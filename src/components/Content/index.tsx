@@ -1,13 +1,14 @@
 import { Box } from "@mantine/core";
-import { Outlet } from "react-router-dom";
-import NavBar from "../NavBar";
-import classes from "./index.module.css";
+import { Outlet } from "react-router";
+import { ScrollRestoration } from "react-router-dom";
+import Header from "../Header";
 
 export default function Content() {
-    return (
-        <Box style={{ color: "white" }} className={classes.wrapper}>
-            <NavBar />
-            <Outlet />
-        </Box>
-    );
+  return (
+    <Box>
+      <ScrollRestoration />
+      <Header />
+      <Outlet />
+    </Box>
+  );
 }

@@ -1,0 +1,57 @@
+.header {
+  height: rem(120px);
+  margin-bottom: rem(60px);
+  border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+
+  background-image: url("/images/after_match.jpg");
+}
+
+.inner {
+  height: rem(120px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  display: block;
+  line-height: 1;
+  padding: rem(12px) rem(16px);
+  margin: rem(10px);
+  border-radius: var(--mantine-radius-md);
+  text-decoration: none;
+  color: #fbb416;
+  font-size: var(--mantine-font-size-xl);
+  font-weight: bold;
+
+  &:hover {
+    animation: scale-up 0.2s forwards;
+  }
+
+  &:not(:hover) {
+    animation: scale-down 0.2s forwards;
+  }
+
+  [data-mantine-color-scheme] &[data-active] {
+    background-color: #fbb416;
+    color: #fff;
+  }
+}
+
+@keyframes scale-up {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.25);
+  }
+}
+
+@keyframes scale-down {
+  from {
+    transform: scale(1.25);
+  }
+  to {
+    transform: scale(1);
+  }
+}
