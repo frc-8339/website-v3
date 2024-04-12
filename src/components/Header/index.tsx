@@ -27,29 +27,31 @@ export default function Header() {
 
   const items = links.map((link) => (
     <Link key={link.label} to={link.link} className={classes.link} data-active={active === link.link || undefined}>
-      {link.label}
+      {link.label.toUpperCase()}
     </Link>
   ));
 
   return (
-    <header className={classes.header}>
-      <Box style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
-        <Box size="md" ml={80} mr={80}>
-          <Box className={classes.inner}>
-            <Image
-              w={"auto"}
-              mah={"80%"}
-              mr={20}
-              src={"/images/logo1.png"}
-              alt="Penticton Robotics logo"
-              style={{ cursor: "pointer" }}
-              onClick={() => navigate("/")}
-            />
-            <Group gap={5} visibleFrom="md">
-              {items}
-            </Group>
+    <header>
+      <Box className={classes.header}>
+        <Box className={classes.overlay}>
+          <Box size="md" ml={80} mr={80}>
+            <Box className={classes.inner}>
+              <Image
+                w={"auto"}
+                mah={"80%"}
+                mr={20}
+                src={"/images/logo1.png"}
+                alt="Penticton Robotics logo"
+                style={{ cursor: "pointer" }}
+                onClick={() => navigate("/")}
+              />
+              <Group gap={5} visibleFrom="lg">
+                {items}
+              </Group>
 
-            <Burger opened={opened} onClick={toggle} hiddenFrom="md" size="sm" />
+              <Burger color="pr-yellow" opened={opened} onClick={toggle} hiddenFrom="lg" size="md" />
+            </Box>
           </Box>
         </Box>
       </Box>

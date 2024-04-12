@@ -28,7 +28,7 @@ export default function App() {
     <MantineProvider
       theme={{
         primaryColor: "pr-yellow",
-        fontFamily: "Roboto, sans-serif",
+        fontFamily: "Roboto Condensed, sans-serif",
         headings: { fontFamily: "Roboto, sans-serif" },
         colors: {
           "pr-yellow": ["#FBB416", "#FBB416", "#FBB416", "#FBB416", "#FBB416", "#FBB416", "#FBB416", "#FBB416", "#FBB416", "#FBB416"],

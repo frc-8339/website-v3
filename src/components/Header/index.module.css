@@ -3,7 +3,15 @@
   margin-bottom: rem(60px);
   border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
 
-  background-image: url("/images/after_match.jpg");
+  background-image: url("/images/award.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -650px;
+  background-attachment: fixed;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .inner {
@@ -41,17 +49,21 @@
 @keyframes scale-up {
   from {
     transform: scale(1);
+    color: #fbb416;
   }
   to {
     transform: scale(1.25);
+    color: #fdd888;
   }
 }
 
 @keyframes scale-down {
   from {
     transform: scale(1.25);
+    color: #fdd888;
   }
   to {
     transform: scale(1);
+    color: #fbb416;
   }
 }
