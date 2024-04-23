@@ -5,9 +5,10 @@
 
   background-image: url("/images/award.webp");
   background-size: cover;
-  background-repeat: no-repeat;
+  /* repeat is on to fix image disapearing on smaller screens */
+  background-repeat: repeat;
   background-position-y: -650px;
-  background-attachment: fixed;
+  background-attachment: local;
 }
 
 .overlay {
