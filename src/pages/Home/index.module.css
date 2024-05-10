@@ -15,10 +15,30 @@
 }
 
 .root {
-  
+
   &:hover {
     .controls {
       opacity: 1;
     }
   }
+}
+
+
+.content {
+  background-image: url("/images/2024CompetitionRobotInPits.webp");
+  background-size: cover;
+  /* repeat is on to fix image disapearing on smaller screens */
+  background-repeat: repeat;
+  background-size: cover;
+  background-position-y: 1000px;
+}
+
+.overlay {
+  background-color: #fbb41680;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,6 +1,6 @@
 .header {
   height: rem(120px);
-  margin-bottom: rem(60px);
+  margin-bottom: rem(0px);
   border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
 
   background-image: url("/images/award.webp");
