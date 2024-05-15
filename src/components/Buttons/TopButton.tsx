@@ -1,9 +1,8 @@
 import { Button } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
 import { useNavigate } from "react-router";
 
 export default function TopButton({ title, url }: { title: string; url: string }) {
-  const isMobile = useMediaQuery("(max-width: 48em)");
+  // const isMobile = useMediaQuery("(max-width: 48em)");
 
   const navigate = useNavigate();
 
