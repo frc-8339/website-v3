@@ -5,11 +5,15 @@ import { useLocation, useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import classes from "./index.module.css";
 
-const links = [
+const links: {
+  link: string;
+  label: string;
+}[] = [
   { link: "/about", label: "About Us" },
   { link: "/media", label: "Media" },
   { link: "/benefits", label: "Benefits" },
   { link: "/first", label: "What is FIRST?" },
+  { link: "/events", label: "Events" },
   { link: "/sponsor", label: "Sponsor/Donate" },
   { link: "/contact", label: "Contact Us" },
 ];
