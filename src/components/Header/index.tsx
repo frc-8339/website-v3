@@ -1,5 +1,5 @@
-import { Box, Burger, Group, Image } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { Box, Burger, Group, Image, Text } from "@mantine/core";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router";
 import { Link } from "react-router-dom";
@@ -19,6 +19,7 @@ const links: {
 ];
 
 export default function Header() {
+  const isMobile = useMediaQuery("(max-width: 75em)");
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -29,9 +30,11 @@ export default function Header() {
     setActive(location.pathname);
   }, [location]);
 
-  const items = links.map((link) => (
-    <Link key={link.label} to={link.link} className={classes.link} data-active={active === link.link || undefined}>
-      {link.label.toUpperCase()}
+  const items = links.map(({ link, label }) => (
+    <Link key={label} to={link} className={classes.link} data-active={active === link || undefined}>
+      <Text c={active === link ? "black" : "pr-yellow"} size="xl" fw="bold" lh={1}>
+        {label.toLocaleUpperCase()}
+      </Text>
     </Link>
   ));
 
@@ -39,7 +42,7 @@ export default function Header() {
     <header>
       <Box className={classes.header}>
         <Box className={classes.overlay}>
-          <Box size="md" ml={80} mr={80}>
+          <Box size="md" ml={isMobile ? 0 : 80} mr={80}>
             <Box className={classes.inner}>
               <Image
                 w={"auto"}

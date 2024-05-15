@@ -3,6 +3,7 @@ import { RouteObject, RouterProvider } from "react-router";
 import { createBrowserRouter } from "react-router-dom";
 import Content from "./components/Content";
 import NotFound from "./pages/404";
+import AboutUs from "./pages/AboutUs";
 import Home from "./pages/Home";
 
 const routes: RouteObject[] = [
@@ -13,6 +14,10 @@ const routes: RouteObject[] = [
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <AboutUs />,
       },
       {
         path: "*",

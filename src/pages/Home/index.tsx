@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Grid, Image, Text, Title } from "@mantine/core";
+import { Box, Center, Flex, Grid, Image, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { IconMail } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
@@ -67,7 +67,9 @@ export default function Home() {
       </Link>
 
       <Flex align="center" direction="column" bg="#8E6302" pt={"md"}>
-        <Title c="pr-yellow">Sponsors</Title>
+        <Text c="pr-yellow" fz="8vh" fw="bold" style={{ textShadow: "0.64vh 0.64vh #000" }}>
+          Sponsors
+        </Text>
         {
           // TODO: Change sponsors
         }
