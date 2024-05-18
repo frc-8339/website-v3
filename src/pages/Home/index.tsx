@@ -70,10 +70,7 @@ export default function Home() {
         <Text c="pr-yellow" fz="8vh" fw="bold" style={{ textShadow: "0.64vh 0.64vh #000" }}>
           Sponsors
         </Text>
-        {
-          // TODO: Change sponsors
-        }
-        <Image src="https://pentictonrobotics.ca/gallery_gen/3826b8df02f18f12f38d8164b41d782d.png" alt="Sponsors" w="80vw" />
+        <Image src="/images/sponsors.svg" alt="Sponsors" w="80vw" />
       </Flex>
     </Box>
   );
