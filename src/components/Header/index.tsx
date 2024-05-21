@@ -1,4 +1,4 @@
-import { Box, Burger, Group, Image, Text, BackgroundImage, Flex } from "@mantine/core";
+import { BackgroundImage, Box, Burger, Flex, Group, Image, Text } from "@mantine/core";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router";
@@ -42,12 +42,12 @@ export default function Header() {
   return (
     <header>
       {/* repeat is on to fix image disapearing on smaller screens */}
-      <BackgroundImage src="/images/award.webp" bgsz="cover" bgr="repeat" bgp="0 -650px" bga="local" mb={0} h={120} className={classes.header}>
+      <BackgroundImage src="/images/award.webp" bgsz="cover" bgr="repeat" bgp="0 -650px" bga="local" mb={0} h={120}>
         <Box bg="rgba(0, 0, 0, 0.7)">
           {/* <Overlay opacity={0.7} color="black" /> */}
 
           <Box size="md" ml={isMobile ? 0 : 80} mr={80}>
-            <Flex h={120} justify="space-between" className={classes.inner}>
+            <Flex h={120} justify="space-between" align="center">
               <Image
                 w={"auto"}
                 mah={"80%"}

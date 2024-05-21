@@ -1,7 +1,7 @@
 import { Button } from "@mantine/core";
 import { useNavigate } from "react-router";
 
-export default function TopButton({ title, url }: { title: string; url: string }) {
+export default function HomeTopButton({ title, url }: { title: string; url: string }) {
   // const isMobile = useMediaQuery("(max-width: 48em)");
 
   const navigate = useNavigate();
