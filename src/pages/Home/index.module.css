@@ -38,3 +38,8 @@
   width: 100%;
   display: flex;
 }
+
+.root{
+  background-image: url("/images/53576296439_a58071c9d4_o croppedButOpaquer.png");
+  background-size: contain;
+}

@@ -1,4 +1,4 @@
-import { Box, Burger, Group, Image, Text } from "@mantine/core";
+import { Box, Burger, Group, Image, Text, BackgroundImage, Flex } from "@mantine/core";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router";
@@ -9,6 +9,7 @@ const links: {
   link: string;
   label: string;
 }[] = [
+  { link: "/", label: "Home" },
   { link: "/about", label: "About Us" },
   { link: "/media", label: "Media" },
   { link: "/benefits", label: "Benefits" },
@@ -40,10 +41,13 @@ export default function Header() {
 
   return (
     <header>
-      <Box className={classes.header}>
-        <Box className={classes.overlay}>
+      {/* repeat is on to fix image disapearing on smaller screens */}
+      <BackgroundImage src="/images/award.webp" bgsz="cover" bgr="repeat" bgp="0 -650px" bga="local" mb={0} h={120} className={classes.header}>
+        <Box bg="rgba(0, 0, 0, 0.7)">
+          {/* <Overlay opacity={0.7} color="black" /> */}
+
           <Box size="md" ml={isMobile ? 0 : 80} mr={80}>
-            <Box className={classes.inner}>
+            <Flex h={120} justify="space-between" className={classes.inner}>
               <Image
                 w={"auto"}
                 mah={"80%"}
@@ -58,10 +62,10 @@ export default function Header() {
               </Group>
 
               <Burger color="pr-yellow" opened={opened} onClick={toggle} hiddenFrom="lg" size="md" />
-            </Box>
+            </Flex>
           </Box>
         </Box>
-      </Box>
+      </BackgroundImage>
     </header>
   );
 }

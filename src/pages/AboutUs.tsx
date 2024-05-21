@@ -6,7 +6,7 @@ export default function AboutUs() {
   const isMobile = useMediaQuery("(max-width: 75em)");
 
   return (
-    <Box>
+    <Box style={{ backgroundColor: "#fbb416a0" }}>
       <Flex align="center" direction="column">
         <Text
           miw="30vw"

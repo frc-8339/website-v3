@@ -23,7 +23,7 @@ export default function Home() {
   const isMobile = useMediaQuery("(max-width: 48em)");
 
   return (
-    <Box>
+    <Box className={classes.root}>
       <Box className={classes.content}>
         <Flex className={classes.overlay} align="center" direction="column">
           <Image
