@@ -1,4 +1,4 @@
-import { BackgroundImage, Center, Flex, Grid, Image, Text } from "@mantine/core";
+import { BackgroundImage, Box, Center, Flex, Grid, Image, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { IconMail } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
@@ -39,15 +39,19 @@ export default function Home() {
         </Flex>
       </BackgroundImage>
 
-      <Link to={`mailto:${email}`} style={{ textDecoration: "none" }}>
-        <Center h="15vh">
-          <IconMail color="#FBB416" size={50} />
+      <BackgroundImage src="/images/code.png">
+        <Box bg="rgba(0, 0, 0, 0.7)">
+          <Link to={`mailto:${email}`} style={{ textDecoration: "none" }}>
+            <Center h="15vh">
+              <IconMail color="#FBB416" size={50} />
 
-          <Text ta="center" fz="h2" c="pr-yellow" fw="bold" ml="xs">
-            {email}
-          </Text>
-        </Center>
-      </Link>
+              <Text ta="center" fz="h2" c="pr-yellow" fw="bold" ml="xs">
+                {email}
+              </Text>
+            </Center>
+          </Link>
+        </Box>
+      </BackgroundImage>
 
       <Flex align="center" direction="column" bg="#8E6302" pt={"md"}>
         <Text c="pr-yellow" fz="8vh" fw="bold" style={{ textShadow: "0.64vh 0.64vh #000" }}>

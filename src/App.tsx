@@ -5,6 +5,7 @@ import Content from "./components/Content";
 import NotFound from "./pages/404";
 import AboutUs from "./pages/AboutUs";
 import Home from "./pages/Home";
+import WhatIsFirst from "./pages/WhatIsFIRST";
 
 const routes: RouteObject[] = [
   {
@@ -18,6 +19,10 @@ const routes: RouteObject[] = [
       {
         path: "/about",
         element: <AboutUs />,
+      },
+      {
+        path: "/first",
+        element: <WhatIsFirst />,
       },
       {
         path: "*",

@@ -1,10 +1,9 @@
+import { Carousel } from "@mantine/carousel";
 import { Box, Flex, Image, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { Link } from "react-router-dom";
 
 export default function AboutUs() {
-  const isMobile = useMediaQuery("(max-width: 75em)");
-
   return (
     <Box style={{ backgroundColor: "#fbb416a0" }}>
       <Flex align="center" direction="column">
@@ -18,13 +17,16 @@ export default function AboutUs() {
           About Us
         </Text>
 
-        <Flex m="xl" align={isMobile ? "center" : "start"} direction={isMobile ? "column" : "unset"}>
-          <Image
-            src="https://pentictonrobotics.ca/gallery_gen/9d5ac7523336017f98505b90302b9dac_1318x970.jpg"
-            w={isMobile ? "100%" : "50vw"}
-            alt="Penticton Robotics members"
-          />
-          <Text {...(isMobile ? { mt: "lg" } : { ml: "xl" })} fz="h2">
+        <Flex m="xl" align="center" direction="column">
+          <Carousel withIndicators w="80%" mt="lg" loop>
+            {["2020", "2023"].map((year) => (
+              <Carousel.Slide key={year}>
+                <Image src={`/images/team/${year}.jpg`} h="100%" w="100%" alt={`Penticton Robotics ${year} members`} />
+              </Carousel.Slide>
+            ))}
+          </Carousel>
+
+          <Text w="80%" mt="xl" fz="h2">
             We are Penticton Robotics, a Penticton based FIRST robotics team meeting out of Princess Margaret Secondary. The Penticton Robotics Club
             is a diverse, student-led team of high school students with the vision and dream of representing School District 67 at the regional FIRST
             robotics competition on March 1st, 2023, in Victoria, British Columbia. Our challenge, as a team, is to dedicate hundreds of hours over
