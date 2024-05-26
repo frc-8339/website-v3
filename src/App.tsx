@@ -6,6 +6,7 @@ import NotFound from "./pages/404";
 import AboutUs from "./pages/AboutUs";
 import Home from "./pages/Home";
 import WhatIsFirst from "./pages/WhatIsFIRST";
+import Benefits from "./pages/Benefits";
 
 const routes: RouteObject[] = [
   {
@@ -23,6 +24,10 @@ const routes: RouteObject[] = [
       {
         path: "/first",
         element: <WhatIsFirst />,
+      },
+      {
+        path: "/benefits",
+        element: <Benefits />,
       },
       {
         path: "*",

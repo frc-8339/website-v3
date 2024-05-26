@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import classes from "./index.module.css";
 
+//see RouteObject in App.tsx for context
 const links: {
   link: string;
   label: string;

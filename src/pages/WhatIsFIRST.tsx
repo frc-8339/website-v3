@@ -1,11 +1,13 @@
 import { Box, Flex, Image, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
+import CountdownTimer from "../components/CountdownTimer";
+import { competitionDate } from "../lib/constants";
 
 export default function WhatIsFirst() {
   const isMobile = useMediaQuery("(max-width: 75em)");
 
   return (
-    <Box>
+    <Box style={{ backgroundColor: "#fbb416a0" }}>
       <Flex align="center" direction="column">
         <Text
           miw="30vw"
@@ -16,6 +18,18 @@ export default function WhatIsFirst() {
         >
           What is FIRST?
         </Text>
+        <Flex m="xl" align={isMobile ? "center" : "start"} direction={isMobile ? "column" : "unset"}>
+          <iframe
+            width="800vw"
+            height="450vh"
+            src="https://www.youtube.com/embed/Jd29kzjclV0"
+            title="About FIRST Robotics Competition (2021)"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        </Flex>
         <Text {...(isMobile ? { mt: "lg" } : { ml: "xl" })} fz="h2">
           FIRST is a global robotics competition that hopes to inspire the next generation of scientists and engineers. FIRST stands for “For
           Inspiration and Recognition of Science and Technology.” Combining the excitement of sport with the rigors of science and technology, FIRST
@@ -25,13 +39,7 @@ export default function WhatIsFirst() {
           real-world engineering as a student can get. Volunteer professional mentors lend their time and talents to guide each team. Each season ends
           with an exciting FIRST Championship.
         </Text>
-        <Flex m="xl" align={isMobile ? "center" : "start"} direction={isMobile ? "column" : "unset"}>
-          <Image
-            src="https://pentictonrobotics.ca/gallery_gen/9d5ac7523336017f98505b90302b9dac_1318x970.jpg"
-            w={isMobile ? "100%" : "50vw"}
-            alt="Penticton Robotics members"
-          />
-        </Flex>
+        <CountdownTimer date={competitionDate} /><br/>
       </Flex>
     </Box>
   );
