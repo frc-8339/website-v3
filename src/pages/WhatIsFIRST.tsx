@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Text } from "@mantine/core";
+import { Box, Flex, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import CountdownTimer from "../components/CountdownTimer";
 import { competitionDate } from "../lib/constants";
@@ -39,7 +39,8 @@ export default function WhatIsFirst() {
           real-world engineering as a student can get. Volunteer professional mentors lend their time and talents to guide each team. Each season ends
           with an exciting FIRST Championship.
         </Text>
-        <CountdownTimer date={competitionDate} /><br/>
+        <CountdownTimer date={competitionDate} />
+        <br />
       </Flex>
     </Box>
   );
