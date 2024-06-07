@@ -19,7 +19,7 @@ export default function AboutUs() {
 
         <Flex m="xl" align="center" direction="column">
           <Carousel withIndicators w="80%" mt="lg" loop>
-            {["2020", "2023"].map((year) => (
+            {["2020", "2023", "2024"].map((year) => (
               <Carousel.Slide key={year}>
                 <Image src={`/images/team/${year}.jpg`} h="100%" w="100%" alt={`Penticton Robotics ${year} members`} />
               </Carousel.Slide>
