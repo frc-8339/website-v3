@@ -7,6 +7,7 @@ import AboutUs from "./pages/AboutUs";
 import Home from "./pages/Home";
 import WhatIsFirst from "./pages/WhatIsFIRST";
 import Benefits from "./pages/Benefits";
+import Media from "./pages/Media";
 
 const routes: RouteObject[] = [
   {
@@ -28,6 +29,10 @@ const routes: RouteObject[] = [
       {
         path: "/benefits",
         element: <Benefits />,
+      },
+      {
+        path: "/media",
+        element: <Media />,
       },
       {
         path: "*",
