@@ -5,6 +5,11 @@ import { useLocation, useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import classes from "./index.module.css";
 
+import logoFallback from "./logo.png";
+import logo from "./logo.png?w=128;320;512;768;1024&format=webp;png&as=srcset&imagetools";
+
+import award from "./award.webp";
+
 //see RouteObject in App.tsx for context
 const links: {
   link: string;
@@ -43,7 +48,7 @@ export default function Header() {
   return (
     <header>
       {/* repeat is on to fix image disapearing on smaller screens */}
-      <BackgroundImage src="/images/award.webp" bgsz="cover" bgr="repeat" bgp="0 -650px" bga="local" mb={0} h={120}>
+      <BackgroundImage src={award} bgsz="cover" bgr="repeat" bgp="0 -650px" bga="local" mb={0} h={120}>
         <Box bg="rgba(0, 0, 0, 0.7)">
           {/* <Overlay opacity={0.7} color="black" /> */}
 
@@ -53,7 +58,8 @@ export default function Header() {
                 w={"auto"}
                 mah={"80%"}
                 mr={20}
-                src={"/images/logo1.png"}
+                srcSet={logo}
+                src={logoFallback}
                 alt="Penticton Robotics logo"
                 style={{ cursor: "pointer" }}
                 onClick={() => navigate("/")}
@@ -63,6 +69,10 @@ export default function Header() {
               </Group>
 
               <Burger color="pr-yellow" opened={opened} onClick={toggle} hiddenFrom="lg" size="md" />
+
+              {/* <Menu opened={opened} onClose={toggle}>
+                {items}
+              </Menu> */}
             </Flex>
           </Box>
         </Box>

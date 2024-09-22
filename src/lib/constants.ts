@@ -25,3 +25,5 @@ export const sponsorFiles: string[] = [
 
   "/images/sponsors/Total Restoration.svg",
 ];
+
+export const photoDrive2024 = "https://drive.google.com/drive/folders/1mS3VU2atscVExsfSAT5wZRaRGCx4G_-Z";

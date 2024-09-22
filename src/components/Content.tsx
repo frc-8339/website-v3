@@ -6,7 +6,7 @@ import Header from "./Header";
 
 export default function Content() {
   return (
-    <Box>
+    <Box style={{ backgroundColor: "#fcd06d" }} mih="100vh">
       <ScrollRestoration />
       <Header />
       <Outlet />

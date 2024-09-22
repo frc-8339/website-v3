@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function AboutUs() {
   return (
-    <Box style={{ backgroundColor: "#fbb416a0" }}>
+    <Box>
       <Flex align="center" direction="column">
         <Text
           miw="30vw"
