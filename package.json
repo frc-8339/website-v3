@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource-variable/roboto-condensed": "^5.1.0",
+    "@fontsource/roboto": "^5.1.0",
     "@mantine/carousel": "^7.9.2",
     "@mantine/core": "^7.9.2",
     "@mantine/hooks": "^7.9.2",
