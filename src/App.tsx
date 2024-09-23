@@ -4,10 +4,11 @@ import { createBrowserRouter } from "react-router-dom";
 import Content from "./components/Content";
 import NotFound from "./pages/404";
 import AboutUs from "./pages/AboutUs";
-import Home from "./pages/Home";
-import WhatIsFirst from "./pages/WhatIsFIRST";
 import Benefits from "./pages/Benefits";
+import Home from "./pages/Home";
 import Media from "./pages/Media";
+import SponsorDonate from "./pages/SponsorDonate/index";
+import WhatIsFirst from "./pages/WhatIsFIRST";
 
 const routes: RouteObject[] = [
   {
@@ -33,6 +34,10 @@ const routes: RouteObject[] = [
       {
         path: "/media",
         element: <Media />,
+      },
+      {
+        path: "/power",
+        element: <SponsorDonate />,
       },
       {
         path: "*",

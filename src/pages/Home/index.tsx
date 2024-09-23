@@ -32,7 +32,9 @@ export default function Home() {
     <Box mb="10vh">
       <BackgroundImage src={robotInPit} bgsz="cover" bgr="repeat" bgp="0 1000px">
         <Flex align="center" direction="column" bg="#fbb41680" w="100%" h="100%">
-          <Image {...(!isMobile ? { mah: "30vh", w: "auto" } : { h: "auto", maw: "80vw" })} srcSet={firstLogo8339} src={firstLogo8339Fallback} />
+          <Box h={!isMobile ? "20rem" : "41.9vw"}>
+            <Image srcSet={firstLogo8339} {...(!isMobile ? { mah: "20rem", w: "auto" } : { h: "auto", maw: "80vw" })} src={firstLogo8339Fallback} />
+          </Box>
           <Title order={1} ta="center">
             2025{" "}
             <a
@@ -46,7 +48,6 @@ export default function Home() {
             Kickoff Countdown
           </Title>
           <CountdownTimer date={competitionDate} />
-
           <Grid justify="center" my="lg" visibleFrom="sm">
             <Grid.Col span={5}>
               {homeButtons.map((button, index) =>

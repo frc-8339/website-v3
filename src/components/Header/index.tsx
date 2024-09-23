@@ -21,7 +21,7 @@ const links: {
   { link: "/benefits", label: "Benefits" },
   { link: "/first", label: "What is FIRST?" },
   { link: "/events", label: "Events" },
-  { link: "/sponsor", label: "Sponsor/Donate" },
+  { link: "/power", label: "Sponsor/Donate" },
   { link: "/contact", label: "Contact Us" },
 ];
 
