@@ -54,16 +54,17 @@ export default function Header() {
 
           <Box size="md" ml={isMobile ? 0 : 80} mr={80}>
             <Flex h={120} justify="space-between" align="center">
-              <Image
-                w={"auto"}
-                mah={"80%"}
-                mr={20}
-                srcSet={logo}
-                src={logoFallback}
-                alt="Penticton Robotics logo"
-                style={{ cursor: "pointer" }}
-                onClick={() => navigate("/")}
-              />
+              <Box w={412}>
+                <Image
+                  mr={20}
+                  srcSet={logo}
+                  src={logoFallback}
+                  alt="Penticton Robotics logo"
+                  style={{ cursor: "pointer" }}
+                  onClick={() => navigate("/")}
+                />
+              </Box>
+
               <Group gap={5} visibleFrom="lg">
                 {items}
               </Group>

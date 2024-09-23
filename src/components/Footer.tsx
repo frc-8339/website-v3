@@ -7,7 +7,12 @@ export default function Footer() {
   return (
     <Box>
       <Flex align="center" direction="column" p="lg">
-        <Image src="https://www.sd67.bc.ca/pics/header_logo.png" alt="School District 67" {...(isMobile ? { h: "10vh", w: "auto" } : { w: "6vw" })} />
+        <Image
+          src="https://www.sd67.bc.ca/pics/header_logo.png"
+          alt="School District 67"
+          {...(isMobile ? { h: "10vh", w: "auto" } : { w: "6vw" })}
+          loading="lazy"
+        />
 
         <Text c="black" fz="h4">
           © {new Date().getFullYear()} Penticton Robotics Team

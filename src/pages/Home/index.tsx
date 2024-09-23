@@ -33,7 +33,12 @@ export default function Home() {
       <BackgroundImage src={robotInPit} bgsz="cover" bgr="repeat" bgp="0 1000px">
         <Flex align="center" direction="column" bg="#fbb41680" w="100%" h="100%">
           <Box h={!isMobile ? "20rem" : "41.9vw"}>
-            <Image srcSet={firstLogo8339} {...(!isMobile ? { mah: "20rem", w: "auto" } : { h: "auto", maw: "80vw" })} src={firstLogo8339Fallback} />
+            <Image
+              srcSet={firstLogo8339}
+              {...(!isMobile ? { mah: "20rem", w: "auto" } : { h: "auto", maw: "80vw" })}
+              src={firstLogo8339Fallback}
+              alt="FRC logo with team number 8339"
+            />
           </Box>
           <Title order={1} ta="center">
             2025{" "}
@@ -48,7 +53,7 @@ export default function Home() {
             Kickoff Countdown
           </Title>
           <CountdownTimer date={competitionDate} />
-          <Grid justify="center" my="lg" visibleFrom="sm">
+          <Grid justify="center" my="lg" visibleFrom="sm" w="75vw">
             <Grid.Col span={5}>
               {homeButtons.map((button, index) =>
                 index % 2 === 0 ? <HomeTopButton key={`${button.title} ${button.url}`} title={button.title} url={button.url} /> : null,
@@ -99,7 +104,7 @@ export default function Home() {
           quote={`"Penticton Robotics needs to build and program robots to perform challenging tasks against a field of competitors.They must also raise
           funds, design a team ‘brand’, hone teamwork skills, and perform community outreach. In addition to learning valuable STEM and life skills,
           participants are eligible to apply for $80 million [$110 million CAD] in college scholarships.”`}
-          image={{ srcSet: pentictonWesternNews, src: pentictonWesternNewsFallback }}
+          image={{ srcSet: pentictonWesternNews, src: pentictonWesternNewsFallback, alt: "Penticton Western News logo" }}
           isMobile={isMobile}
         />
 
@@ -108,7 +113,7 @@ export default function Home() {
         <NewsQuote
           quote={`"If they play their cards right, in February of 2023 they'll accompany the robot they’re building -- all 120 pounds of it -- to Victoria for
           the 2023 FIRST (For Inspiration and Recognition of Science and Technology) Robotics Competition."`}
-          image={{ srcSet: pentictonNow, src: pentictonNowFallback }}
+          image={{ srcSet: pentictonNow, src: pentictonNowFallback, alt: "Penticton Now logo" }}
           isMobile={isMobile}
         />
 
@@ -119,7 +124,7 @@ export default function Home() {
           The Penticton Robotics Club first competed in the BC event in 2020, and qualified for the World Championships in Houston, Texas. Sadly, the
           global pandemic shut down that dream, and every year since, the competition has been cancelled. This year [2022/23], it's back, and the
           Penticton kids want to be there to show off their skills."`}
-          image={{ src: castanet }}
+          image={{ src: castanet, alt: "Castanet logo" }}
           isMobile={isMobile}
         />
       </Flex>
