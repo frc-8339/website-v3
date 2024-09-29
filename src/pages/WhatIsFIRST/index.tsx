@@ -12,8 +12,39 @@ export default function WhatIsFirst() {
     <Flex align="center" direction="column">
       <BackgroundImage src={XD} bgsz="cover" style={{ backgroundPositionY: "center" }}>
         <Flex w="100vw" justify="center" bg="#00000080">
-          <Grid w="80%" align="center" justify="space-between">
-            <Grid.Col span={3}>
+          {!isMobile ? (
+            <Grid w="80%" align="center" justify="space-between">
+              <Grid.Col span={3}>
+                <Text
+                  maw="40vw"
+                  fz={isMobile ? "20vw" : "10vw"}
+                  fw="bolder"
+                  lh="1.2"
+                  c="pr-yellow"
+                  style={{
+                    textShadow: isMobile ? "1.6vw 1.6vw #000" : "0.8vw 0.8vw #000",
+                    paddingBottom: 0,
+                    paddingLeft: "10%",
+                  }}
+                  ta={isMobile ? "center" : "left"}
+                >
+                  What is FIRST?
+                </Text>
+              </Grid.Col>
+              <Grid.Col span={6}>
+                <iframe
+                  src="https://www.youtube.com/embed/Jd29kzjclV0"
+                  title="About FIRST Robotics Competition (2021)"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  style={{ width: "100%", height: "auto", aspectRatio: "16 / 9" }}
+                />
+              </Grid.Col>
+            </Grid>
+          ) : (
+            <Flex direction="column" m="lg">
               <Text
                 maw="40vw"
                 fz={isMobile ? "20vw" : "10vw"}
@@ -25,24 +56,22 @@ export default function WhatIsFirst() {
                   paddingBottom: 0,
                   paddingLeft: "10%",
                 }}
-                ta={isMobile ? "center" : "left"}
+                ta="left"
               >
                 What is FIRST?
               </Text>
-            </Grid.Col>
-            <Grid.Col span={6}>
+
               <iframe
-                width="800vw"
-                height="450vh"
                 src="https://www.youtube.com/embed/Jd29kzjclV0"
                 title="About FIRST Robotics Competition (2021)"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
+                style={{ width: "80vw", height: "45vw" }}
               />
-            </Grid.Col>
-          </Grid>
+            </Flex>
+          )}
         </Flex>
       </BackgroundImage>
 

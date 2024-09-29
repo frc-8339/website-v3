@@ -30,9 +30,45 @@ export default function SponsorDonate() {
           </Box>
         </BackgroundImage>
 
-        <Grid m="md" mt="xl" align="start" justify="center">
-          <Grid.Col span={3}>
-            <Text fz="h2">
+        {!isMobile ? (
+          <Grid m="md" mt="xl" align="start" justify="center">
+            <Grid.Col span={3}>
+              <Text fz="h2">
+                Donations:
+                <br />
+                School District 67
+                <br />
+                425 Jermyn Ave
+                <br />
+                Penticton, BC V2A 1Z4
+              </Text>
+            </Grid.Col>
+            <Grid.Col span={3}>
+              <Text fz="h2">
+                Sponsors:
+                <br />
+                Princess Margaret Secondary School
+                <br />
+                120 Green Ave W
+                <br />
+                Penticton, BC V2A 3T1
+              </Text>
+            </Grid.Col>
+            <Grid.Col span={3}>
+              <Text fz="h2">
+                Please check out our information sheet for more info:{" "}
+                <a href="/Sponsorship_Letter.pdf" target="_blank" rel="noopener noreferrer">
+                  Information Sheet
+                </a>
+                <br />
+                You can also
+                <Link to="/contact"> contact us</Link> for more information.
+              </Text>
+            </Grid.Col>
+          </Grid>
+        ) : (
+          <Flex direction="column" m="lg">
+            <Text fz="h2" m="lg">
               Donations:
               <br />
               School District 67
@@ -41,9 +77,7 @@ export default function SponsorDonate() {
               <br />
               Penticton, BC V2A 1Z4
             </Text>
-          </Grid.Col>
-          <Grid.Col span={3}>
-            <Text fz="h2">
+            <Text fz="h2" m="lg">
               Sponsors:
               <br />
               Princess Margaret Secondary School
@@ -52,19 +86,17 @@ export default function SponsorDonate() {
               <br />
               Penticton, BC V2A 3T1
             </Text>
-          </Grid.Col>
-          <Grid.Col span={3}>
-            <Text fz="h2">
+            <Text fz="h2" m="lg">
               Please check out our information sheet for more info:{" "}
-              <a href="https://pentictonrobotics.pages.dev/gallery/SponsorDonationInformationSheet.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="/Sponsorship_Letter.pdf" target="_blank" rel="noopener noreferrer">
                 Information Sheet
               </a>
               <br />
               You can also
               <Link to="/contact"> contact us</Link> for more information.
             </Text>
-          </Grid.Col>
-        </Grid>
+          </Flex>
+        )}
       </Flex>
     </Box>
   );

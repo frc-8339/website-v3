@@ -39,25 +39,49 @@ export default function AboutUs() {
         </Flex>
       </BackgroundImage>
 
-      <Carousel
-        withIndicators
-        height={"90vh"}
-        w="80%"
-        mt="lg"
-        loop
-        controlSize={36}
-        plugins={[autoplay.current]}
-        styles={{ control: { backgroundColor: "white" } }}
-        onMouseEnter={autoplay.current.stop}
-        onMouseLeave={autoplay.current.reset}
-      >
-        {["2020", "2023", "2024"].map((year) => (
-          <Carousel.Slide key={year}>
-            <Image src={`/images/team/${year}.jpg`} h="100%" w="100%" alt={`Penticton Robotics ${year} members`} />
-          </Carousel.Slide>
-        ))}
-      </Carousel>
-
+      {!isMobile ? (
+        <Carousel
+          withIndicators
+          height={"90vh"}
+          w="80%"
+          mt="lg"
+          loop
+          controlSize={36}
+          plugins={[autoplay.current]}
+          styles={{ control: { backgroundColor: "white" } }}
+          onMouseEnter={autoplay.current.stop}
+          onMouseLeave={autoplay.current.reset}
+        >
+          {["2020", "2023", "2024"].map((year) => (
+            <Carousel.Slide key={year}>
+              <Image src={`/images/team/${year}.jpg`} h="100%" w="100%" alt={`Penticton Robotics ${year} members`} />
+            </Carousel.Slide>
+          ))}
+        </Carousel>
+      ) : (
+        <Flex m="xl" mb={0} align="center" direction="column">
+          {["2020", "2023", "2024"].map((year) => (
+            <>
+              <Text
+                maw="40vw"
+                mb="sm"
+                fz={isMobile ? "20vw" : "10vw"}
+                fw="bolder"
+                lh="1.2"
+                c="pr-yellow"
+                style={{
+                  textShadow: isMobile ? "1.6vw 1.6vw #000" : "0.8vw 0.8vw #000",
+                  paddingBottom: 0,
+                }}
+                ta={isMobile ? "center" : "left"}
+              >
+                {year}
+              </Text>
+              <Image src={`/images/team/${year}.jpg`} h="100%" w="100%" alt={`Penticton Robotics ${year} members`} />
+            </>
+          ))}
+        </Flex>
+      )}
       <Flex m="xl" align="center" direction="column">
         <Text w="80%" mt="xl" fz="h2">
           We are Penticton Robotics, a Penticton based FIRST robotics team meeting out of Princess Margaret Secondary. The Penticton Robotics Club is

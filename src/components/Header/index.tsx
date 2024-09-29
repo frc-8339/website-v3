@@ -1,4 +1,4 @@
-import { BackgroundImage, Box, Burger, Flex, Group, Image, Text } from "@mantine/core";
+import { BackgroundImage, Box, Burger, Drawer, Flex, Group, Image, Text } from "@mantine/core";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router";
@@ -30,7 +30,7 @@ export default function Header() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, drawerControls] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export default function Header() {
   }, [location]);
 
   const items = links.map(({ link, label }) => (
-    <Link key={label} to={link} className={classes.link} data-active={active === link || undefined}>
+    <Link key={label} to={link} className={classes.link} data-active={active === link || undefined} onClick={drawerControls.close}>
       <Text c={active === link ? "black" : "pr-yellow"} size="xl" fw="bold" lh={1}>
         {label.toLocaleUpperCase()}
       </Text>
@@ -48,6 +48,19 @@ export default function Header() {
   return (
     <header>
       {/* repeat is on to fix image disapearing on smaller screens */}
+      <Drawer
+        opened={opened}
+        onClose={drawerControls.toggle}
+        padding="md"
+        position="right"
+        closeButtonProps={{ size: "xl" }}
+        styles={{ content: { backgroundColor: "black" }, header: { backgroundColor: "black" }, close: { color: "white", backgroundColor: "black" } }}
+      >
+        <Flex direction="column" align="center">
+          {items}
+        </Flex>
+      </Drawer>
+
       <BackgroundImage src={award} bgsz="cover" bgr="repeat" bgp="0 -650px" bga="local" mb={0} h={120}>
         <Box bg="rgba(0, 0, 0, 0.7)">
           {/* <Overlay opacity={0.7} color="black" /> */}
@@ -69,11 +82,7 @@ export default function Header() {
                 {items}
               </Group>
 
-              <Burger color="pr-yellow" opened={opened} onClick={toggle} hiddenFrom="lg" size="md" />
-
-              {/* <Menu opened={opened} onClose={toggle}>
-                {items}
-              </Menu> */}
+              <Burger color="pr-yellow" opened={opened} onClick={drawerControls.toggle} hiddenFrom="lg" size="md" />
             </Flex>
           </Box>
         </Box>
