@@ -14,8 +14,15 @@ export default function Footer() {
           loading="lazy"
         />
 
-        <Text c="black" fz="h4">
+        <Text c="black" fz="h4" ta="center">
           © {new Date().getFullYear()} Penticton Robotics Team
+        </Text>
+        <Text>
+          made by{" "}
+          <a href="https://github.com/tobycm" target="_blank" rel="noopener noreferrer">
+            tobycm
+          </a>{" "}
+          with ❤️
         </Text>
       </Flex>
     </Box>

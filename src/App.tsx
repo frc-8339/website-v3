@@ -5,6 +5,7 @@ import Content from "./components/Content";
 import NotFound from "./pages/404";
 import AboutUs from "./pages/AboutUs";
 import Benefits from "./pages/Benefits";
+import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Media from "./pages/Media";
 import SponsorDonate from "./pages/SponsorDonate/index";
@@ -38,6 +39,10 @@ const routes: RouteObject[] = [
       {
         path: "/power",
         element: <SponsorDonate />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
       {
         path: "*",
