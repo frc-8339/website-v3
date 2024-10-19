@@ -22,7 +22,10 @@ export default function Footer() {
           <a href="https://github.com/tobycm" target="_blank" rel="noopener noreferrer">
             tobycm
           </a>{" "}
-          with ❤️
+          with{" "}
+          <a href="https://www.instagram.com/p/DBJwMI2pHz0" target="_blank" rel="noopener noreferrer" style={{ all: "unset" }}>
+            ❤️
+          </a>
         </Text>
       </Flex>
     </Box>

@@ -4,7 +4,9 @@ import { useMediaQuery } from "@mantine/hooks";
 import marcusFixingRobot from "./IMG_0461.webp";
 
 import { IconMail, IconPhone } from "@tabler/icons-react";
-import walker from "./walker circle.png";
+
+import walkerFallback from "./walker circle.png";
+import walker from "./walker circle.png?w=256;512;768;1024&format=webp;png&as=srcset&imagetools";
 
 export default function Contact() {
   const isMobile = useMediaQuery("(max-width: 62em)");
@@ -46,7 +48,7 @@ export default function Contact() {
           >
             Our Mentor
           </Text>
-          <Image src={walker} alt="Mr. Josh Walker" h={isMobile ? "6rem" : "4rem"} />
+          <Image src={walkerFallback} srcSet={walker} alt="Mr. Josh Walker" h={isMobile ? "6rem" : "4rem"} />
 
           <Text fz="3rem" m="lg" ta="center">
             Mr. Josh Walker
