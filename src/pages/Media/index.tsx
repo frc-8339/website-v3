@@ -13,7 +13,7 @@ export default function AboutUs() {
   return (
     <Flex align="center" direction="column">
       <BackgroundImage src={robotTouchGrass} bgsz="cover" style={{ backgroundPositionY: "67.5%" }}>
-        <Flex w="100vw" justify="center" bg="#00000080">
+        <Flex w="100%" justify="center" bg="#00000080">
           <Grid w="80%" align="center" justify="space-between">
             <Grid.Col span={3}>
               <Text

@@ -11,7 +11,7 @@ export default function WhatIsFirst() {
   return (
     <Flex align="center" direction="column">
       <BackgroundImage src={XD} bgsz="cover" style={{ backgroundPositionY: "center" }}>
-        <Flex w="100vw" justify="center" bg="#00000080">
+        <Flex w="100%" justify="center" bg="#00000080">
           {!isMobile ? (
             <Grid w="80%" align="center" justify="space-between">
               <Grid.Col span={3}>

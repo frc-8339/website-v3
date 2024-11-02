@@ -15,7 +15,7 @@ export default function AboutUs() {
   return (
     <Flex align="center" direction="column">
       <BackgroundImage src={ballinXD} bgsz="cover" style={{ backgroundPositionY: "60%" }}>
-        <Flex w="100vw" justify="center" bg="#00000020">
+        <Flex w="100%" justify="center" bg="#00000020">
           <Grid w="80%" align="center" justify="space-between">
             <Grid.Col span={3}>
               <Text
