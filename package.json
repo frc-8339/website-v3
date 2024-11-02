@@ -8,7 +8,6 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "packageManager": "^bun@1.0.0",
   "dependencies": {
     "@fontsource-variable/roboto-condensed": "^5.1.0",
     "@fontsource/roboto": "^5.1.0",
