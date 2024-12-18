@@ -2,6 +2,7 @@ import { BackgroundImage, Box, Flex, Grid, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
 import { Link } from "react-router-dom";
+import Sponsors from "../../components/Sponsors";
 import marcusFixingRobot from "./IMG_0461.webp";
 
 export default function SponsorDonate() {
@@ -29,6 +30,8 @@ export default function SponsorDonate() {
             </Text>
           </Box>
         </BackgroundImage>
+
+        <Sponsors />
 
         {!isMobile ? (
           <Grid m="md" mt="xl" align="start" justify="center">

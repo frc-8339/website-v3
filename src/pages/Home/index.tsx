@@ -4,7 +4,7 @@ import { IconMail } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 import HomeTopButton from "../../components/Buttons/HomeTop";
 import CountdownTimer from "../../components/CountdownTimer";
-import { competitionDate, email, homeButtons, mrWalkerEmail, sponsorFiles } from "../../lib/constants";
+import { competitionDate, email, homeButtons, mrWalkerEmail, sponsors } from "../../lib/constants";
 
 import firstLogo8339Fallback from "./First+8339LogoBlack.webp";
 import firstLogo8339 from "./First+8339LogoBlack.webp?w=320;512;768;1024&format=webp;png&as=srcset&imagetools";
@@ -20,6 +20,7 @@ import pentictonNow from "./newsLogos/PentictonNow-Logo.png?w=128;192;256;320;51
 import castanet from "./newsLogos/castanet-logo.svg";
 
 import NewsQuote from "../../components/NewsQuote";
+import Sponsors from "../../components/Sponsors";
 import facebook from "./socialMediaIcons/facebook.svg";
 import instagramFallback from "./socialMediaIcons/instagram.png";
 import instagram from "./socialMediaIcons/instagram.png?w=16;32;48;64;96;128;192;256;320;512;768&format=webp;png&as=srcset&imagetools";
@@ -87,17 +88,9 @@ export default function Home() {
           </Link>
         </Box>
       </BackgroundImage>
-      {/* Sponsors */}
-      <Flex align="center" direction="column" pt="md">
-        <Text c="pr-yellow" fz="8vh" fw="bold" style={{ textShadow: "0.64vh 0.64vh #000" }}>
-          Sponsors
-        </Text>
-        <Flex align="center" justify="center" wrap="wrap">
-          {sponsorFiles.map((file) => (
-            <Image key={file} src={file} alt={`Sponsor ${file}`} w="22vw" m="3vw" />
-          ))}
-        </Flex>
-      </Flex>
+
+      <Sponsors sponsors={sponsors.filter((sponsor) => ["diamond", "platinum"].includes(sponsor.tier))} />
+
       {/* News Quotes */}
       <Flex align="center" direction={isMobile ? "column" : "row"} justify="center" mt="8vh" mx="4vw" h="100%" ta="center">
         <NewsQuote
