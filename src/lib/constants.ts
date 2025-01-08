@@ -67,3 +67,35 @@ export const sponsorFiles: string[] = [
 ];
 
 export const photoDrive2024 = "https://drive.google.com/drive/folders/1mS3VU2atscVExsfSAT5wZRaRGCx4G_-Z";
+
+interface Objective {
+  date: Date;
+  name: string;
+}
+
+export const objectives: Objective[] = [
+  {
+    date: new Date(1736010000000),
+    name: "2025 REEFSCAPE Kickoff",
+  },
+  {
+    date: new Date(1736528400000),
+    name: "2025 REEFSCAPE Prototyping",
+  },
+  {
+    date: new Date(1737133200000),
+    name: "2025 REEFSCAPE Finalizing Design",
+  },
+  {
+    date: new Date(1738342800000),
+    name: "2025 REEFSCAPE Individual Systems building",
+  },
+  {
+    date: new Date(1739379600000),
+    name: "2025 REEFSCAPE Robot Assembly",
+  },
+  {
+    date: new Date(1740589200000),
+    name: "2025 REEFSCAPE Competition",
+  },
+];

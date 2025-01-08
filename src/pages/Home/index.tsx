@@ -1,10 +1,9 @@
-import { BackgroundImage, Box, Center, Divider, Flex, Grid, Group, Image, Space, Text, Title } from "@mantine/core";
+import { BackgroundImage, Box, Center, Divider, Flex, Grid, Group, Image, Space, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { IconMail } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 import HomeTopButton from "../../components/Buttons/HomeTop";
-import CountdownTimer from "../../components/CountdownTimer";
-import { competitionDate, email, homeButtons, mrWalkerEmail, sponsors } from "../../lib/constants";
+import { email, homeButtons, mrWalkerEmail, sponsors } from "../../lib/constants";
 
 import firstLogo8339Fallback from "./First+8339LogoBlack.webp";
 import firstLogo8339 from "./First+8339LogoBlack.webp?w=320;512;768;1024&format=webp;png&as=srcset&imagetools";
@@ -20,6 +19,7 @@ import pentictonNow from "./newsLogos/PentictonNow-Logo.png?w=128;192;256;320;51
 import castanet from "./newsLogos/castanet-logo.svg";
 
 import NewsQuote from "../../components/NewsQuote";
+import Progress from "../../components/Progress";
 import Sponsors from "../../components/Sponsors";
 import facebook from "./socialMediaIcons/facebook.svg";
 import instagramFallback from "./socialMediaIcons/instagram.png";
@@ -41,7 +41,7 @@ export default function Home() {
               alt="FRC logo with team number 8339"
             />
           </Box>
-          <Title order={1} ta="center">
+          {/* <Title order={1} ta="center">
             2025{" "}
             <a
               href="https://info.firstinspires.org/first-dive#hs_cos_wrapper_reefscape_logo"
@@ -50,10 +50,12 @@ export default function Home() {
               style={{ textDecoration: "none" }}
             >
               REEFSCAPE℠
-            </a>{" "}
-            Kickoff Countdown
-          </Title>
-          <CountdownTimer date={competitionDate} />
+            </a>
+          </Title> */}
+
+          <Progress />
+
+          {/* <CountdownTimer date={competitionDate} /> */}
           <Grid justify="center" my="lg" visibleFrom="sm" w="75vw">
             <Grid.Col span={5}>
               {homeButtons.map((button, index) =>

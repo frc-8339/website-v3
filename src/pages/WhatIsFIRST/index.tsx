@@ -1,7 +1,5 @@
-import { BackgroundImage, Flex, Grid, Text, Title } from "@mantine/core";
+import { BackgroundImage, Flex, Grid, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
-import CountdownTimer from "../../components/CountdownTimer";
-import { competitionDate } from "../../lib/constants";
 
 import XD from "./XD.webp";
 
@@ -84,7 +82,7 @@ export default function WhatIsFirst() {
         real-world engineering as a student can get. Volunteer professional mentors lend their time and talents to guide each team. Each season ends
         with an exciting FIRST Championship.
       </Text>
-      <Title mt="xl" order={1} ta="center">
+      {/* <Title mt="xl" order={1} ta="center">
         2025{" "}
         <a
           href="https://info.firstinspires.org/first-dive#hs_cos_wrapper_reefscape_logo"
@@ -96,7 +94,7 @@ export default function WhatIsFirst() {
         </a>{" "}
         Kickoff Countdown
       </Title>
-      <CountdownTimer date={competitionDate} />
+      <CountdownTimer date={competitionDate} /> */}
       <br />
     </Flex>
   );
