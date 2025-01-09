@@ -50,8 +50,6 @@ export const sponsors: Sponsor[] = [
   { name: "Cutting Edge Counters", tier: "iron" },
   { name: "Bradford Bookkeeping", tier: "iron" },
   { name: "Westland Insurance", tier: "iron" },
-
-  { name: "Drew Ashton", tier: "bronze" },
 ];
 
 export const sponsorFiles: string[] = [
