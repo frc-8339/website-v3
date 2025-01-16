@@ -7,8 +7,10 @@ export default function Progress() {
   const isMobile = useMediaQuery("(max-width: 48em)");
 
   const currentObjective = objectives.find((objective) => objective.date > new Date()) ?? objectives[objectives.length - 1];
+  const currentObjectiveIndex = objectives.indexOf(currentObjective);
+  const lastObjective = objectives[currentObjectiveIndex - 1] ?? objectives[0];
 
-  const progress = currentObjective.date.getTime() / Date.now();
+  const progress = ((currentObjective.date.getTime() - Date.now()) / (currentObjective.date.getTime() - lastObjective.date.getTime())) * 100;
 
   return (
     <Flex w={isMobile ? "90vw" : "35vw"} align="center" direction="column">
