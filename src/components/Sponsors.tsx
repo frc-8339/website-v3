@@ -19,7 +19,6 @@ export default function Sponsors({ sponsors }: { sponsors: Sponsor[] }) {
       <Flex align="center" justify="center" wrap="wrap">
         {sponsors
           .filter((sponsor) => ["diamond", "platinum", "gold", "silver"].includes(sponsor.tier))
-          .filter((sponsor) => sponsor.name !== "Neuhouzz Real Estate") // no logo yet
           .map((sponsor) => (
             <Sponsor key={sponsor.name} {...sponsor} />
           ))}
