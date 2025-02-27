@@ -16,11 +16,12 @@ const links: {
   label: string;
 }[] = [
   { link: "/", label: "Home" },
+  { link: "https://www.twitch.tv/firstinspires1", label: "Live" },
   { link: "/about", label: "About Us" },
   { link: "/media", label: "Media" },
   { link: "/benefits", label: "Benefits" },
   { link: "/first", label: "What is FIRST?" },
-  { link: "/events", label: "Events" },
+  // { link: "/events", label: "Events" },
   { link: "/power", label: "Sponsor/Donate" },
   { link: "/contact", label: "Contact Us" },
 ];
