@@ -16,7 +16,7 @@ const links: {
   label: string;
 }[] = [
   { link: "/", label: "Home" },
-  { link: "https://www.twitch.tv/firstinspires1", label: "Live" },
+  // { link: "https://www.twitch.tv/firstinspires1", label: "Live" },
   { link: "/about", label: "About Us" },
   { link: "/media", label: "Media" },
   { link: "/benefits", label: "Benefits" },
