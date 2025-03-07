@@ -88,9 +88,9 @@ export default function Home() {
             2025 REEFSCAPE℠ Competition Champion!
           </Text>
 
-          <Image srcSet={win} src={winFallback} alt="2025 REEFSCAPE℠ Competition Champion" w="70vw" />
+          <Image srcSet={win} src={winFallback} alt="2025 REEFSCAPE℠ Competition Champion" w={isMobile ? "90vw" : "70vw"} />
 
-          <Image src={winnerBanner} alt="2025 REEFSCAPE℠ Competition Champion" my="lg" w="15vw" />
+          <Image src={winnerBanner} alt="2025 REEFSCAPE℠ Competition Champion" my="lg" w={isMobile ? "50vw" : "15vw"} />
 
           {/* <Progress /> */}
 
