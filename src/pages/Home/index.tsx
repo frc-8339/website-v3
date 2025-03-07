@@ -84,13 +84,22 @@ export default function Home() {
             </a>
           </Title> */}
 
-          <Text fz={60} fw="bold" ta="center" mb={"lg"} w="100%" className="rainbow">
-            2025 REEFSCAPE℠ Competition Champion!
+          <Text fz={60} fw="bold" ta="center" mb="lg" w="100%" className="rainbow" px="xl" lh={isMobile ? "4.5rem" : "h1"}>
+            2025{" "}
+            <a
+              href="https://info.firstinspires.org/first-dive#hs_cos_wrapper_reefscape_logo"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              REEFSCAPE℠
+            </a>{" "}
+            Competition Champion!
           </Text>
 
           <Image srcSet={win} src={winFallback} alt="2025 REEFSCAPE℠ Competition Champion" w={isMobile ? "90vw" : "70vw"} />
 
-          <Image src={winnerBanner} alt="2025 REEFSCAPE℠ Competition Champion" my="lg" w={isMobile ? "50vw" : "15vw"} />
+          <Image src={winnerBanner} alt="2025 REEFSCAPE℠ Competition Champion" my="lg" w={isMobile ? "50vw" : "20vw"} />
 
           {/* <Progress /> */}
 
@@ -130,7 +139,7 @@ export default function Home() {
         </Box>
       </BackgroundImage>
 
-      <Sponsors sponsors={sponsors.filter((sponsor) => ["diamond", "platinum"].includes(sponsor.tier))} />
+      <Sponsors sponsors={sponsors.filter((sponsor) => ["diamond", "platinum"].includes(sponsor.tier))} isMobile={isMobile} />
 
       {/* News Quotes */}
       <Flex align="center" direction={isMobile ? "column" : "row"} justify="center" mt="8vh" mx="4vw" h="100%" ta="center">
@@ -145,8 +154,8 @@ export default function Home() {
         {isMobile ? <Space h="10vh" /> : <Divider color="black" h="70vh" mx="xl" orientation="vertical" />}
 
         <NewsQuote
-          quote={`"If they play their cards right, in February of 2023 they'll accompany the robot they’re building -- all 120 pounds of it -- to Victoria for
-          the 2023 FIRST (For Inspiration and Recognition of Science and Technology) Robotics Competition."`}
+          quote={`"If they play their cards right, in February of 2023 they'll accompany the robot they’re building — all 120 pounds of it — to Victoria for
+          the 2023 FIRST Robotics Competition."`}
           image={{ srcSet: pentictonNow, src: pentictonNowFallback, alt: "Penticton Now logo" }}
           isMobile={isMobile}
         />
