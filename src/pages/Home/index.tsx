@@ -1,16 +1,24 @@
 import { BackgroundImage, Box, Center, Divider, Flex, Grid, Group, Image, Space, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { IconMail } from "@tabler/icons-react";
+import confetti from "canvas-confetti";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import HomeTopButton from "../../components/Buttons/HomeTop";
 import { email, homeButtons, mrWalkerEmail, sponsors } from "../../lib/constants";
+import "./index.css";
 
 import firstLogo8339Fallback from "./First+8339LogoBlack.webp";
 import firstLogo8339 from "./First+8339LogoBlack.webp?w=320;512;768;1024&format=webp;png&as=srcset&imagetools";
 
-import robotInPit from "./robotInPit.webp";
+import robotQueueing from "./robot queueing.webp";
 
 import lenovoThinkbook14G3ACLakaToby_21a2XDDD from "./code.webp";
+
+import winFallback from "./20250302_014149096_iOS.png";
+import win from "./20250302_014149096_iOS.png?w=768;1024;1280;1366;1440;1920;2560;3840;4032&format=webp;jpg;png&as=srcset&imagetools";
+
+import winnerBanner from "./2025 Winner.svg";
 
 import pentictonWesternNewsFallback from "./newsLogos/Penticton-Western-News.webp";
 import pentictonWesternNews from "./newsLogos/Penticton-Western-News.webp?w=128;192;256;320;512;768;1024&format=webp;png&as=srcset&imagetools";
@@ -19,8 +27,8 @@ import pentictonNow from "./newsLogos/PentictonNow-Logo.png?w=128;192;256;320;51
 import castanet from "./newsLogos/castanet-logo.svg";
 
 import NewsQuote from "../../components/NewsQuote";
-import Progress from "../../components/Progress";
 import Sponsors from "../../components/Sponsors";
+import { random } from "../../lib/utils";
 import facebook from "./socialMediaIcons/facebook.svg";
 import instagramFallback from "./socialMediaIcons/instagram.png";
 import instagram from "./socialMediaIcons/instagram.png?w=16;32;48;64;96;128;192;256;320;512;768&format=webp;png&as=srcset&imagetools";
@@ -29,9 +37,32 @@ import twitter from "./socialMediaIcons/twitter.svg";
 export default function Home() {
   const isMobile = useMediaQuery("(max-width: 48em)");
 
+  const confettiDuration = 60 * 1000;
+  const particles = 200;
+  const particlesOptions = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+  const animationEnd = Date.now() + confettiDuration;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+
+      const particleCount = particles * (timeLeft / confettiDuration);
+      // since particles fall down, start a bit higher than random
+      confetti({ ...particlesOptions, particleCount, origin: { x: random(0.1, 0.3), y: Math.random() - 0.2 } });
+      confetti({ ...particlesOptions, particleCount, origin: { x: random(0.7, 0.9), y: Math.random() - 0.2 } });
+    }, 400);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Box mb="10vh">
-      <BackgroundImage src={robotInPit} bgsz="cover" bgr="repeat" bgp="0 1000px">
+      <BackgroundImage src={robotQueueing} bgsz="cover" bgr="repeat">
         <Flex align="center" direction="column" bg="#fbb41680" w="100%" h="100%">
           <Box h={!isMobile ? "20rem" : "41.9vw"}>
             <Image
@@ -53,7 +84,15 @@ export default function Home() {
             </a>
           </Title> */}
 
-          <Progress />
+          <Text fz={60} fw="bold" ta="center" mb={"lg"} w="100%" className="rainbow">
+            2025 REEFSCAPE℠ Competition Champion!
+          </Text>
+
+          <Image srcSet={win} src={winFallback} alt="2025 REEFSCAPE℠ Competition Champion" w="70vw" />
+
+          <Image src={winnerBanner} alt="2025 REEFSCAPE℠ Competition Champion" my="lg" w="15vw" />
+
+          {/* <Progress /> */}
 
           {/* <CountdownTimer date={competitionDate} /> */}
           <Grid justify="center" my="lg" visibleFrom="sm" w="75vw">

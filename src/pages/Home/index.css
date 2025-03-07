@@ -1,0 +1,22 @@
+.rainbow {
+  animation: rainbow 4s linear 0s infinite;
+  color: red;
+}
+
+@keyframes rainbow {
+  from {
+    color: #6666ff;
+  }
+  10% {
+    color: #0099ff;
+  }
+  50% {
+    color: #00ff00;
+  }
+  75% {
+    color: #ff3399;
+  }
+  100% {
+    color: #6666ff;
+  }
+}

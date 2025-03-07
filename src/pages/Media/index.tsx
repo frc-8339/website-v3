@@ -1,11 +1,11 @@
-import { BackgroundImage, Button, Flex, Grid, Image, Text } from "@mantine/core";
+import { BackgroundImage, Button, Flex, Grid, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
-import { photoDrive2024 } from "../../lib/constants";
 
 import robotTouchGrass from "./IMG_1725-1.webp";
 
-import photoDriveIconFallback from "./PhotoDrive2023-24.png";
-import photoDriveIcon from "./PhotoDrive2023-24.png?w=128;256;512;768;1024;1526;2048&format=webp;png&as=srcset&imagetools";
+import { IconBrandGoogleDrive, IconMail, IconWorldWww } from "@tabler/icons-react";
+import { Link } from "react-router-dom";
+import { email, mediaGoogleDrive } from "../../lib/constants";
 
 export default function AboutUs() {
   const isMobile = useMediaQuery("(max-width: 62em)");
@@ -38,21 +38,53 @@ export default function AboutUs() {
       </BackgroundImage>
 
       <Flex m="xl" align="center" direction="column">
-        <Image srcSet={photoDriveIcon} src={photoDriveIconFallback} maw="36rem" />
-        <Button
-          component="a"
-          fullWidth
-          bg="black"
-          c="pr-yellow"
-          fz="h2"
-          h="3.5rem"
-          mt="sm"
-          href={photoDrive2024}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          2024 Photo Drive
-        </Button>
+        <Text mt="xl" fz="h2" fw="bold" ta="center">
+          Team Photos and Videos from Events:
+          <Button
+            component="a"
+            bg="black"
+            c="pr-yellow"
+            fz="h2"
+            h="3.5rem"
+            ml="sm"
+            href={mediaGoogleDrive}
+            target="_blank"
+            rel="noopener noreferrer"
+            leftSection={<IconBrandGoogleDrive />}
+          >
+            Google Drive
+          </Button>
+        </Text>
+
+        <Text mt="xl" fz="h2" fw="bold" ta="center">
+          Matches Videos, Details, Awards, etc:
+          <Button
+            component="a"
+            bg="black"
+            c="pr-yellow"
+            fz="h2"
+            h="3.5rem"
+            ml="sm"
+            href="https://frc-events.firstinspires.org/2025/team/8339"
+            target="_blank"
+            rel="noopener noreferrer"
+            leftSection={<IconWorldWww />}
+          >
+            FRC Event Page
+          </Button>
+        </Text>
+
+        <Text mt="xl" fz="h2" fw="bold" ta="center">
+          For more information, please contact us at:
+          <Link to={`mailto:${email}`} style={{ textDecoration: "none" }}>
+            <Flex wrap="wrap" align="center" justify="center">
+              <IconMail size={50} />
+              <Text ta="center" fz="h2" fw="bold" ml="xs">
+                {email}
+              </Text>
+            </Flex>
+          </Link>
+        </Text>
       </Flex>
     </Flex>
   );

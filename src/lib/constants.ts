@@ -64,7 +64,7 @@ export const sponsorFiles: string[] = [
   "/images/sponsors/Neuhouzz.svg",
 ];
 
-export const photoDrive2024 = "https://drive.google.com/drive/folders/1mS3VU2atscVExsfSAT5wZRaRGCx4G_-Z";
+export const mediaGoogleDrive = "https://drive.google.com/drive/folders/1mS3VU2atscVExsfSAT5wZRaRGCx4G_-Z";
 
 interface Objective {
   date: Date;
