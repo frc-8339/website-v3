@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 
 import ballinXD from "./ballinXD.webp";
 
+const yearsWithPicture = ["2020", "2023", "2024", "2025"];
+
 export default function AboutUs() {
   const isMobile = useMediaQuery("(max-width: 62em)");
 
@@ -52,7 +54,7 @@ export default function AboutUs() {
           onMouseEnter={autoplay.current.stop}
           onMouseLeave={autoplay.current.reset}
         >
-          {["2020", "2023", "2024"].map((year) => (
+          {yearsWithPicture.map((year) => (
             <Carousel.Slide key={year}>
               <Image src={`/images/team/${year}.jpg`} h="100%" w="100%" alt={`Penticton Robotics ${year} members`} />
             </Carousel.Slide>
@@ -60,7 +62,7 @@ export default function AboutUs() {
         </Carousel>
       ) : (
         <Flex m="xl" mb={0} align="center" direction="column">
-          {["2020", "2023", "2024"].map((year) => (
+          {yearsWithPicture.map((year) => (
             <>
               <Text
                 maw="40vw"
