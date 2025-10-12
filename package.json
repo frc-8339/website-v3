@@ -43,6 +43,8 @@
     "vite-imagetools": "^7.0.5"
   },
   "trustedDependencies": [
-    "@swc/core"
+    "@swc/core",
+    "esbuild",
+    "sharp"
   ]
 }
