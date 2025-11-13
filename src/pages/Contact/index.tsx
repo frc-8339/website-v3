@@ -3,7 +3,7 @@ import { useMediaQuery } from "@mantine/hooks";
 
 import marcusFixingRobot from "./IMG_0461.webp";
 
-import { IconMail, IconPhone } from "@tabler/icons-react";
+import { IconBrandDiscord, IconMail, IconPhone } from "@tabler/icons-react";
 
 import walkerFallback from "./walker circle.png";
 import walker from "./walker circle.png?w=256;512;768;1024&format=webp;png&as=srcset&imagetools";
@@ -98,6 +98,9 @@ export default function Contact() {
           </Text>
           <Text fz="h2" ta="center">
             <IconMail /> Email: <a href="mailto:penticton.robotics@gmail.com">penticton.robotics@gmail.com</a>
+          </Text>
+          <Text fz="h2" ta="center">
+            <IconBrandDiscord /> Discord: <a href="https://discord.com/users/487597510559531009">tobycm</a>
           </Text>
 
           <Space h="2rem" />

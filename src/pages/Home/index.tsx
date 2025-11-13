@@ -1,8 +1,6 @@
 import { BackgroundImage, Box, Center, Divider, Flex, Grid, Group, Image, Space, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { IconMail } from "@tabler/icons-react";
-import confetti from "canvas-confetti";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import HomeTopButton from "../../components/Buttons/HomeTop";
 import { email, homeButtons, mrWalkerEmail, sponsors } from "../../lib/constants";
@@ -28,7 +26,6 @@ import castanet from "./newsLogos/castanet-logo.svg";
 
 import NewsQuote from "../../components/NewsQuote";
 import Sponsors from "../../components/Sponsors";
-import { random } from "../../lib/utils";
 import facebook from "./socialMediaIcons/facebook.svg";
 import instagramFallback from "./socialMediaIcons/instagram.png";
 import instagram from "./socialMediaIcons/instagram.png?w=16;32;48;64;96;128;192;256;320;512;768&format=webp;png&as=srcset&imagetools";
@@ -42,23 +39,6 @@ export default function Home() {
   const particlesOptions = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
   const animationEnd = Date.now() + confettiDuration;
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const timeLeft = animationEnd - Date.now();
-
-      if (timeLeft <= 0) {
-        return clearInterval(interval);
-      }
-
-      const particleCount = particles * (timeLeft / confettiDuration);
-      // since particles fall down, start a bit higher than random
-      confetti({ ...particlesOptions, particleCount, origin: { x: random(0.1, 0.3), y: Math.random() - 0.2 } });
-      confetti({ ...particlesOptions, particleCount, origin: { x: random(0.7, 0.9), y: Math.random() - 0.2 } });
-    }, 400);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <Box mb="10vh">
