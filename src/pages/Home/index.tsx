@@ -34,12 +34,6 @@ import twitter from "./socialMediaIcons/twitter.svg";
 export default function Home() {
   const isMobile = useMediaQuery("(max-width: 48em)");
 
-  const confettiDuration = 60 * 1000;
-  const particles = 200;
-  const particlesOptions = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
-
-  const animationEnd = Date.now() + confettiDuration;
-
   return (
     <Box mb="10vh">
       <BackgroundImage src={robotQueueing} bgsz="cover" bgr="repeat">
