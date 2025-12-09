@@ -3,7 +3,7 @@ import { useMediaQuery } from "@mantine/hooks";
 import { IconMail } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 import HomeTopButton from "../../components/Buttons/HomeTop";
-import { email, homeButtons, mrWalkerEmail, sponsors } from "../../lib/constants";
+import { email, homeButtons, mrWalkerEmail } from "../../lib/constants";
 import "./index.css";
 
 import firstLogo8339Fallback from "./First+8339LogoBlack.webp";
