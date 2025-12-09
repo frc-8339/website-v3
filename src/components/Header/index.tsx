@@ -17,13 +17,13 @@ const links: {
 }[] = [
   { link: "/", label: "Home" },
   // { link: "https://www.twitch.tv/firstinspires1", label: "Live" },
-  { link: "/about", label: "About Us" },
-  { link: "/media", label: "Media" },
-  { link: "/benefits", label: "Benefits" },
-  { link: "/first", label: "What is FIRST?" },
+  { link: "#about", label: "About Us" },
+  { link: "#media", label: "Media" },
+  { link: "#power", label: "Sponsor/Donate" },
+  { link: "#first", label: "What is FIRST?" },
+  { link: "#benefits", label: "Benefits" },
   // { link: "/events", label: "Events" },
-  { link: "/power", label: "Sponsor/Donate" },
-  { link: "/contact", label: "Contact Us" },
+  { link: "#contact", label: "Contact Us" },
 ];
 
 export default function Header() {

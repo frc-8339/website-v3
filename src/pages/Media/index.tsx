@@ -7,11 +7,11 @@ import { IconBrandGoogleDrive, IconMail, IconWorldWww } from "@tabler/icons-reac
 import { Link } from "react-router-dom";
 import { email, mediaGoogleDrive } from "../../lib/constants";
 
-export default function AboutUs() {
+export default function Media() {
   const isMobile = useMediaQuery("(max-width: 62em)");
 
   return (
-    <Flex align="center" direction="column">
+    <Flex align="center" direction="column" id="media">
       <BackgroundImage src={robotTouchGrass} bgsz="cover" style={{ backgroundPositionY: "67.5%" }}>
         <Flex w="100%" justify="center" bg="#00000080">
           <Grid w="80%" align="center" justify="space-between">

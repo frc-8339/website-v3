@@ -15,7 +15,7 @@ export default function AboutUs() {
   const autoplay = useRef(Autoplay({ delay: 2000 }));
 
   return (
-    <Flex align="center" direction="column">
+    <Flex align="center" direction="column" id="about">
       <BackgroundImage src={ballinXD} bgsz="cover" style={{ backgroundPositionY: "60%" }}>
         <Flex w="100%" justify="center" bg="#00000020">
           <Grid w="80%" align="center" justify="space-between">

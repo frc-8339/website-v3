@@ -30,6 +30,12 @@ import facebook from "./socialMediaIcons/facebook.svg";
 import instagramFallback from "./socialMediaIcons/instagram.png";
 import instagram from "./socialMediaIcons/instagram.png?w=16;32;48;64;96;128;192;256;320;512;768&format=webp;png&as=srcset&imagetools";
 import twitter from "./socialMediaIcons/twitter.svg";
+import AboutUs from "../AboutUs";
+import Media from "../Media";
+import SponsorDonate from "../SponsorDonate";
+import WhatIsFirst from "../WhatIsFIRST";
+import Benefits from "../Benefits";
+import Contact from "../Contact";
 
 export default function Home() {
   const isMobile = useMediaQuery("(max-width: 48em)");
@@ -115,6 +121,13 @@ export default function Home() {
 
       <Sponsors isMobile={isMobile} />
 
+      <AboutUs />
+      <Media /> 
+      <SponsorDonate />
+      <WhatIsFirst />
+      <Benefits />
+      <Contact />
+
       {/* News Quotes */}
       <Flex align="center" direction={isMobile ? "column" : "row"} justify="center" mt="8vh" mx="4vw" h="100%" ta="center">
         <NewsQuote
@@ -168,26 +181,6 @@ export default function Home() {
           </Group>
         </Flex>
 
-        {!isMobile && <Divider color="black" h="30vh" mx="xl" orientation="vertical" />}
-
-        <Flex align="center" justify="center" direction="column" mt={isMobile ? "xl" : ""}>
-          <Text fz="6vh" fw="bold" ta="center">
-            Our Mentor
-          </Text>
-
-          <Text fz="3vh" ta="center">
-            Contact Mr. Josh Walker
-          </Text>
-
-          <Link to={`mailto:${mrWalkerEmail}`} style={{ textDecoration: "none" }}>
-            <Center>
-              <IconMail size={50} />
-              <Text ta="center" fz="h2" fw="bold" ml="xs">
-                {mrWalkerEmail}
-              </Text>
-            </Center>
-          </Link>
-        </Flex>
       </Flex>
     </Box>
   );

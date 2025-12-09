@@ -6,7 +6,7 @@ export default function Benefits() {
   const isMobile = useMediaQuery("(max-width: 62em)");
 
   return (
-    <Flex align="center" direction="column">
+    <Flex align="center" direction="column" id="benefits">
       <BackgroundImage src="/images/team/2024.jpg" bgsz="cover" style={{ backgroundPositionY: "43%" }}>
         <Flex w="100%" justify="center" bg="#00000080">
           <Grid w="80%" align="center" justify="space-between">

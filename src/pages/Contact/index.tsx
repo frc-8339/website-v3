@@ -13,7 +13,7 @@ export default function Contact() {
 
   return (
     <Box>
-      <Flex align="center" direction="column">
+      <Flex align="center" direction="column" id="contact">
         <BackgroundImage src={marcusFixingRobot} bgsz="cover" style={{ backgroundPositionY: "center" }}>
           <Box bg="#00000080">
             <Text

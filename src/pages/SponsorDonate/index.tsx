@@ -2,15 +2,14 @@ import { BackgroundImage, Box, Flex, Grid, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
 import { Link } from "react-router-dom";
-import Sponsors from "../../components/Sponsors";
+
 import marcusFixingRobot from "./IMG_0461.webp";
 
 export default function SponsorDonate() {
   const isMobile = useMediaQuery("(max-width: 62em)");
 
   return (
-    <Box>
-      <Flex align="center" direction="column">
+      <Flex align="center" direction="column" id="power">
         <BackgroundImage src={marcusFixingRobot} bgsz="cover" style={{ backgroundPositionY: "center" }}>
           <Box bg="#00000080">
             <Text
@@ -31,7 +30,7 @@ export default function SponsorDonate() {
           </Box>
         </BackgroundImage>
 
-        <Sponsors />
+        {/* <Sponsors /> */}
 
         {!isMobile ? (
           <Grid m="md" mt="xl" align="start" justify="center">
@@ -103,6 +102,5 @@ export default function SponsorDonate() {
 
         <a href="https://app.return-it.ca/pentictonrobotics"> <img alt="Donate your recycling button" src="https://app.return-it.ca/Donate_Button_V1_orange_.png" width={350} title="DONATE YOUR RECYCLING"/> </a>
       </Flex>
-    </Box>
   );
 }

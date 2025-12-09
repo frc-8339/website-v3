@@ -21,7 +21,7 @@ export default function Footer() {
           made by{" "}
           <a href="https://github.com/tobycm" target="_blank" rel="noopener noreferrer">
             tobycm
-          </a>{" "}
+          </a>{" "}+ 3rinaaa
           with{" "}
           <a href="https://www.instagram.com/p/DBJwMI2pHz0" target="_blank" rel="noopener noreferrer" style={{ all: "unset" }}>
             ❤️
