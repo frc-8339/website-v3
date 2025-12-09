@@ -95,11 +95,13 @@ export default function SponsorDonate() {
                 Information Sheet
               </a>
               <br />
-              You can also
-              <Link to="/contact"> contact us</Link> for more information.
+              You can also{" "}
+              <Link to="/contact">contact us</Link> for more information.
             </Text>
           </Flex>
         )}
+
+        <a href="https://app.return-it.ca/pentictonrobotics"> <img alt="Donate your recycling button" src="https://app.return-it.ca/Donate_Button_V1_orange_.png" width={350} title="DONATE YOUR RECYCLING"/> </a>
       </Flex>
     </Box>
   );

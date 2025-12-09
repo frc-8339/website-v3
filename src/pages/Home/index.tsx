@@ -113,7 +113,7 @@ export default function Home() {
         </Box>
       </BackgroundImage>
 
-      <Sponsors sponsors={sponsors.filter((sponsor) => ["diamond", "platinum"].includes(sponsor.tier))} isMobile={isMobile} />
+      <Sponsors isMobile={isMobile} />
 
       {/* News Quotes */}
       <Flex align="center" direction={isMobile ? "column" : "row"} justify="center" mt="8vh" mx="4vw" h="100%" ta="center">
@@ -137,10 +137,7 @@ export default function Home() {
         {isMobile ? <Space h="10vh" /> : <Divider color="black" h="70vh" mx="xl" orientation="vertical" />}
 
         <NewsQuote
-          quote={`"FIRST is a global nonprofit organization dedicated to advancing youth in the world of science, technology, engineering, and mathematics.
-          The Penticton Robotics Club first competed in the BC event in 2020, and qualified for the World Championships in Houston, Texas. Sadly, the
-          global pandemic shut down that dream, and every year since, the competition has been cancelled. This year [2022/23], it's back, and the
-          Penticton kids want to be there to show off their skills."`}
+          quote={`"Penticton's team was knocked out in the first round of the finals but ended up being chosen for the creativity award because the judges liked their recycled hockey stick scissor lift."`}
           image={{ src: castanet, alt: "Castanet logo" }}
           isMobile={isMobile}
         />
