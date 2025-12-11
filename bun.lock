@@ -6,6 +6,7 @@
       "name": "website-v3",
       "dependencies": {
         "@fontsource-variable/roboto-condensed": "^5.2.5",
+        "@fontsource/audiowide": "^5.2.7",
         "@fontsource/roboto": "^5.2.5",
         "@mantine/carousel": "^7.17.1",
         "@mantine/core": "^7.17.1",
@@ -115,6 +116,8 @@
     "@floating-ui/utils": ["@floating-ui/utils@0.2.10", "", {}, "sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ=="],
 
     "@fontsource-variable/roboto-condensed": ["@fontsource-variable/roboto-condensed@5.2.8", "", {}, "sha512-aIZ2kYSoJHkTI4z8x/PRgKX6Zb9TTtSE/u+fUYeiwL+5trP9rhYYEEeNjRttaMqRgoDHcSueArdRZ43wf/i2Kw=="],
+
+    "@fontsource/audiowide": ["@fontsource/audiowide@5.2.7", "", {}, "sha512-ude+jAqXaEkV4vfKAYyfub694LSy/OKkYyUHumYrEP3ZgSSP6TomITFLUC8x6Fhc2salL7nuju3xT6aWOHECPg=="],
 
     "@fontsource/roboto": ["@fontsource/roboto@5.2.8", "", {}, "sha512-oh9g4Cg3loVMz9MWeKWfDI+ooxxG1aRVetkiKIb2ESS2rrryGecQ/y4pAj4z5A5ebyw450dYRi/c4k/I3UBhHA=="],
 
