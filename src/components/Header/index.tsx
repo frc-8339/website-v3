@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import classes from "./index.module.css";
-import "@fontsource/audiowide/400.css"
+import "@fontsource/audiowide/400.css";
 
 import logo from "./pr logo.svg";
 
@@ -15,16 +15,16 @@ const links: {
   link: string;
   label: string;
 }[] = [
-    { link: "/", label: "Home" },
-    // { link: "https://www.twitch.tv/firstinspires1", label: "Live" },
-    { link: "#about", label: "About Us" },
-    { link: "#media", label: "Media" },
-    { link: "#power", label: "Sponsor/Donate" },
-    { link: "#first", label: "What is FIRST?" },
-    { link: "#benefits", label: "Benefits" },
-    // { link: "/events", label: "Events" },
-    { link: "#contact", label: "Contact Us" },
-  ];
+  { link: "/", label: "Home" },
+  // { link: "https://www.twitch.tv/firstinspires1", label: "Live" },
+  { link: "#about", label: "About Us" },
+  { link: "#media", label: "Media" },
+  { link: "#power", label: "Sponsor/Donate" },
+  { link: "#first", label: "What is FIRST?" },
+  { link: "#benefits", label: "Benefits" },
+  // { link: "/events", label: "Events" },
+  { link: "#contact", label: "Contact Us" },
+];
 
 export default function Header() {
   const isMobile = useMediaQuery("(max-width: 75em)");
@@ -64,21 +64,15 @@ export default function Header() {
 
       <BackgroundImage src={award} bgsz="cover" bgr="repeat" bgp="0 -650px" bga="local" mb={0} h={120}>
         <Box bg="rgba(0, 0, 0, 0.7)">
-          {/* <Overlay opacity={0.7} color="black" /> */}
 
           <Box size="md" ml={isMobile ? 0 : 80} mr={80}>
             <Flex h={120} justify="space-between" align="center">
               <Flex w={100} align="center">
-                <Image
-                  mr={20}
-                  src={logo}
-                  alt="Penticton Robotics logo"
-                  style={{ cursor: "pointer" }}
-                  onClick={() => navigate("/")}
+                <Image mr={20} src={logo} alt="Penticton Robotics logo" style={{ cursor: "pointer" }} onClick={() => navigate("/")} />
 
-                />
-
-                <Text c="pr-yellow" fz={50} lh={1} fw={500} ta="center" ff="Audiowide">Penticton Robotics</Text>
+                <Text c="pr-yellow" fz={isMobile ? 35 : 50} lh={1} fw={500} ta="center" ff="Audiowide">
+                  Penticton Robotics
+                </Text>
               </Flex>
 
               <Group gap={5} visibleFrom="lg">

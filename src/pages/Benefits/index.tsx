@@ -16,7 +16,6 @@ export default function Benefits() {
                 fz={isMobile ? "20vw" : "10vw"}
                 fw="bolder"
                 lh="1.2"
-                c="pr-yellow"
                 style={{
                   textShadow: isMobile ? "1.6vw 1.6vw #000" : "0.8vw 0.8vw #000",
                   paddingBottom: 0,

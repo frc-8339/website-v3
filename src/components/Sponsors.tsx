@@ -13,7 +13,7 @@ function Sponsor({ name, badge, link, isMobile }: Sponsor & { isMobile?: boolean
 export default function Sponsors({ sponsors, isMobile }: { sponsors: Sponsor[]; isMobile?: boolean }) {
   return (
     <Flex align="center" direction="column" pt="md">
-      <Text c="pr-yellow" fz="8vh" fw="bold" style={{ textShadow: "0.64vh 0.64vh #000" }}>
+      <Text fz="8vh" fw="bold">
         Sponsors
       </Text>
       <Flex align="center" justify="center" wrap="wrap">

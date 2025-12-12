@@ -19,7 +19,7 @@ export default function HomeTopButton({ title, url }: { title: string; url: stri
       variant="filled"
       radius="sm"
       onClick={() => {
-        if (url.startsWith("/")) navigate(url);
+        if (url.startsWith("/")||url.startsWith("#")) navigate(url);
         else window.open(url, "_blank");
       }}
     >

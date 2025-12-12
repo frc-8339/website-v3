@@ -25,7 +25,6 @@ export default function AboutUs() {
                 fz={isMobile ? "20vw" : "10vw"}
                 fw="bolder"
                 lh="1.2"
-                c="pr-yellow"
                 style={{
                   textShadow: isMobile ? "1.6vw 1.6vw #000" : "0.8vw 0.8vw #000",
                   paddingBottom: 0,
@@ -65,12 +64,12 @@ export default function AboutUs() {
           {yearsWithPicture.map((year) => (
             <>
               <Text
+              pos="absolute"
                 maw="40vw"
                 mb="sm"
                 fz={isMobile ? "20vw" : "10vw"}
                 fw="bolder"
                 lh="1.2"
-                c="pr-yellow"
                 style={{
                   textShadow: isMobile ? "1.6vw 1.6vw #000" : "0.8vw 0.8vw #000",
                   paddingBottom: 0,

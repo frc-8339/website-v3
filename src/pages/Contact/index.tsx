@@ -21,7 +21,6 @@ export default function Contact() {
               fz={isMobile ? "20vw" : "10vw"}
               fw="bolder"
               lh="1.2"
-              c="pr-yellow"
               style={{
                 textShadow: isMobile ? "1.6vw 1.6vw #000" : "0.8vw 0.8vw #000",
                 paddingBottom: 0,
@@ -39,7 +38,6 @@ export default function Contact() {
             fz="4.5rem"
             fw="bold"
             ta="center"
-            c="pr-yellow"
             style={{
               textShadow: "0.6vh 0.6vh #000",
               paddingBottom: 0,
@@ -48,7 +46,8 @@ export default function Contact() {
           >
             Our Mentor
           </Text>
-          <Image src={walkerFallback} srcSet={walker} alt="Mr. Josh Walker" h={isMobile ? "6rem" : "4rem"} />
+          
+          <Image src={walkerFallback} srcSet={walker} alt="Mr. Josh Walker" h="4rem" />
 
           <Text fz="3rem" m="lg" ta="center">
             Mr. Josh Walker
