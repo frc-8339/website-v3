@@ -1,6 +1,6 @@
-import { BackgroundImage, Box, Center, Divider, Flex, Grid, Group, Image, Space, Text } from "@mantine/core";
+import { BackgroundImage, Box, Center, Divider, Flex, Grid, Group, Image, Space, Text, Title } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
-import { IconMail } from "@tabler/icons-react";
+import { IconBrandFacebook, IconBrandInstagram, IconBrandYoutube, IconMail } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 import HomeTopButton from "../../components/Buttons/HomeTop";
 import { email, homeButtons } from "../../lib/constants";
@@ -42,6 +42,32 @@ export default function Home() {
 
   return (
     <Box mb="10vh">
+      <Grid m="5vw">
+        <Grid.Col span={5}>
+          <Text fz={40}>Penticton Robotics</Text>
+          <Text fz={30} fw="bold">FRC Team #8339</Text>
+          <Link to={`mailto:${email}`}>
+            <Text fz={26} c="pr-yellow"><IconMail color="#FBB416" size={20} style={{ marginRight: "4px" }} />{email}</Text>
+          </Link>
+          <Text fz={26}> Member of the Okanagan Robotics Alliance</Text>
+          <Group gap="xs">
+            <Link target="_blank" to="https://www.instagram.com/penticton_robotics" style={{ textDecoration: "none" }}>
+              <IconBrandInstagram color="#FBB416" size={36} />
+            </Link>
+            <Link target="_blank" to="https://www.facebook.com/PentictonRobotics">
+            <IconBrandFacebook color="#FBB416" size={36} />
+            </Link>
+            
+            <Link target="_blank" to="https://www.youtube.com/@pentictonrobotics" style={{textDecoration: "none"}}>
+            <IconBrandYoutube color="#FBB416" size={36} />
+            </Link>
+          </Group>
+        </Grid.Col>
+        <Grid.Col span={7}>
+          <Image srcSet={win} src={winFallback} alt="2025 REEFSCAPE℠ Competition Champion" />
+        </Grid.Col>
+      </Grid>
+
       <BackgroundImage src={robotQueueing} bgsz="cover" bgr="repeat">
         <Flex align="center" direction="column" bg="#fbb41680" w="100%" h="100%">
           <Box h={!isMobile ? "20rem" : "41.9vw"}>
@@ -120,13 +146,6 @@ export default function Home() {
       </BackgroundImage>
 
       <Sponsors isMobile={isMobile} />
-
-      <AboutUs />
-      <Media /> 
-      <SponsorDonate />
-      <WhatIsFirst />
-      <Benefits />
-      <Contact />
 
       {/* News Quotes */}
       <Flex align="center" direction={isMobile ? "column" : "row"} justify="center" mt="8vh" mx="4vw" h="100%" ta="center">
