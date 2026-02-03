@@ -1,4 +1,4 @@
-import { BackgroundImage, Box, Center, Divider, Flex, Grid, Group, Image, Space, Text, Title } from "@mantine/core";
+import { BackgroundImage, Box, Center, Divider, Flex, Grid, Group, Image, Space, Stack, Text, Title } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { IconBrandFacebook, IconBrandInstagram, IconBrandYoutube, IconMail } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
@@ -55,13 +55,42 @@ export default function Home() {
               <IconBrandInstagram color="#FBB416" size={36} />
             </Link>
             <Link target="_blank" to="https://www.facebook.com/PentictonRobotics">
-            <IconBrandFacebook color="#FBB416" size={36} />
+              <IconBrandFacebook color="#FBB416" size={36} />
             </Link>
-            
-            <Link target="_blank" to="https://www.youtube.com/@pentictonrobotics" style={{textDecoration: "none"}}>
-            <IconBrandYoutube color="#FBB416" size={36} />
+
+            <Link target="_blank" to="https://www.youtube.com/@pentictonrobotics" style={{ textDecoration: "none" }}>
+              <IconBrandYoutube color="#FBB416" size={36} />
             </Link>
           </Group>
+          <Grid>
+            <Grid.Col span={8.5}>
+              <Stack align="left" justify="start">
+              <Text fz={24}>- team running since 2018 <br />
+                - located in penticton @ maggie <br />
+                - combination of students from pen hi and maggie <br />
+                - hard working team <br />
+                - winner of 2025 competition
+              </Text>
+              <Grid mr={"xs"} justify="center" my="lg" visibleFrom="sm">
+            <Grid.Col span={6}>
+              {homeButtons.map((button, index) =>
+                index % 2 === 0 ? <HomeTopButton key={`${button.title} ${button.url}`} title={button.title} url={button.url} /> : null,
+              )}
+            </Grid.Col>
+            <Grid.Col span={6}>
+              {homeButtons.map((button, index) =>
+                index % 2 !== 0 ? <HomeTopButton key={`${button.title} ${button.url}`} title={button.title} url={button.url} /> : null,
+              )}
+            </Grid.Col>
+          </Grid>
+          </Stack>
+            </Grid.Col>
+            <Grid.Col span={3.5}>
+               <Image src={winnerBanner} alt="2025 REEFSCAPE℠ Competition Champion"  />
+            </Grid.Col>
+
+          </Grid>
+
         </Grid.Col>
         <Grid.Col span={7}>
           <Image srcSet={win} src={winFallback} alt="2025 REEFSCAPE℠ Competition Champion" />
@@ -110,18 +139,7 @@ export default function Home() {
           {/* <Progress /> */}
 
           {/* <CountdownTimer date={competitionDate} /> */}
-          <Grid justify="center" my="lg" visibleFrom="sm" w="75vw">
-            <Grid.Col span={5}>
-              {homeButtons.map((button, index) =>
-                index % 2 === 0 ? <HomeTopButton key={`${button.title} ${button.url}`} title={button.title} url={button.url} /> : null,
-              )}
-            </Grid.Col>
-            <Grid.Col span={5}>
-              {homeButtons.map((button, index) =>
-                index % 2 !== 0 ? <HomeTopButton key={`${button.title} ${button.url}`} title={button.title} url={button.url} /> : null,
-              )}
-            </Grid.Col>
-          </Grid>
+          
           <Flex align="center" direction="column" my="lg" hiddenFrom="sm">
             {homeButtons.map((button) => (
               <HomeTopButton key={`${button.title} ${button.url}`} title={button.title} url={button.url} />
