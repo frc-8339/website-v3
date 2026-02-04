@@ -41,25 +41,25 @@ export default function Home() {
   const isMobile = useMediaQuery("(max-width: 48em)");
 
   return (
-    <Box mb="10vh">
+    <Box mb="10vh" c="black">
       <Grid m="5vw">
         <Grid.Col span={5}>
-          <Text fz={40}>Penticton Robotics</Text>
-          <Text fz={30} fw="bold">FRC Team #8339</Text>
+          <Text ff="Audiowide" fw={"bolder"} fz={64}>Penticton Robotics</Text>
+          <Text fz={45} fw="bold">FRC Team #8339</Text>
           <Link to={`mailto:${email}`}>
-            <Text fz={26} c="pr-yellow"><IconMail color="#FBB416" size={20} style={{ marginRight: "4px" }} />{email}</Text>
+            <Text fz={26} c="black"><IconMail color="#000000" size={20} style={{ marginRight: "4px" }} />{email}</Text>
           </Link>
           <Text fz={26}> Member of the Okanagan Robotics Alliance</Text>
           <Group gap="xs">
             <Link target="_blank" to="https://www.instagram.com/penticton_robotics" style={{ textDecoration: "none" }}>
-              <IconBrandInstagram color="#FBB416" size={36} />
+              <IconBrandInstagram color="#000000" size={36} />
             </Link>
             <Link target="_blank" to="https://www.facebook.com/PentictonRobotics">
-              <IconBrandFacebook color="#FBB416" size={36} />
+              <IconBrandFacebook color="#000000" size={36} />
             </Link>
 
             <Link target="_blank" to="https://www.youtube.com/@pentictonrobotics" style={{ textDecoration: "none" }}>
-              <IconBrandYoutube color="#FBB416" size={36} />
+              <IconBrandYoutube color="#000000" size={36} />
             </Link>
           </Group>
           <Grid>

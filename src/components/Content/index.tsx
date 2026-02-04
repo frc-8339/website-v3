@@ -7,7 +7,7 @@ import { IconArrowUp } from "@tabler/icons-react";
 
 export default function Content() {
   return (
-    <Box c="pr-yellow" bg="black" mih="100vh">
+    <Box c="pr-yellow" mih="100vh">
       <Button
       bg="#000000"
         style={{
