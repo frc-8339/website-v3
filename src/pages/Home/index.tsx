@@ -97,56 +97,7 @@ export default function Home() {
         </Grid.Col>
       </Grid>
 
-      <BackgroundImage src={robotQueueing} bgsz="cover" bgr="repeat">
-        <Flex align="center" direction="column" bg="#fbb41680" w="100%" h="100%">
-          <Box h={!isMobile ? "20rem" : "41.9vw"}>
-            <Image
-              srcSet={firstLogo8339}
-              {...(!isMobile ? { mah: "20rem", w: "auto" } : { h: "auto", maw: "80vw" })}
-              src={firstLogo8339Fallback}
-              alt="FRC logo with team number 8339"
-            />
-          </Box>
-          {/* <Title order={1} ta="center">
-            2025{" "}
-            <a
-              href="https://info.firstinspires.org/first-dive#hs_cos_wrapper_reefscape_logo"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none" }}
-            >
-              REEFSCAPE℠
-            </a>
-          </Title> */}
 
-          <Text fz={60} fw="bold" ta="center" mb="lg" w="100%" className="rainbow" px="xl" lh={isMobile ? "4.5rem" : "h1"}>
-            2025{" "}
-            <a
-              href="https://info.firstinspires.org/first-dive#hs_cos_wrapper_reefscape_logo"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              REEFSCAPE℠
-            </a>{" "}
-            Competition Champion!
-          </Text>
-
-          <Image srcSet={win} src={winFallback} alt="2025 REEFSCAPE℠ Competition Champion" w={isMobile ? "90vw" : "70vw"} />
-
-          <Image src={winnerBanner} alt="2025 REEFSCAPE℠ Competition Champion" my="lg" w={isMobile ? "50vw" : "20vw"} />
-
-          {/* <Progress /> */}
-
-          {/* <CountdownTimer date={competitionDate} /> */}
-          
-          <Flex align="center" direction="column" my="lg" hiddenFrom="sm">
-            {homeButtons.map((button) => (
-              <HomeTopButton key={`${button.title} ${button.url}`} title={button.title} url={button.url} />
-            ))}
-          </Flex>
-        </Flex>
-      </BackgroundImage>
       {/* Email */}
       <BackgroundImage src={lenovoThinkbook14G3ACLakaToby_21a2XDDD}>
         <Box bg="rgba(0, 0, 0, 0.7)">

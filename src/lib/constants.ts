@@ -16,7 +16,7 @@ export const homeButtons: {
 export interface Sponsor {
   name: string;
   tier: "diamond" | "platinum" | "gold" | "silver" | "iron" | "bronze";
-  badge?: string; // only for sponsors from silver to diamond
+  image?: string; // only for sponsors from silver to diamond
   link?: string; // only for badges
 }
 
@@ -36,20 +36,27 @@ export interface Sponsor {
 // Drew Ashton - Bronze
 
 export const sponsors: Sponsor[] = [
-  { name: "Kinetic Custom Trailers", tier: "platinum", badge: "/images/sponsors/Kinetic.svg", link: "https://kinetic-group.com/" },
 
-  { name: "TD Bank", tier: "gold", badge: "/images/sponsors/TD Bank.svg", link: "https://www.td.com/ca/en/personal-banking/" },
-  { name: "Nufloors Penticton", tier: "gold", badge: "/images/sponsors/Nufloors.svg", link: "https://www.nufloors.ca/penticton" },
-  { name: "Wyper Law", tier: "gold", badge: "/images/sponsors/Wyper Law.svg", link: "https://wyperlaw.ca/" },
-  { name: "FRC Grant", tier: "gold", badge: "/images/sponsors/FIRST.svg", link: "https://www.firstinspires.org/robotics/frc" },
+  { name: "Kinetic Custom Trailers", tier: "gold", image: "/images/sponsors/Kinetic.png", link: "https://kinetic-group.com/" },
+  { name: "Fraternal Order of Eagles", tier: "gold", image: "/images/sponsors/FOE logo.svg", link: "https://www.td.com/ca/en/personal-banking/" },
+  { name: "Nufloors Penticton", tier: "gold", image: "/images/sponsors/Nufloors.png", link: "https://www.nufloors.ca/penticton" },
+  { name: "Greyback Construction", tier: "gold", image: "/images/sponsors/Greyback.png", link: "https://wyperlaw.ca/" },
+  { name: "FIRST Robotics", tier: "gold", image: "/images/sponsors/FIRST.svg", link: "https://www.firstinspires.org/robotics/frc" },
+  { name: "CUPE 523", tier: "gold", image: "/images/sponsors/CUPE 523.svg", link: "https://www.firstinspires.org/robotics/frc" },
+  { name: "Rotary Club", tier: "gold", image: "/images/sponsors/Rotary Club of Penticton.svg", link: "https://www.firstinspires.org/robotics/frc" },
 
-  { name: "Neuhouzz Real Estate", tier: "silver", badge: "/images/sponsors/Neuhouzz.svg", link: "https://neuhouzz.ca/" },
-  { name: "Total Restoration", tier: "silver", badge: "/images/sponsors/Total Restoration.svg", link: "https://totalrestoration.ca/" },
 
-  { name: "Tony's Meats", tier: "iron" },
+  { name: "Penticton Foundry", tier: "silver", image: "/images/sponsors/Penticton Foundry.png", link: "https://neuhouzz.ca/" },
+  { name: "Beem Credit Union", tier: "silver", image: "/images/sponsors/Beem.png", link: "https://totalrestoration.ca/" },
+  { name: "Rene and Anita Buttar", tier: "silver", link: "https://totalrestoration.ca/" },
+  { name: "Brutus", tier: "silver", image: "/images/sponsors/Brutus.png", link: "https://totalrestoration.ca/" },
+
+  { name: "Home Hardware", tier: "iron" },
   { name: "Cutting Edge Counters", tier: "iron" },
   { name: "Bradford Bookkeeping", tier: "iron" },
-  { name: "Westland Insurance", tier: "iron" },
+  { name: "McLeod & Schneiderat", tier: "iron" },
+  { name: "Dr. Buttar & Dr. Grewal Inc", tier: "iron" },
+
 ];
 
 export const sponsorFiles: string[] = [

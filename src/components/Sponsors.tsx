@@ -1,16 +1,9 @@
 import { Flex, Image, Text } from "@mantine/core";
-import type { Sponsor } from "../lib/constants";
-import { sponsors } from "../lib/constants";
+import { Sponsor as TSponsor, sponsors } from "../lib/constants";
 
-function Sponsor({ name, badge, link, isMobile }: Sponsor & { isMobile?: boolean }) {
-  return (
-    <a href={link}>
-      <Image src={badge} alt={`Sponsor ${name}`} w={isMobile ? "70vw" : "22vw"} m="3vw" />
-    </a>
-  );
-}
+import Sponsor from "./Sponsor";
 
-export default function Sponsors({ sponsors, isMobile }: { sponsors: Sponsor[]; isMobile?: boolean }) {
+export default function Sponsors({ sponsors }: { sponsors: TSponsor[] }) {
   return (
     <Flex align="center" direction="column" pt="md">
       <Text fz="8vh" fw="bold">
@@ -20,7 +13,7 @@ export default function Sponsors({ sponsors, isMobile }: { sponsors: Sponsor[]; 
         {sponsors
           .filter((sponsor) => ["diamond", "platinum", "gold", "silver"].includes(sponsor.tier))
           .map((sponsor) => (
-            <Sponsor key={sponsor.name} {...sponsor} isMobile={isMobile} />
+            <Sponsor key={sponsor.name} sponsor={sponsor} />
           ))}
       </Flex>
     </Flex>
