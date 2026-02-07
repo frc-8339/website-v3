@@ -1,4 +1,4 @@
-import { Flex, Image, Text } from "@mantine/core";
+import { Flex, Text } from "@mantine/core";
 import { Sponsor as TSponsor, sponsors } from "../lib/constants";
 
 import Sponsor from "./Sponsor";

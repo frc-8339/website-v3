@@ -1,15 +1,10 @@
-import { BackgroundImage, Box, Center, Divider, Flex, Grid, Group, Image, Space, Stack, Text, Title } from "@mantine/core";
+import { BackgroundImage, Box, Center, Divider, Flex, Grid, Group, Image, Space, Stack, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { IconBrandFacebook, IconBrandInstagram, IconBrandYoutube, IconMail } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 import HomeTopButton from "../../components/Buttons/HomeTop";
 import { email, homeButtons } from "../../lib/constants";
 import "./index.css";
-
-import firstLogo8339Fallback from "./First+8339LogoBlack.webp";
-import firstLogo8339 from "./First+8339LogoBlack.webp?w=320;512;768;1024&format=webp;png&as=srcset&imagetools";
-
-import robotQueueing from "./robot queueing.webp";
 
 import lenovoThinkbook14G3ACLakaToby_21a2XDDD from "./code.webp";
 
@@ -30,12 +25,6 @@ import facebook from "./socialMediaIcons/facebook.svg";
 import instagramFallback from "./socialMediaIcons/instagram.png";
 import instagram from "./socialMediaIcons/instagram.png?w=16;32;48;64;96;128;192;256;320;512;768&format=webp;png&as=srcset&imagetools";
 import twitter from "./socialMediaIcons/twitter.svg";
-import AboutUs from "../AboutUs";
-import Media from "../Media";
-import SponsorDonate from "../SponsorDonate";
-import WhatIsFirst from "../WhatIsFIRST";
-import Benefits from "../Benefits";
-import Contact from "../Contact";
 
 export default function Home() {
   const isMobile = useMediaQuery("(max-width: 48em)");
@@ -44,10 +33,17 @@ export default function Home() {
     <Box mb="10vh" c="black">
       <Grid m="5vw">
         <Grid.Col span={5}>
-          <Text ff="Audiowide" fw={"bolder"} fz={64}>Penticton Robotics</Text>
-          <Text fz={45} fw="bold">FRC Team #8339</Text>
+          <Text ff="Audiowide" fw={"bolder"} fz={64}>
+            Penticton Robotics
+          </Text>
+          <Text fz={45} fw="bold">
+            FRC Team #8339
+          </Text>
           <Link to={`mailto:${email}`}>
-            <Text fz={26} c="black"><IconMail color="#000000" size={20} style={{ marginRight: "4px" }} />{email}</Text>
+            <Text fz={26} c="black">
+              <IconMail color="#000000" size={20} style={{ marginRight: "4px" }} />
+              {email}
+            </Text>
           </Link>
           <Text fz={26}> Member of the Okanagan Robotics Alliance</Text>
           <Group gap="xs">
@@ -65,38 +61,35 @@ export default function Home() {
           <Grid>
             <Grid.Col span={8.5}>
               <Stack align="left" justify="start">
-              <Text fz={24}>- team running since 2018 <br />
-                - located in penticton @ maggie <br />
-                - combination of students from pen hi and maggie <br />
-                - hard working team <br />
-                - winner of 2025 competition
-              </Text>
-              <Grid mr={"xs"} justify="center" my="lg" visibleFrom="sm">
-            <Grid.Col span={6}>
-              {homeButtons.map((button, index) =>
-                index % 2 === 0 ? <HomeTopButton key={`${button.title} ${button.url}`} title={button.title} url={button.url} /> : null,
-              )}
-            </Grid.Col>
-            <Grid.Col span={6}>
-              {homeButtons.map((button, index) =>
-                index % 2 !== 0 ? <HomeTopButton key={`${button.title} ${button.url}`} title={button.title} url={button.url} /> : null,
-              )}
-            </Grid.Col>
-          </Grid>
-          </Stack>
+                <Text fz={24}>
+                  - team running since 2018 <br />
+                  - located in penticton @ maggie <br />
+                  - combination of students from pen hi and maggie <br />
+                  - hard working team <br />- winner of 2025 competition
+                </Text>
+                <Grid mr={"xs"} justify="center" my="lg" visibleFrom="sm">
+                  <Grid.Col span={6}>
+                    {homeButtons.map((button, index) =>
+                      index % 2 === 0 ? <HomeTopButton key={`${button.title} ${button.url}`} title={button.title} url={button.url} /> : null,
+                    )}
+                  </Grid.Col>
+                  <Grid.Col span={6}>
+                    {homeButtons.map((button, index) =>
+                      index % 2 !== 0 ? <HomeTopButton key={`${button.title} ${button.url}`} title={button.title} url={button.url} /> : null,
+                    )}
+                  </Grid.Col>
+                </Grid>
+              </Stack>
             </Grid.Col>
             <Grid.Col span={3.5}>
-               <Image src={winnerBanner} alt="2025 REEFSCAPE℠ Competition Champion"  />
+              <Image src={winnerBanner} alt="2025 REEFSCAPE℠ Competition Champion" />
             </Grid.Col>
-
           </Grid>
-
         </Grid.Col>
         <Grid.Col span={7}>
           <Image srcSet={win} src={winFallback} alt="2025 REEFSCAPE℠ Competition Champion" />
         </Grid.Col>
       </Grid>
-
 
       {/* Email */}
       <BackgroundImage src={lenovoThinkbook14G3ACLakaToby_21a2XDDD}>
@@ -114,7 +107,7 @@ export default function Home() {
         </Box>
       </BackgroundImage>
 
-      <Sponsors isMobile={isMobile} />
+      <Sponsors />
 
       {/* News Quotes */}
       <Flex align="center" direction={isMobile ? "column" : "row"} justify="center" mt="8vh" mx="4vw" h="100%" ta="center">
@@ -168,7 +161,6 @@ export default function Home() {
             </Link>
           </Group>
         </Flex>
-
       </Flex>
     </Box>
   );
