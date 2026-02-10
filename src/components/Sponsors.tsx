@@ -9,7 +9,7 @@ export default function Sponsors({ sponsors }: { sponsors: TSponsor[] }) {
       <Text fz="8vh" fw="bold">
         Sponsors
       </Text>
-      <Flex align="center" justify="center" wrap="wrap">
+      <Flex justify="center" wrap="wrap" gap={"xl"}>
         {sponsors
           .filter((sponsor) => ["diamond", "platinum", "gold", "silver"].includes(sponsor.tier))
           .map((sponsor) => (

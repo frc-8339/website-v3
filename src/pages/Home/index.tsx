@@ -33,7 +33,7 @@ export default function Home() {
     <Box mb="10vh" c="black">
       <Grid m="5vw">
         <Grid.Col span={5}>
-          <Text ff="Audiowide" fw={"bolder"} fz={64}>
+          <Text ff="Audiowide" fw={"bolder"} fz={64} c="pr-yellow">
             Penticton Robotics
           </Text>
           <Text fz={45} fw="bold">
