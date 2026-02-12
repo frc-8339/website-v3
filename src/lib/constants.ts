@@ -39,18 +39,17 @@ export interface Sponsor {
 export const sponsors: Sponsor[] = [
 
   { name: "Kinetic Custom Trailers", tier: "gold", image: "/images/sponsors/Kinetic.png", link: "https://kinetic-group.com/" },
-  { name: "Fraternal Order of Eagles", tier: "gold", image: "/images/sponsors/FOE logo.svg", link: "https://www.td.com/ca/en/personal-banking/" },
+  { name: "Fraternal Order of Eagles", tier: "gold", image: "/images/sponsors/FOE logo.svg", link: "https://bcfoe.com/" },
   { name: "Nufloors Penticton", tier: "gold", image: "/images/sponsors/Nufloors.png", link: "https://www.nufloors.ca/penticton" },
-  { name: "Greyback Construction", tier: "gold", image: "/images/sponsors/Greyback.png", link: "https://wyperlaw.ca/", invertBackground:true },
+  { name: "Greyback Construction", tier: "gold", image: "/images/sponsors/Greyback.png", link: "https://www.greyback.com/", invertBackground:true },
   { name: "FIRST Robotics", tier: "gold", image: "/images/sponsors/FIRST.svg", link: "https://www.firstinspires.org/robotics/frc" },
-  { name: "CUPE 523", tier: "gold", image: "/images/sponsors/CUPE 523.svg", link: "https://www.firstinspires.org/robotics/frc" },
-  { name: "Rotary Club", tier: "gold", image: "/images/sponsors/Rotary Club of Penticton.svg", link: "https://www.firstinspires.org/robotics/frc" },
+  { name: "CUPE 523", tier: "gold", image: "/images/sponsors/CUPE 523.svg", link: "https://523.cupe.ca/" },
+  { name: "Rotary Club", tier: "gold", image: "/images/sponsors/Rotary Club of Penticton.svg", link: "https://rotarypenticton.com/" },
 
-
-  { name: "Penticton Foundry", tier: "silver", image: "/images/sponsors/Penticton Foundry.png", link: "https://neuhouzz.ca/" },
-  { name: "Beem Credit Union", tier: "silver", image: "/images/sponsors/Beem.png", link: "https://totalrestoration.ca/", invertBackground:true },
-  { name: "Rene and Anita Buttar", tier: "silver", link: "https://totalrestoration.ca/" },
-  { name: "Brutus", tier: "silver", image: "/images/sponsors/Brutus.png", link: "https://totalrestoration.ca/", invertBackground:true },
+  { name: "Penticton Foundry", tier: "silver", image: "/images/sponsors/Penticton Foundry.png", link: "https://www.pentictonfoundry.com/" },
+  { name: "Beem Credit Union", tier: "silver", image: "/images/sponsors/Beem.png", link: "https://beemcreditunion.ca/", invertBackground:true },
+  { name: "Rene and Anita Buttar", tier: "silver",  },
+  { name: "Brutus", tier: "silver", image: "/images/sponsors/Brutus.png", link: "https://www.brutusbodies.com/", invertBackground:true },
 
   { name: "Home Hardware", tier: "iron" },
   { name: "Cutting Edge Counters", tier: "iron" },

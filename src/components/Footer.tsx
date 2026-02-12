@@ -5,7 +5,7 @@ export default function Footer() {
   const isMobile = useMediaQuery("(max-width: 75em)");
 
   return (
-    <Box>
+    <Box bg="black">
       <Flex align="center" direction="column" p="lg">
         <Image
           src="https://www.sd67.bc.ca/pics/header_logo.png"

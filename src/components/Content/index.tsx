@@ -9,7 +9,7 @@ export default function Content() {
   return (
     <Box c="pr-yellow" mih="100vh">
       <Button
-      bg="#000000"
+      bg="#FBB416"
         style={{
           position: "fixed",
           right: 50,
@@ -22,7 +22,7 @@ export default function Content() {
           });
         }}
       >
-        <IconArrowUp color="#FBB416" size={40} />
+        <IconArrowUp color="#000000" size={40} />
       </Button>
       <ScrollRestoration />
       <Header />
