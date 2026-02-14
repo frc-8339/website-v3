@@ -5,7 +5,7 @@ import Sponsor from "./Sponsor";
 
 export default function Sponsors({ sponsors }: { sponsors: TSponsor[] }) {
   return (
-    <Flex align="center" direction="column" pt="md">
+    <Flex align="center" direction="column" pt="md" gap={"lg"}>
       <Text fz="8vh" fw="bold">
         Sponsors
       </Text>

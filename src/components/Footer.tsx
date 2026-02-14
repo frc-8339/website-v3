@@ -1,11 +1,11 @@
-import { Box, Flex, Image, Text } from "@mantine/core";
+import { Anchor, Box, Flex, Image, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
 export default function Footer() {
   const isMobile = useMediaQuery("(max-width: 75em)");
 
   return (
-    <Box bg="black">
+    <Box bg="black" c="pr-yellow" p="md">
       <Flex align="center" direction="column" p="lg">
         <Image
           src="https://www.sd67.bc.ca/pics/header_logo.png"
@@ -14,18 +14,18 @@ export default function Footer() {
           loading="lazy"
         />
 
-        <Text c="black" fz="h4" ta="center">
+        <Text fz="h4" ta="center">
           © {new Date().getFullYear()} Penticton Robotics Team
         </Text>
         <Text>
           made by{" "}
-          <a href="https://github.com/tobycm" target="_blank" rel="noopener noreferrer">
+          <Anchor href="https://github.com/tobycm" target="_blank" rel="noopener noreferrer">
             tobycm
-          </a>{" "}+ 3rinaaa
-          with{" "}
-          <a href="https://www.instagram.com/p/DBJwMI2pHz0" target="_blank" rel="noopener noreferrer" style={{ all: "unset" }}>
+          </Anchor>{" "}
+          + 3rinaaa with{" "}
+          <Anchor href="https://www.instagram.com/p/DBJwMI2pHz0" target="_blank" rel="noopener noreferrer" style={{ all: "unset" }}>
             ❤️
-          </a>
+          </Anchor>
         </Text>
       </Flex>
     </Box>

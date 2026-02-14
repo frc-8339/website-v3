@@ -2,6 +2,15 @@ import { Box, Image, Stack, Text } from "@mantine/core";
 import { Sponsor as TSponsor } from "../lib/constants";
 import { Link } from "react-router-dom";
 
+const sponsorsTierMapping: Record<string, string> = {
+  diamond: "Diamond",
+  platinum: "Platinum",
+  gold: "Gold",
+  silver: "Silver",
+  bronze: "Bronze",
+  iron: "Iron",
+};
+
 export default function Sponsor({ sponsor }: { sponsor: TSponsor }) {
   return (
     <Stack
@@ -15,10 +24,8 @@ export default function Sponsor({ sponsor }: { sponsor: TSponsor }) {
       bg={sponsor.invertBackground ? "black" : "white"}
       c={sponsor.invertBackground ? "pr-yellow" : "black"}
     >
-      <Box w="25vw" h="25vw">
-        <Link to={sponsor.link}>
-        {sponsor.image ? <Image src={sponsor.image} w="25vw" h="25vw" fit="contain" /> : null}
-        </Link>
+      <Box w="16vw" h="16vw">
+        <Link to={sponsor.link}>{sponsor.image ? <Image src={sponsor.image} w="16vw" h="16vw" fit="contain" /> : null}</Link>
       </Box>
       <Text fz={"h1"} fw={"bold"}>
         {sponsor.name}
@@ -26,7 +33,7 @@ export default function Sponsor({ sponsor }: { sponsor: TSponsor }) {
       <Link to={sponsor.link}>
         <Text>{sponsor.link}</Text>
       </Link>
-      <Text>{sponsor.tier}</Text>
+      <Text>{sponsorsTierMapping[sponsor.tier] || sponsor.tier} Sponsor</Text>
     </Stack>
   );
 }

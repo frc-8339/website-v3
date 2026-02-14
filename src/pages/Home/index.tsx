@@ -21,17 +21,13 @@ import castanet from "./newsLogos/castanet-logo.svg";
 
 import NewsQuote from "../../components/NewsQuote";
 import Sponsors from "../../components/Sponsors";
-import facebook from "./socialMediaIcons/facebook.svg";
-import instagramFallback from "./socialMediaIcons/instagram.png";
-import instagram from "./socialMediaIcons/instagram.png?w=16;32;48;64;96;128;192;256;320;512;768&format=webp;png&as=srcset&imagetools";
-import twitter from "./socialMediaIcons/twitter.svg";
 
 export default function Home() {
   const isMobile = useMediaQuery("(max-width: 48em)");
 
   return (
-    <Box mb="10vh" c="black" bg={"black"}>
-      <Grid m="5vw">
+    <Box mb="10vh">
+      <Grid bg={"black"} p="5vw">
         <Grid.Col span={5}>
           <Text ff="Audiowide" fw={"bolder"} fz={64} c="pr-yellow">
             Penticton Robotics
@@ -93,13 +89,6 @@ export default function Home() {
           <Image srcSet={win} src={winFallback} alt="2025 REEFSCAPE℠ Competition Champion" />
         </Grid.Col>
       </Grid>
-
-      {/* Email */}
-      <BackgroundImage src={lenovoThinkbook14G3ACLakaToby_21a2XDDD}>
-        <Box bg="rgba(0, 0, 0, 0.7)">
-          <Center h="20vh"></Center>
-        </Box>
-      </BackgroundImage>
 
       <Sponsors />
 
