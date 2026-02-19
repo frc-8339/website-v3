@@ -10,6 +10,14 @@ const sponsorsTierMapping: Record<string, string> = {
   bronze: "Bronze",
   iron: "Iron",
 };
+const sponsorsTierColors: Record<string, { from: string; to: string; deg: number }> = {
+  diamond: { from: "#bfe8f5", to: "#9debff", deg: 90 },
+  platinum: { from: "#c0c0c0", to: "#a9a9a9", deg: 90 },
+  gold: { from: "#ffd700", to: "#daa520", deg: 90 },
+  silver: { from: "#c0c0c0", to: "#a9a9a9", deg: 90 },
+  bronze: { from: "#cd7f32", to: "#8b4513", deg: 90 },
+  iron: { from: "#8b4513", to: "#654321", deg: 90 },
+};
 
 export default function Sponsor({ sponsor }: { sponsor: TSponsor }) {
   return (
@@ -27,13 +35,12 @@ export default function Sponsor({ sponsor }: { sponsor: TSponsor }) {
       <Box w="16vw" h="16vw">
         <Link to={sponsor.link}>{sponsor.image ? <Image src={sponsor.image} w="16vw" h="16vw" fit="contain" /> : null}</Link>
       </Box>
-      <Text fz={"h1"} fw={"bold"}>
+      <Text fz={"h1"} fw={"bold"} variant="gradient" gradient={sponsorsTierColors[sponsor.tier] || { from: "#000", to: "#000", deg: 90 }}>
         {sponsor.name}
       </Text>
       <Link to={sponsor.link}>
         <Text>{sponsor.link}</Text>
       </Link>
-      <Text>{sponsorsTierMapping[sponsor.tier] || sponsor.tier} Sponsor</Text>
     </Stack>
   );
 }
