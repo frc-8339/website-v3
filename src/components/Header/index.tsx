@@ -1,10 +1,10 @@
+import "@fontsource/audiowide/400.css";
 import { Box, Burger, Drawer, Flex, Group, Image, Text } from "@mantine/core";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import classes from "./index.module.css";
-import "@fontsource/audiowide/400.css";
 
 import logo from "./pr logo.svg";
 
@@ -25,7 +25,7 @@ const links: {
 ];
 
 export default function Header() {
-  const isMobile = useMediaQuery("(max-width: 75em)");
+  const isMobile = useMediaQuery("(max-width: 90em)");
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -60,21 +60,21 @@ export default function Header() {
         </Flex>
       </Drawer>
 
-      <Box bg="black" size="md" pl={isMobile ? 0 : 80} pr={80}>
+      <Box bg="black" size="md" pl="lg" pr="lg">
         <Flex h={120} justify="space-between" align="center">
           <Flex w={100} align="center">
             <Image mr={20} src={logo} alt="Penticton Robotics logo" style={{ cursor: "pointer" }} onClick={() => navigate("/")} />
 
-            <Text c="pr-yellow" fz={isMobile ? 35 : 50} lh={1} fw={500} ta="center" ff="Audiowide">
+            <Text c="pr-yellow" fz={45} lh={1} fw={500} ta="center" ff="Audiowide">
               Penticton Robotics
             </Text>
           </Flex>
 
-          <Group gap={5} visibleFrom="lg">
+          <Group gap={5} display={!isMobile ? "flex" : "none"}>
             {items}
           </Group>
 
-          <Burger color="pr-yellow" opened={opened} onClick={drawerControls.toggle} hiddenFrom="lg" size="md" />
+          <Burger color="pr-yellow" opened={opened} onClick={drawerControls.toggle} display={isMobile ? "flex" : "none"} size="md" />
         </Flex>
       </Box>
     </header>

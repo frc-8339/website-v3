@@ -21,12 +21,12 @@ import NewsQuote from "../../components/NewsQuote";
 import Sponsors from "../../components/Sponsors";
 
 export default function Home() {
-  const isMobile = useMediaQuery("(max-width: 48em)");
+  const isMobile = useMediaQuery("(max-width: 64em)");
 
   return (
     <Box mb="10vh">
-      <Grid bg={"black"} p="5vw">
-        <Grid.Col span={5}>
+      {isMobile ? (
+        <Stack bg="black" p="xl">
           <Text ff="Audiowide" fw={"bolder"} fz={64} c="pr-yellow">
             Penticton Robotics
           </Text>
@@ -40,7 +40,6 @@ export default function Home() {
             </Text>
           </Link>
           <Text fz={26} c="#FBB416">
-            {" "}
             Member of the Okanagan Robotics Alliance
           </Text>
           <Group gap="xs">
@@ -55,38 +54,89 @@ export default function Home() {
               <IconBrandYoutube color="#FBB416" size={36} />
             </Link>
           </Group>
+
           <Grid>
-            <Grid.Col span={8.5}>
-              <Stack align="left" justify="start">
-                <Text fz={24} c="#FBB416">
-                  - team running since 2018 <br />
-                  - located in penticton @ maggie <br />
-                  - combination of students from pen hi and maggie <br />
-                  - hard working team <br />- winner of 2025 competition
-                </Text>
-                <Grid mr={"xs"} justify="center" my="lg" visibleFrom="sm">
-                  <Grid.Col span={6}>
-                    {homeButtons.map((button, index) =>
-                      index % 2 === 0 ? <HomeTopButton key={`${button.title} ${button.url}`} title={button.title} url={button.url} /> : null,
-                    )}
-                  </Grid.Col>
-                  <Grid.Col span={6}>
-                    {homeButtons.map((button, index) =>
-                      index % 2 !== 0 ? <HomeTopButton key={`${button.title} ${button.url}`} title={button.title} url={button.url} /> : null,
-                    )}
-                  </Grid.Col>
-                </Grid>
-              </Stack>
+            <Grid.Col span={9}>
+              <Image srcSet={win} src={winFallback} alt="2025 REEFSCAPE℠ Competition Champion" />
             </Grid.Col>
-            <Grid.Col span={3.5}>
+            <Grid.Col span={3}>
               <Image src={winnerBanner} alt="2025 REEFSCAPE℠ Competition Champion" />
             </Grid.Col>
           </Grid>
-        </Grid.Col>
-        <Grid.Col span={7}>
-          <Image srcSet={win} src={winFallback} alt="2025 REEFSCAPE℠ Competition Champion" />
-        </Grid.Col>
-      </Grid>
+
+          <Text fz={24} c="#FBB416">
+            - team running since 2018 <br />
+            - located in penticton @ maggie <br />
+            - combination of students from pen hi and maggie <br />
+            - hard working team <br />- winner of 2025 competition
+          </Text>
+          {homeButtons.map((button) => (
+            <HomeTopButton key={`${button.title} ${button.url}`} title={button.title} url={button.url} />
+          ))}
+        </Stack>
+      ) : (
+        <Grid bg={"black"} p="5vw">
+          <Grid.Col span={5}>
+            <Text ff="Audiowide" fw={"bolder"} fz={64} c="pr-yellow">
+              Penticton Robotics
+            </Text>
+            <Text fz={45} fw="bold" c="#FBB416">
+              FRC Team #8339
+            </Text>
+            <Link to={`mailto:${email}`}>
+              <Text fz={26} c="#FBB416">
+                <IconMail color="#FBB416" size={20} style={{ marginRight: "4px" }} />
+                {email}
+              </Text>
+            </Link>
+            <Text fz={26} c="#FBB416">
+              Member of the Okanagan Robotics Alliance
+            </Text>
+            <Group gap="xs">
+              <Link target="_blank" to="https://www.instagram.com/penticton_robotics" style={{ textDecoration: "none" }}>
+                <IconBrandInstagram color="#FBB416" size={36} />
+              </Link>
+              <Link target="_blank" to="https://www.facebook.com/PentictonRobotics">
+                <IconBrandFacebook color="#FBB416" size={36} />
+              </Link>
+
+              <Link target="_blank" to="https://www.youtube.com/@pentictonrobotics" style={{ textDecoration: "none" }}>
+                <IconBrandYoutube color="#FBB416" size={36} />
+              </Link>
+            </Group>
+            <Grid>
+              <Grid.Col span={8.5}>
+                <Stack align="left" justify="start">
+                  <Text fz={24} c="#FBB416">
+                    - team running since 2018 <br />
+                    - located in penticton @ maggie <br />
+                    - combination of students from pen hi and maggie <br />
+                    - hard working team <br />- winner of 2025 competition
+                  </Text>
+                  <Grid mr={"xs"} justify="center" my="lg" visibleFrom="sm">
+                    <Grid.Col span={6}>
+                      {homeButtons.map((button, index) =>
+                        index % 2 === 0 ? <HomeTopButton key={`${button.title} ${button.url}`} title={button.title} url={button.url} /> : null,
+                      )}
+                    </Grid.Col>
+                    <Grid.Col span={6}>
+                      {homeButtons.map((button, index) =>
+                        index % 2 !== 0 ? <HomeTopButton key={`${button.title} ${button.url}`} title={button.title} url={button.url} /> : null,
+                      )}
+                    </Grid.Col>
+                  </Grid>
+                </Stack>
+              </Grid.Col>
+              <Grid.Col span={3.5}>
+                <Image src={winnerBanner} alt="2025 REEFSCAPE℠ Competition Champion" />
+              </Grid.Col>
+            </Grid>
+          </Grid.Col>
+          <Grid.Col span={7}>
+            <Image srcSet={win} src={winFallback} alt="2025 REEFSCAPE℠ Competition Champion" />
+          </Grid.Col>
+        </Grid>
+      )}
 
       <Sponsors />
 
