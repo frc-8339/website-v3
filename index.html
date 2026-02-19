@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="https://tobycm.github.io/easy-snow/snow.css" />
     <script>
       const now = new Date();
-      document.christmas = now.getMonth() > 9 || now.getMonth() < 3; // Nov to Mar
+      document.christmas = now.getMonth() > 9 || now.getMonth() < 2; // Nov to Feb
+      if (now.getFullYear() === 2026) {
+        document.christmas = false; // No snow in 2026
+      }
     </script>
     <script src="https://tobycm.github.io/easy-snow/snow.js"></script>
   </head>

@@ -12,7 +12,7 @@ export default function Contact() {
   const isMobile = useMediaQuery("(max-width: 62em)");
 
   return (
-    <Box>
+    <Box bg="black">
       <Flex align="center" direction="column" id="contact">
         <BackgroundImage src={marcusFixingRobot} bgsz="cover" style={{ backgroundPositionY: "center" }}>
           <Box bg="#00000080">

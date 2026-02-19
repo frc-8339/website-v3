@@ -14,7 +14,7 @@ export default function WhatIsFirst() {
   const bannerWidth = isMobile ? "80vw" : "13vw";
 
   return (
-    <Flex align="center" direction="column" id="first">
+    <Flex align="center" direction="column" id="first" bg="black">
       <BackgroundImage src={XD} bgsz="cover" style={{ backgroundPositionY: "center" }}>
         <Flex w="100%" justify="center" bg="#00000080">
           {!isMobile ? (

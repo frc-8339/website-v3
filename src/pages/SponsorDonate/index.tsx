@@ -9,7 +9,7 @@ export default function SponsorDonate() {
   const isMobile = useMediaQuery("(max-width: 62em)");
 
   return (
-      <Flex align="center" direction="column" id="power">
+      <Flex align="center" direction="column" id="power" bg="black">
         <BackgroundImage src={marcusFixingRobot} bgsz="cover" style={{ backgroundPositionY: "center" }}>
           <Box bg="#00000080">
             <Text
@@ -63,7 +63,7 @@ export default function SponsorDonate() {
                   Information Sheet
                 </a>
                 <br />
-                You can also
+                You can also 
                 <Link to="/contact"> contact us</Link> for more information.
               </Text>
             </Grid.Col>

@@ -8,13 +8,12 @@ export default function HomeTopButton({ title, url }: { title: string; url: stri
 
   return (
     <Button
-      bg="black"
-      c="pr-yellow"
-      size="4rem"
+      bg="pr-yellow"
+      c="black"
+      // size="4rem"
+      my={"xs"}
       fw="bold"
-      fz="h3"
-      m="md"
-      mb="0"
+      fz="h4"
       w="100%"
       variant="filled"
       radius="sm"
