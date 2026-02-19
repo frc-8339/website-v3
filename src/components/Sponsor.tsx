@@ -1,15 +1,7 @@
 import { Box, Image, Stack, Text } from "@mantine/core";
-import { Sponsor as TSponsor } from "../lib/constants";
 import { Link } from "react-router-dom";
+import { Sponsor as TSponsor } from "../lib/constants";
 
-const sponsorsTierMapping: Record<string, string> = {
-  diamond: "Diamond",
-  platinum: "Platinum",
-  gold: "Gold",
-  silver: "Silver",
-  bronze: "Bronze",
-  iron: "Iron",
-};
 const sponsorsTierColors: Record<string, { from: string; to: string; deg: number }> = {
   diamond: { from: "#bfe8f5", to: "#9debff", deg: 90 },
   platinum: { from: "#c0c0c0", to: "#a9a9a9", deg: 90 },
@@ -24,23 +16,31 @@ export default function Sponsor({ sponsor }: { sponsor: TSponsor }) {
     <Stack
       justify="center"
       align="center"
-      bd={"#FBB416 solid 1rem"}
+      bd="#FBB416 solid 1rem"
       p="xl"
-      style={{
-        borderRadius: "4rem",
-      }}
+      style={{ borderRadius: "4rem" }}
       bg={sponsor.invertBackground ? "black" : "white"}
       c={sponsor.invertBackground ? "pr-yellow" : "black"}
     >
       <Box w="16vw" h="16vw">
-        <Link to={sponsor.link}>{sponsor.image ? <Image src={sponsor.image} w="16vw" h="16vw" fit="contain" /> : null}</Link>
+        {sponsor.image ? (
+          sponsor.link ? (
+            <Link to={sponsor.link}>
+              <Image src={sponsor.image} w="16vw" h="16vw" fit="contain" />
+            </Link>
+          ) : (
+            <Image src={sponsor.image} w="16vw" h="16vw" fit="contain" />
+          )
+        ) : null}
       </Box>
-      <Text fz={"h1"} fw={"bold"} variant="gradient" gradient={sponsorsTierColors[sponsor.tier] || { from: "#000", to: "#000", deg: 90 }}>
+      <Text fz="h1" fw="bold" variant="gradient" gradient={sponsorsTierColors[sponsor.tier] || { from: "#000", to: "#000", deg: 90 }}>
         {sponsor.name}
       </Text>
-      <Link to={sponsor.link}>
-        <Text>{sponsor.link}</Text>
-      </Link>
+      {sponsor.link ? (
+        <Link to={sponsor.link}>
+          <Text>{sponsor.link}</Text>
+        </Link>
+      ) : null}
     </Stack>
   );
 }

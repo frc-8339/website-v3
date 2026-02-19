@@ -1,12 +1,10 @@
-import { BackgroundImage, Box, Center, Divider, Flex, Grid, Group, Image, Space, Stack, Text } from "@mantine/core";
+import { Box, Divider, Flex, Grid, Group, Image, Space, Stack, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { IconBrandFacebook, IconBrandInstagram, IconBrandYoutube, IconMail } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 import HomeTopButton from "../../components/Buttons/HomeTop";
 import { email, homeButtons } from "../../lib/constants";
 import "./index.css";
-
-import lenovoThinkbook14G3ACLakaToby_21a2XDDD from "./code.webp";
 
 import winFallback from "./20250302_014149096_iOS.png";
 import win from "./20250302_014149096_iOS.png?w=768;1024;1280;1366;1440;1920;2560;3840;4032&format=webp;jpg;png&as=srcset&imagetools";
@@ -114,7 +112,6 @@ export default function Home() {
         {isMobile ? <Space h="10vh" /> : <Divider color="#FBB416" h="70vh" mx="xl" orientation="vertical" />}
 
         <NewsQuote
-          c="white"
           quote={`"Penticton's team was knocked out in the first round of the finals but ended up being chosen for the creativity award because the judges liked their recycled hockey stick scissor lift."`}
           image={{ src: castanet, alt: "Castanet logo" }}
           isMobile={isMobile}
