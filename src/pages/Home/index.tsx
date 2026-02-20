@@ -19,12 +19,14 @@ import castanet from "./newsLogos/castanet-logo.svg";
 
 import NewsQuote from "../../components/NewsQuote";
 import Sponsors from "../../components/Sponsors";
+import NewsletterPopup from "../../components/NewsletterPopup";
 
 export default function Home() {
   const isMobile = useMediaQuery("(max-width: 64em)");
 
   return (
-    <Box mb="10vh">
+  <Box mb="10vh">
+    <NewsletterPopup />
       {isMobile ? (
         <Stack bg="black" p="xl">
           <Text ff="Audiowide" fw={"bolder"} fz={64} c="pr-yellow">
