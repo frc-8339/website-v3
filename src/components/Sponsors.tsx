@@ -1,7 +1,7 @@
 import { Flex, Text } from "@mantine/core";
 import { Sponsor as TSponsor, sponsors } from "../lib/constants";
 
-import Sponsor from "./Sponsor";
+import Sponsor, { IronSponsor } from "./Sponsor";
 
 export default function Sponsors({ sponsors }: { sponsors: TSponsor[] }) {
   return (
@@ -11,10 +11,11 @@ export default function Sponsors({ sponsors }: { sponsors: TSponsor[] }) {
       </Text>
       <Flex justify="center" wrap="wrap" gap={"xl"}>
         {sponsors
-          .filter((sponsor) => ["diamond", "platinum", "gold", "silver", "iron"].includes(sponsor.tier))
+          .filter((sponsor) => ["diamond", "platinum", "gold", "silver"].includes(sponsor.tier))
           .map((sponsor) => (
             <Sponsor key={sponsor.name} sponsor={sponsor} />
           ))}
+        <IronSponsor sponsors={sponsors.filter((sponsor) => sponsor.tier === "iron")} />
       </Flex>
     </Flex>
   );
