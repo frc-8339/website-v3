@@ -1,7 +1,7 @@
 import { Flex, Text } from "@mantine/core";
 import { Sponsor as TSponsor, sponsors } from "../lib/constants";
 
-import Sponsor from "./Sponsor";
+import Sponsor, { IronSponsor } from "./Sponsor";
 
 export default function Sponsors({ sponsors }: { sponsors: TSponsor[] }) {
   return (
@@ -15,6 +15,7 @@ export default function Sponsors({ sponsors }: { sponsors: TSponsor[] }) {
           .map((sponsor) => (
             <Sponsor key={sponsor.name} sponsor={sponsor} />
           ))}
+        <IronSponsor sponsors={sponsors.filter((sponsor) => sponsor.tier === "iron")} />
       </Flex>
     </Flex>
   );

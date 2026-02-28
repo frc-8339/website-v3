@@ -44,3 +44,20 @@ export default function Sponsor({ sponsor }: { sponsor: TSponsor }) {
     </Stack>
   );
 }
+export function IronSponsor({ sponsors }: { sponsors: TSponsor[] }) {
+  return (
+    <Stack justify="center" align="center" bd="#FBB416 solid 1rem" p="xl" style={{ borderRadius: "4rem" }} bg="white">
+      {sponsors.map((sponsor) => (
+        <Text
+          fz="h1"
+          fw="bold"
+          variant="gradient"
+          gradient={sponsorsTierColors[sponsor.tier] || { from: "#000", to: "#000", deg: 90 }}
+          key={sponsor.name}
+        >
+          {sponsor.name}
+        </Text>
+      ))}
+    </Stack>
+  );
+}

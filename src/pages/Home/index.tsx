@@ -140,7 +140,7 @@ export default function Home() {
         </Grid>
       )}
 
-      <Sponsors />
+      <Sponsors/>
 
       {/* News Quotes */}
       <Flex align="center" direction={isMobile ? "column" : "row"} justify="center" mt="8vh" mx="4vw" h="100%" ta="center">
