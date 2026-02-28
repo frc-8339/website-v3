@@ -7,9 +7,9 @@ export const homeButtons: {
   title: string;
   url: string;
 }[] = [
-  { title: "Student Benefits", url: "#benefits" },
+  { title: "Student Benefits", url: "/benefits" },
   { title: "Apply to Join", url: "https://l.tobycm.dev/prsignup" },
-  { title: "Sponsor/Donate", url: "#power" },
+  { title: "Sponsor/Donate", url: "/power" },
   {
     title: "Join our newsletter",
     url: "https://a6d48789.sibforms.com/serve/MUIFAHA4a2bQgaDI2t2lG9Y5tvpSvvS9XLERjKR-IcBJZrR-8yuWNKN_Y5HBhJGhYze57PzdNb1XGW-1LW1iu_0MPq5UWiYzNmgi2feAkqF6VonwtH6M6qtExpa53u9c92lQJ5GMB0L81suX-11MO930HXfPapDQXgGfrBRdBWhzoLHh06aqe09KemRHKPuzTr7wFSFALUHIzViF9A==",
@@ -66,8 +66,7 @@ export const sponsors: Sponsor[] = [
   { name: "Beem Credit Union", tier: "silver", image: "/images/sponsors/Beem.png", link: "https://beemcreditunion.ca/", invertBackground: true },
   { name: "Rene and Anita Buttar", tier: "silver" },
   { name: "Brutus", tier: "silver", image: "/images/sponsors/Brutus.png", link: "https://www.brutusbodies.com/", invertBackground: true },
-  { name: "Dash Digital", tier: "silver", image: "/images/sponsors/dashdigital.png", link: "https://www.dashdigital.ca/" },
-  { name: "Marcus Makes", tier: "silver", image: "/images/sponsors/Marcus Makes.png", link: "https://www.marcusmakes.ca/" },
+  { name: "Dash Digital", tier: "iron", image: "/images/sponsors/dashdigital.png", link: "https://www.dashdigital.ca/" },
 
   { name: "Home Hardware", tier: "iron" },
   { name: "Cutting Edge Counters", tier: "iron" },
@@ -124,3 +123,6 @@ export const objectives: Objective[] = [
     name: "2025 REEFSCAPE Competition",
   },
 ];
+
+export const brevoFormUrl =
+  "https://a6d48789.sibforms.com/serve/MUIFAHA4a2bQgaDI2t2lG9Y5tvpSvvS9XLERjKR-IcBJZrR-8yuWNKN_Y5HBhJGhYze57PzdNb1XGW-1LW1iu_0MPq5UWiYzNmgi2feAkqF6VonwtH6M6qtExpa53u9c92lQJ5GMB0L81suX-11MO930HXfPapDQXgGfrBRdBWhzoLHh06aqe09KemRHKPuzTr7wFSFALUHIzViF9A==";
