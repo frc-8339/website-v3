@@ -77,6 +77,8 @@ export const sponsors: Sponsor[] = [
   { name: "Total Restoration", tier: "iron" },
   { name: "Marcus Makes", tier: "iron" },
   { name: "Emochoice", tier: "iron" },
+  { name: "Flattiles Design Ltd.", tier: "iron" },
+  { name: "Minuteman Press" , tier: "iron" },
 ];
 
 export const sponsorFiles: string[] = [
