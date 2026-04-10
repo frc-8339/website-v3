@@ -3,11 +3,6 @@ import { useMediaQuery } from "@mantine/hooks";
 
 import XD from "./XD.webp";
 
-import rookie2020 from "./awards/2020 Rookie.svg";
-import rookieDesign2021 from "./awards/2021 Rookie Design.svg";
-import creativity2024 from "./awards/2024 Creativity.svg";
-import winner2025 from "./awards/2025 Winner.svg";
-
 export default function WhatIsFirst() {
   const isMobile = useMediaQuery("(max-width: 75em)");
 
@@ -22,8 +17,9 @@ export default function WhatIsFirst() {
               <Grid.Col span={3}>
                 <Text
                   maw="40vw"
-                  fz={isMobile ? "20vw" : "10vw"}
+                  fz={isMobile ? "10vw" : "5vw"}
                   fw="bolder"
+                  ff="Audiowide"
                   lh="1.2"
                   c="pr-yellow"
                   style={{
@@ -79,13 +75,6 @@ export default function WhatIsFirst() {
           )}
         </Flex>
       </BackgroundImage>
-
-      <Flex align="center" justify="center" wrap="wrap" direction={isMobile ? "column" : "row"} my="xl">
-        <Image src={rookie2020} mx="lg" w={bannerWidth} />
-        <Image src={rookieDesign2021} mx="lg" w={bannerWidth} />
-        <Image src={creativity2024} mx="lg" w={bannerWidth} />
-        <Image src={winner2025} mx="lg" w={bannerWidth} />
-      </Flex>
 
       <Text mt="xl" fz="h2" w="80%" ta="justify">
         FIRST is a global robotics competition that hopes to inspire the next generation of scientists and engineers. FIRST stands for “For

@@ -5,8 +5,8 @@ import marcusFixingRobot from "./IMG_0461.webp";
 
 import { IconBrandDiscord, IconMail, IconPhone } from "@tabler/icons-react";
 
-import walkerFallback from "./walker circle.png";
-import walker from "./walker circle.png?w=256;512;768;1024&format=webp;png&as=srcset&imagetools";
+import walkerFallback from "./walker.png";
+import walker from "./walker.png?w=256;512;768;1024&format=webp;png&as=srcset&imagetools";
 
 export default function Contact() {
   const isMobile = useMediaQuery("(max-width: 62em)");
@@ -18,8 +18,9 @@ export default function Contact() {
           <Box bg="#00000080">
             <Text
               maw="40vw"
-              fz={isMobile ? "20vw" : "10vw"}
+              fz={isMobile ? "10vw" : "5vw"}
               fw="bolder"
+              ff="Audiowide"
               lh="1.2"
               style={{
                 textShadow: isMobile ? "1.6vw 1.6vw #000" : "0.8vw 0.8vw #000",
@@ -47,7 +48,7 @@ export default function Contact() {
             Our Mentor
           </Text>
           
-          <Image src={walkerFallback} srcSet={walker} alt="Mr. Josh Walker" h="4rem" />
+          <Image src={walkerFallback} srcSet={walker} alt="Mr. Josh Walker" h="4rem" radius="50%" bd="8px solid pr-yellow" />
 
           <Text fz="3rem" m="lg" ta="center">
             Mr. Josh Walker
@@ -63,9 +64,6 @@ export default function Contact() {
                     <IconPhone /> Phone
                   </Table.Td>
                   <Table.Td>
-                    {
-                      // +1 (250) 770-7620 ext. 7205
-                    }
                     <a href="tel:+12507707620">+1 (250) 770-7620 ext. 7205</a>
                   </Table.Td>
                 </Table.Tr>

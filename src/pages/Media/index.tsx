@@ -18,8 +18,9 @@ export default function Media() {
             <Grid.Col span={3}>
               <Text
                 maw="40vw"
-                fz={isMobile ? "20vw" : "10vw"}
+                fz={isMobile ? "10vw" : "5vw"}
                 fw="bolder"
+                ff="Audiowide"
                 lh="1.2"
                 c="pr-yellow"
                 style={{

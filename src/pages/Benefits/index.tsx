@@ -13,8 +13,9 @@ export default function Benefits() {
             <Grid.Col span={3}>
               <Text
                 maw="40vw"
-                fz={isMobile ? "20vw" : "10vw"}
+                fz={isMobile ? "10vw" : "5vw"}
                 fw="bolder"
+                ff="Audiowide"
                 lh="1.2"
                 style={{
                   textShadow: isMobile ? "1.6vw 1.6vw #000" : "0.8vw 0.8vw #000",
