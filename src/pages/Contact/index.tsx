@@ -3,7 +3,7 @@ import { useMediaQuery } from "@mantine/hooks";
 
 import marcusFixingRobot from "./IMG_0461.webp";
 
-import { IconBrandDiscord, IconMail, IconPhone } from "@tabler/icons-react";
+import { IconBrandDiscord, IconBrandFacebook, IconBrandInstagram, IconBrandYoutube, IconMail, IconPhone } from "@tabler/icons-react";
 
 import walkerFallback from "./walker.png";
 import walker from "./walker.png?w=256;512;768;1024&format=webp;png&as=srcset&imagetools";
@@ -47,7 +47,7 @@ export default function Contact() {
           >
             Our Mentor
           </Text>
-          
+
           <Image src={walkerFallback} srcSet={walker} alt="Mr. Josh Walker" h="4rem" radius="50%" bd="8px solid pr-yellow" />
 
           <Text fz="3rem" m="lg" ta="center">
@@ -97,10 +97,23 @@ export default function Contact() {
             <IconMail /> Email: <a href="mailto:penticton.robotics@gmail.com">penticton.robotics@gmail.com</a>
           </Text>
           <Text fz="h2" ta="center">
-            <IconBrandDiscord /> Discord: <a href="https://discord.com/users/487597510559531009">tobycm</a>
+            <IconBrandDiscord /> Discord: <a href="https://discord.com/users/1176298206309646401"> @3rinaaa (Kim) </a>
           </Text>
 
           <Space h="2rem" />
+
+          <Text fz="3rem" ta="center" m="lg">
+            Social Media
+          </Text>
+          <Text fz="h2" ta="center">
+            <IconBrandInstagram /> Instagram: <a href="https://instagram.com/penticton_robotics"> @penticton_robotics</a>
+          </Text>
+          <Text fz="h2" ta="center">
+            <IconBrandFacebook /> Facebook: <a href="https://facebook.com/penticton.robotics"> @penticton.robotics</a>
+          </Text>
+          <Text fz="h2" ta="center">
+            <IconBrandYoutube /> YouTube: <a href="https://youtube.com/@pentictonrobotics"> @pentictonrobotics</a>
+          </Text>
         </Flex>
       </Flex>
     </Box>
