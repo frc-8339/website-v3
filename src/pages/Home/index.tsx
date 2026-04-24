@@ -1,5 +1,5 @@
 import { Box, Divider, Flex, Grid, Group, Image, Space, Stack, Text } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
+import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import { IconBrandFacebook, IconBrandInstagram, IconBrandYoutube, IconMail } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 import HomeTopButton from "../../components/Buttons/HomeTop";
@@ -19,28 +19,40 @@ import pentictonNow from "./newsLogos/PentictonNow-Logo.png?w=128;192;256;320;51
 import castanet from "./newsLogos/castanet-logo.svg";
 
 import NewsQuote from "../../components/NewsQuote";
+import NewsletterModal from "../../components/NewsletterModal";
 import Sponsors from "../../components/Sponsors";
 
 export default function Home() {
   const isMobile = useMediaQuery("(max-width: 64em)");
 
+  const [opened, controls] = useDisclosure(false);
+
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     controls.open();
+  //   }, 2500);
+
+  //   return () => clearTimeout(timer);
+  // }, []);
+
   return (
     <Box mb="10vh">
+      <NewsletterModal opened={opened} controls={controls} />
       {isMobile ? (
         <Stack bg="black" p="xl">
           <Text ff="Audiowide" fw={"bolder"} fz={64} c="pr-yellow">
             Penticton Robotics
           </Text>
-          <Text fz={45} fw="bold" c="#FBB416">
+          <Text fz={45} fw="bold" c="pr-yellow">
             FRC Team #8339
           </Text>
           <Link to={`mailto:${email}`}>
-            <Text fz={26} c="#FBB416">
+            <Text fz={26} c="pr-yellow">
               <IconMail color="#FBB416" size={20} style={{ marginRight: "4px" }} />
               {email}
             </Text>
           </Link>
-          <Text fz={26} c="#FBB416">
+          <Text fz={26} c="pr-yellow">
             Member of the Okanagan Robotics Alliance
           </Text>
           <Group gap="xs">
@@ -65,10 +77,11 @@ export default function Home() {
             </Grid.Col>
           </Grid>
 
-          <Text fz={24} c="#FBB416">
-            - Hard working team running since 2018 <br />
-            - Located in penticton @ maggie <br />
-            - Combination of students from pen hi and maggie <br />- Winner of 2025 competition
+          <Text fz={24} c="pr-yellow">
+            - team running since 2018 <br />
+            - located in penticton @ maggie <br />
+            - combination of students from pen hi and maggie <br />
+            - hard working team <br />- winner of 2025 competition
           </Text>
           {homeButtons.map((button) => (
             <HomeTopButton key={`${button.title} ${button.url}`} title={button.title} url={button.url} />
@@ -80,16 +93,16 @@ export default function Home() {
             <Text ff="Audiowide" fw={"bolder"} fz={64} c="pr-yellow">
               Penticton Robotics
             </Text>
-            <Text fz={45} fw="bold" c="#FBB416">
+            <Text fz={45} fw="bold" c="pr-yellow">
               FRC Team #8339
             </Text>
             <Link to={`mailto:${email}`}>
-              <Text fz={26} c="#FBB416">
+              <Text fz={26} c="pr-yellow">
                 <IconMail color="#FBB416" size={20} style={{ marginRight: "4px" }} />
                 {email}
               </Text>
             </Link>
-            <Text fz={26} c="#FBB416">
+            <Text fz={26} c="pr-yellow">
               Member of the Okanagan Robotics Alliance
             </Text>
             <Group gap="xs">
@@ -107,7 +120,7 @@ export default function Home() {
             <Grid>
               <Grid.Col span={8.5}>
                 <Stack align="left" justify="start">
-                  <Text fz={24} c="#FBB416">
+                  <Text fz={24} c="pr-yellow">
                     - team running since 2018 <br />
                     - located in penticton @ maggie <br />
                     - combination of students from pen hi and maggie <br />
