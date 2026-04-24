@@ -16,13 +16,15 @@ export default function Sponsor({ sponsor }: { sponsor: TSponsor }) {
     <Stack
       justify="center"
       align="center"
+      ta="center"
       bd="#FBB416 solid 1rem"
       p="xl"
+      w="25vw"
       style={{ borderRadius: "4rem" }}
       bg={sponsor.invertBackground ? "black" : "white"}
       c={sponsor.invertBackground ? "pr-yellow" : "black"}
     >
-      <Box w="16vw" h="16vw">
+      <Box h="16vw">
         {sponsor.image ? (
           sponsor.link ? (
             <Link to={sponsor.link}>
@@ -33,7 +35,9 @@ export default function Sponsor({ sponsor }: { sponsor: TSponsor }) {
           )
         ) : null}
       </Box>
-      <Text fz="h1" fw="bold" variant="gradient" gradient={sponsorsTierColors[sponsor.tier] || { from: "#000", to: "#000", deg: 90 }}>
+      <Text fz="h1" fw="bold" variant="gradient" gradient={sponsorsTierColors[sponsor.tier] || { from: "#000", to: "#000", deg: 90 }} style={{
+        textWrap: "wrap",
+      }}>
         {sponsor.name}
       </Text>
       {sponsor.link ? (
@@ -46,7 +50,7 @@ export default function Sponsor({ sponsor }: { sponsor: TSponsor }) {
 }
 export function IronSponsor({ sponsors }: { sponsors: TSponsor[] }) {
   return (
-    <Stack justify="center" align="center" bd="#FBB416 solid 1rem" p="xl" style={{ borderRadius: "4rem" }} bg="white">
+    <Stack w="25vw" justify="center" align="center" bd="#FBB416 solid 1rem" p="xl" style={{ borderRadius: "4rem" }} bg="white">
       {sponsors.map((sponsor) => (
         <Text
           fz="h1"

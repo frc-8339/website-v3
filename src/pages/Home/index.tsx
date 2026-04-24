@@ -6,8 +6,9 @@ import HomeTopButton from "../../components/Buttons/HomeTop";
 import { email, homeButtons } from "../../lib/constants";
 import "./index.css";
 
-import winFallback from "./20250302_014149096_iOS.png";
 import win from "./20250302_014149096_iOS.png?w=768;1024;1280;1366;1440;1920;2560;3840;4032&format=webp;jpg;png&as=srcset&imagetools";
+import team2026Fallback from "./2026.jpg";
+import team2026 from "./2026.jpg?w=768;1024;1280;1366;1440;1920;2560;3840;4032&format=webp;jpg;png&as=srcset&imagetools";
 
 import winnerBanner from "./2025 Winner.svg";
 
@@ -69,7 +70,7 @@ export default function Home() {
 
           <Grid>
             <Grid.Col span={9}>
-              <Image srcSet={win} src={winFallback} alt="2025 REEFSCAPE℠ Competition Champion" />
+              <Image src={win} srcSet={win} alt="2025 REEFSCAPE℠ Competition Champion" />
             </Grid.Col>
             <Grid.Col span={3}>
               <Image src={winnerBanner} alt="2025 REEFSCAPE℠ Competition Champion" />
@@ -140,12 +141,12 @@ export default function Home() {
                 </Stack>
               </Grid.Col>
               <Grid.Col span={3.5}>
-                <Image src={winnerBanner} alt="2025 REEFSCAPE℠ Competition Champion" />
+                <Image srcSet={winnerBanner} alt="2025 REEFSCAPE℠ Competition Champion" />
               </Grid.Col>
             </Grid>
           </Grid.Col>
           <Grid.Col span={7}>
-            <Image srcSet={win} src={winFallback} alt="2025 REEFSCAPE℠ Competition Champion" />
+            <Image srcSet={team2026} src={team2026Fallback} alt="2026 Team Photo" />
           </Grid.Col>
         </Grid>
       )}
