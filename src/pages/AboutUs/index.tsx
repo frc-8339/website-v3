@@ -1,26 +1,17 @@
-import { Carousel } from "@mantine/carousel";
 import { BackgroundImage, Flex, Grid, Group, Image, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
-import Autoplay from "embla-carousel-autoplay";
-import { useRef } from "react";
 import { Link } from "react-router-dom";
 
-import ballinXD from "./ballinXD.webp";
-import winFallback from "./20250302_014149096_iOS.png";
-import win from "./20250302_014149096_iOS.png?w=768;1024;1280;1366;1440;1920;2560;3840;4032&format=webp;jpg;png&as=srcset&imagetools";
 import rookie2020 from "./awards/2020 Rookie.svg";
 import rookieDesign2021 from "./awards/2021 Rookie Design.svg";
 import creativity2024 from "./awards/2024 Creativity.svg";
 import winner2025 from "./awards/2025 Winner.svg";
-
-import winnerBanner from "./2025 Winner.svg";
+import ballinXD from "./ballinXD.webp";
 
 const yearsWithPicture = ["2020", "2023", "2024", "2025", "2026"];
 
 export default function AboutUs() {
   const isMobile = useMediaQuery("(max-width: 62em)");
-
-  const autoplay = useRef(Autoplay({ delay: 2000 }));
 
   return (
     <Flex align="center" direction="column" id="about" bg="black">
@@ -51,20 +42,20 @@ export default function AboutUs() {
 
       <Grid m={"lg"}>
         <Grid.Col span={6}>
-          <Group align="center" justify="center"> 
+          <Group align="center" justify="center">
             {yearsWithPicture.map((year) => (
               <Image src={`/images/team/${year}.jpg`} h="100%" w="45%" alt={`Penticton Robotics ${year} members`} />
-          ))}
+            ))}
           </Group>
         </Grid.Col>
         <Grid.Col span={6}>
-      <Group align="center" justify="center" gap={"lg"}>
-        <Image w="35%" src={rookie2020} alt="2020 Rookie All-Star Team" />
-        <Image w="35%" src={rookieDesign2021} alt="2021 Rookie Design Award" />
-        <Image w="35%" src={creativity2024} alt="2024 Creativity Award" />
-        <Image w="35%" src={winner2025} alt="2025 Winner" />
-      </Group>
-      </Grid.Col>
+          <Group align="center" justify="center" gap={"lg"}>
+            <Image w="35%" src={rookie2020} alt="2020 Rookie All-Star Team" />
+            <Image w="35%" src={rookieDesign2021} alt="2021 Rookie Design Award" />
+            <Image w="35%" src={creativity2024} alt="2024 Creativity Award" />
+            <Image w="35%" src={winner2025} alt="2025 Winner" />
+          </Group>
+        </Grid.Col>
       </Grid>
 
       {/* {!isMobile ? (

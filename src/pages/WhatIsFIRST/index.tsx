@@ -1,12 +1,10 @@
-import { BackgroundImage, Flex, Grid, Image, Text } from "@mantine/core";
+import { BackgroundImage, Flex, Grid, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
 import XD from "./XD.webp";
 
 export default function WhatIsFirst() {
   const isMobile = useMediaQuery("(max-width: 75em)");
-
-  const bannerWidth = isMobile ? "80vw" : "13vw";
 
   return (
     <Flex align="center" direction="column" id="first" bg="black">

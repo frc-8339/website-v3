@@ -6,11 +6,9 @@ import HomeTopButton from "../../components/Buttons/HomeTop";
 import { email, homeButtons } from "../../lib/constants";
 import "./index.css";
 
-import winFallback from "./20250302_014149096_iOS.png";
 import win from "./20250302_014149096_iOS.png?w=768;1024;1280;1366;1440;1920;2560;3840;4032&format=webp;jpg;png&as=srcset&imagetools";
 import team2026Fallback from "./2026.jpg";
 import team2026 from "./2026.jpg?w=768;1024;1280;1366;1440;1920;2560;3840;4032&format=webp;jpg;png&as=srcset&imagetools";
-
 
 import winnerBanner from "./2025 Winner.svg";
 
@@ -70,8 +68,7 @@ export default function Home() {
           <Text fz={24} c="#FBB416">
             - Hard working team running since 2018 <br />
             - Located in penticton @ maggie <br />
-            - Combination of students from pen hi and maggie <br />
-            - Winner of 2025 competition
+            - Combination of students from pen hi and maggie <br />- Winner of 2025 competition
           </Text>
           {homeButtons.map((button) => (
             <HomeTopButton key={`${button.title} ${button.url}`} title={button.title} url={button.url} />
@@ -141,7 +138,7 @@ export default function Home() {
         </Grid>
       )}
 
-      <Sponsors/>
+      <Sponsors />
 
       {/* News Quotes */}
       <Flex align="center" direction={isMobile ? "column" : "row"} justify="center" mt="8vh" mx="4vw" h="100%" ta="center">
