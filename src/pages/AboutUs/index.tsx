@@ -1,4 +1,4 @@
-import { BackgroundImage, Flex, Grid, Group, Image, Text } from "@mantine/core";
+import { BackgroundImage, Flex, Grid, Group, Image, px, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { Link } from "react-router-dom";
 
@@ -70,8 +70,30 @@ export default function AboutUs() {
         <br />
         <br />
         We are seeking donations and sponsors, all donations and sponsorships are precious and gratefully accepted. Any contribution, big or small, is greatly 
-        appreciated and brings us another step closer to making our dreams a reality! Please consult our Sponsor/Donate"<Link to="/power">Sponsor/Donate</Link>" page if you are interested in making a 
-        monetary contribution.
+        appreciated and brings us another step closer to making our dreams a reality! Please consult our Sponsor/Donate"<Link to="/power">Sponsor/Donate</Link>"
+        page if you are interested in making a monetary contribution.
+      </Text>
+      <Text m="lg" px={16} ff="Audiowide" fw={"bolder"} fz={64} c="pr-yellow">
+      What is FIRST?
+      </Text>
+      <Text>
+        The large-scale event is known worldwide as FIRST (For Inspiration and Recognition of Science and Technology). FIRST is a global nonprofit
+        organization dedicated to preparing and guiding the next generation of youth into the world of STEM (science, technology, engineering and mathematics).
+        Combining the excitement of sport with the rigors of science and technology, the FIRST Robotics Competition is considered the ultimate sport for
+        the mind. Under strict rules, limited time and resources, teams of high school students are challenged to raise funds, create a team “brand”, 
+        hone teamwork skills and build and program robots to compete in a field game against like-minded competitors. It’s as close to the real world 
+        of engineering as a student can get. <a href="https://firstroboticscanada.org/frc/"> FIRST Robotics page</a>
+      </Text>
+      <Text m="lg" px={16} ff="Audiowide" fw={"bolder"} fz={64} c="pr-yellow">
+      Benefits
+      </Text>
+      <Text>
+        - Help build real world skills in areas such as STEM, business management, self confidence and more! <br />
+        - Looks AMAZING on a resume and provides many talking points for countless applications <br />
+        - Helps create a community of like-minded students <br />
+        - Due to the range of several activities happening at the same place, students are able to explore their interests in many different areas which
+        - helps with future decisions for post-secondary. Students are able to learn how to use sophisticated software, hardware, power tools and more. < br/>
+        - Approximately 80 million dollars up for grabs in FIRST Robotics scholarships and bursaries.
       </Text>
     </Flex>
   );
