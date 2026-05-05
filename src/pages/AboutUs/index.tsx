@@ -1,4 +1,4 @@
-import { BackgroundImage, Flex, Grid, Group, Image, px, Text } from "@mantine/core";
+import { BackgroundImage, Flex, Grid, Group, Image, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { Link } from "react-router-dom";
 
@@ -57,7 +57,7 @@ export default function AboutUs() {
           </Group>
         </Grid.Col>
       </Grid>
-      <Text w="80%" mt="xl" fz="h2">
+      <Text w="80%" m="xl" fz="h2">
         We are a Penticton based FIRST robotics team meeting at Princess Margaret Secondary. The robotics club is a diverse, student-led team of high
         school students with the dream of representing School District 67 at the regional FIRST robotics competitions in Vancouver, British Columbia.
         Our challenge as a team is to dedicate hundreds of hours over the span of a few months to create a sophisticated robot capable of dynamic movement
@@ -76,18 +76,18 @@ export default function AboutUs() {
       <Text m="lg" px={16} ff="Audiowide" fw={"bolder"} fz={64} c="pr-yellow">
       What is FIRST?
       </Text>
-      <Text>
+      <Text w="80%" m="xl" fz="h2">
         The large-scale event is known worldwide as FIRST (For Inspiration and Recognition of Science and Technology). FIRST is a global nonprofit
         organization dedicated to preparing and guiding the next generation of youth into the world of STEM (science, technology, engineering and mathematics).
         Combining the excitement of sport with the rigors of science and technology, the FIRST Robotics Competition is considered the ultimate sport for
         the mind. Under strict rules, limited time and resources, teams of high school students are challenged to raise funds, create a team “brand”, 
         hone teamwork skills and build and program robots to compete in a field game against like-minded competitors. It’s as close to the real world 
-        of engineering as a student can get. <a href="https://firstroboticscanada.org/frc/"> FIRST Robotics page</a>
+        of engineering as a student can get. For more information, check the <a href="https://firstroboticscanada.org/frc/"> FIRST Robotics page</a>
       </Text>
       <Text m="lg" px={16} ff="Audiowide" fw={"bolder"} fz={64} c="pr-yellow">
       Benefits
       </Text>
-      <Text>
+      <Text w="80%" m="xl" fz="h2">
         - Help build real world skills in areas such as STEM, business management, self confidence and more! <br />
         - Looks AMAZING on a resume and provides many talking points for countless applications <br />
         - Helps create a community of like-minded students <br />

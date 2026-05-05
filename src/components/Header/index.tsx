@@ -18,8 +18,8 @@ const links: {
   { link: "/about", label: "About Us" },
   { link: "/media", label: "Media" },
   { link: "/power", label: "Sponsor/Donate" },
-  { link: "/first", label: "What is FIRST?" },
-  { link: "/benefits", label: "Benefits" },
+  // { link: "/first", label: "What is FIRST?" },
+  // { link: "/benefits", label: "Benefits" },
   // { link: "/events", label: "Events" },
   { link: "/contact", label: "Contact Us" },
 ];
