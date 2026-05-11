@@ -70,7 +70,7 @@ export default function AboutUs() {
         <br />
         <br />
         We are seeking donations and sponsors, all donations and sponsorships are precious and gratefully accepted. Any contribution, big or small, is greatly 
-        appreciated and brings us another step closer to making our dreams a reality! Please consult our Sponsor/Donate"<Link to="/power">Sponsor/Donate</Link>"
+        appreciated and brings us another step closer to making our dreams a reality! Please consult our <Link to="/power">Sponsor/Donate</Link>
         page if you are interested in making a monetary contribution.
       </Text>
       <Text m="lg" px={16} ff="Audiowide" fw={"bolder"} fz={64} c="pr-yellow">
