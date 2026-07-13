@@ -7,14 +7,14 @@ export const homeButtons: {
   title: string;
   url: string;
 }[] = [
-  { title: "Student Benefits", url: "/benefits" },
-  { title: "Apply to Join", url: "https://l.tobycm.dev/prsignup" },
-  { title: "Sponsor/Donate", url: "/power" },
-  {
-    title: "Join our newsletter",
-    url: "https://a6d48789.sibforms.com/serve/MUIFAHA4a2bQgaDI2t2lG9Y5tvpSvvS9XLERjKR-IcBJZrR-8yuWNKN_Y5HBhJGhYze57PzdNb1XGW-1LW1iu_0MPq5UWiYzNmgi2feAkqF6VonwtH6M6qtExpa53u9c92lQJ5GMB0L81suX-11MO930HXfPapDQXgGfrBRdBWhzoLHh06aqe09KemRHKPuzTr7wFSFALUHIzViF9A==",
-  },
-];
+    { title: "Student Benefits", url: "/benefits" },
+    { title: "Join the Team!", url: "https://l.tobycm.dev/prsignup" },
+    { title: "Sponsor/Donate", url: "/power" },
+    {
+      title: "Join our newsletter",
+      url: "https://a6d48789.sibforms.com/serve/MUIFAHA4a2bQgaDI2t2lG9Y5tvpSvvS9XLERjKR-IcBJZrR-8yuWNKN_Y5HBhJGhYze57PzdNb1XGW-1LW1iu_0MPq5UWiYzNmgi2feAkqF6VonwtH6M6qtExpa53u9c92lQJ5GMB0L81suX-11MO930HXfPapDQXgGfrBRdBWhzoLHh06aqe09KemRHKPuzTr7wFSFALUHIzViF9A==",
+    },
+  ];
 
 export interface Sponsor {
   name: string;
@@ -77,7 +77,7 @@ export const sponsors: Sponsor[] = [
   { name: "Marcus Makes", tier: "iron" },
   { name: "Emochoice", tier: "iron" },
   { name: "Flattiles Design Ltd.", tier: "iron" },
-  { name: "Minuteman Press" , tier: "iron" },
+  { name: "Minuteman Press", tier: "iron" },
 ];
 
 export const sponsorFiles: string[] = [
