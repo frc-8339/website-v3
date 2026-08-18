@@ -20,9 +20,13 @@ export default function Footer() {
         <Text>
           made by{" "}
           <Anchor href="https://github.com/tobycm" target="_blank" rel="noopener noreferrer">
-            tobycm
-          </Anchor>{" "}
-          + 3rinaaa with{" "}
+            tobycm{" "}
+          </Anchor>
+          and{" "}
+          <Anchor href="https://github.com/k1wizz" target="_blank" rel="noopener noreferrer">
+            k1wizz{" "}
+          </Anchor>
+          with{" "}
           <Anchor href="https://www.instagram.com/p/DBJwMI2pHz0" target="_blank" rel="noopener noreferrer" style={{ all: "unset" }}>
             ❤️
           </Anchor>
