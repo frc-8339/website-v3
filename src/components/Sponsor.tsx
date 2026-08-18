@@ -20,7 +20,7 @@ export default function Sponsor({ sponsor }: { sponsor: TSponsor }) {
       bd="#FBB416 solid 1rem"
       p="xl"
       w="25vw"
-      style={{ borderRadius: "4rem" }}
+      style={{borderRadius: "4rem"}}
       bg={sponsor.invertBackground ? "black" : "white"}
       c={sponsor.invertBackground ? "pr-yellow" : "black"}
     >

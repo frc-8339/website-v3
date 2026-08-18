@@ -36,7 +36,7 @@ export default function Home() {
   // }, []);
 
   return (
-    <Box mb="10vh">
+    <Box bg="black">
       <NewsletterModal opened={opened} controls={controls} />
       {isMobile ? (
         <Stack bg="black" p="xl">
@@ -181,10 +181,10 @@ export default function Home() {
         />
       </Flex>
 
-      <Space h="10vh" />
+      <Space h="10vh"/>
 
       <Flex align="center" justify="center" direction={isMobile ? "column" : "row"}>
-        <Flex align="center" justify="center" direction="column"></Flex>
+        <Flex align="center" justify="center" direction="column"/>
       </Flex>
     </Box>
   );
