@@ -18,7 +18,7 @@ export default function Contact() {
           <Box bg="#00000080">
             <Text
               maw="40vw"
-              fz={isMobile ? "10vw" : "5vw"}
+              fz={isMobile ? "15vw" : "5vw"}
               fw="bolder"
               ff="Audiowide"
               lh="1.2"
@@ -36,7 +36,7 @@ export default function Contact() {
 
         <Flex direction="column" m="lg">
           <Text
-            fz="4.5rem"
+            fz={isMobile ? "3rem" : "4.5rem"}
             fw="bold"
             ta="center"
             style={{
@@ -50,7 +50,7 @@ export default function Contact() {
 
           <Image src={walkerFallback} srcSet={walker} alt="Mr. Josh Walker" h="4rem" radius="50%" bd="8px solid pr-yellow" />
 
-          <Text fz="3rem" m="lg" ta="center">
+          <Text fz={isMobile ? "2rem" : "3rem"} m="md" ta="center">
             Mr. Josh Walker
           </Text>
 
@@ -79,10 +79,10 @@ export default function Contact() {
             </Table>
           ) : (
             <Flex direction="column">
-              <Text fz="h2">
+              <Text fz="h3" ta="center">
                 <IconPhone /> Phone: <a href="tel:+12507707620">+1 (250) 770-7620 ext. 7205</a>
               </Text>
-              <Text fz="h2">
+              <Text fz="h3" ta="center">
                 <IconMail /> Email: <a href="mailto:jwalker@sd67.bc.ca">jwalker@sd67.bc.ca</a>
               </Text>
             </Flex>
@@ -90,19 +90,19 @@ export default function Contact() {
 
           <Space h="2rem" />
 
-          <Text fz="3rem" ta="center" m="lg">
+          <Text fz="3rem" ta="center" m="md">
             Other Inquiries
           </Text>
-          <Text fz="h2" ta="center">
+          <Text fz={isMobile ? "h3": "h2"} ta="center">
             <IconMail /> Email: <a href="mailto:penticton.robotics@gmail.com">penticton.robotics@gmail.com</a>
           </Text>
-          <Text fz="h2" ta="center">
+          <Text fz={isMobile ? "h3": "h2"} ta="center">
             <IconBrandDiscord /> Discord: <a href="https://discord.com/users/1176298206309646401"> @3rinaaa (Kim) </a>
           </Text>
 
           <Space h="2rem" />
 
-          <Text fz="3rem" ta="center" m="lg">
+          <Text fz="3rem" ta="center" m="md">
             Social Media
           </Text>
           <Text fz="h2" ta="center">

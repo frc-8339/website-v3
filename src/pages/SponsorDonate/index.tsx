@@ -16,7 +16,7 @@ export default function SponsorDonate() {
         <Box bg="#00000080">
           <Text
             maw="40vw"
-            fz={isMobile ? "10vw" : "5vw"}
+            fz={isMobile ? "15vw" : "5vw"}
             fw="bolder"
             lh="1.2"
             c="pr-yellow"
@@ -72,8 +72,8 @@ export default function SponsorDonate() {
           </Grid.Col>
         </Grid>
       ) : (
-        <Flex direction="column" m="lg">
-          <Text fz="h2" m="lg">
+        <Flex direction="column" m="md">
+          <Text fz="h2" m="md">
             Donations:
             <br />
             School District 67
@@ -82,7 +82,7 @@ export default function SponsorDonate() {
             <br />
             Penticton, BC V2A 1Z4
           </Text>
-          <Text fz="h2" m="lg">
+          <Text fz="h2" m="md">
             Sponsors:
             <br />
             Princess Margaret Secondary School
@@ -91,7 +91,7 @@ export default function SponsorDonate() {
             <br />
             Penticton, BC V2A 3T1
           </Text>
-          <Text fz="h2" m="lg">
+          <Text fz="h2" m="md">
             Please check out our information sheet for more info:{" "}
             <a href="/Sponsorship_Letter.pdf" target="_blank" rel="noopener noreferrer">
               Information Sheet
@@ -107,7 +107,7 @@ export default function SponsorDonate() {
         <img
           alt="Donate your recycling button"
           src="https://app.return-it.ca/Donate_Button_V1_orange_.png"
-          width={350}
+          width={isMobile ? 250 : 350}
           title="DONATE YOUR RECYCLING"
         />{" "}
       </a>
