@@ -18,7 +18,7 @@ export default function Media() {
             <Grid.Col span={3}>
               <Text
                 maw="40vw"
-                fz={isMobile ? "10vw" : "5vw"}
+                fz={isMobile ? "15vw" : "5vw"}
                 fw="bolder"
                 ff="Audiowide"
                 lh="1.2"
@@ -80,7 +80,7 @@ export default function Media() {
           <Link to={`mailto:${email}`} style={{ textDecoration: "none" }}>
             <Flex wrap="wrap" align="center" justify="center">
               <IconMail size={50} />
-              <Text ta="center" fz="h2" fw="bold" ml="xs">
+              <Text ta="center" fz={isMobile ? "h3" : "h2"} fw="bold" ml="xs">
                 {email}
               </Text>
             </Flex>

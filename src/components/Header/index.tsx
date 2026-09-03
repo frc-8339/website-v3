@@ -64,7 +64,7 @@ export default function Header() {
         <Flex h={120} justify="space-between" align="center">
           <Flex w={100} align="center">
             <Image mr={20} src={logo} alt="Penticton Robotics logo" style={{ cursor: "pointer" }} onClick={() => navigate("/")} />
-            <Text c="pr-yellow" fz={45} lh={1} fw={500} ta="center" ff="Audiowide">
+            <Text c="pr-yellow" fz={isMobile ? 24 : 52} lh={1} fw={500} ta="center" ff="Audiowide">
               Penticton Robotics
             </Text>
           </Flex>
