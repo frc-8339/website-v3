@@ -1,4 +1,5 @@
 import { Box, Image, Stack, Text } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 import { Link } from "react-router-dom";
 import { Sponsor as TSponsor } from "../lib/constants";
 
@@ -12,45 +13,97 @@ const sponsorsTierColors: Record<string, { from: string; to: string; deg: number
 };
 
 export default function Sponsor({ sponsor }: { sponsor: TSponsor }) {
+  const isMobile = useMediaQuery("(max-width: 64em)");
   return (
-    <Stack
-      justify="center"
-      align="center"
-      ta="center"
-      bd="#FBB416 solid 1rem"
-      p="xl"
-      w="25vw"
-      style={{borderRadius: "4rem"}}
-      bg={sponsor.invertBackground ? "black" : "white"}
-      c={sponsor.invertBackground ? "pr-yellow" : "black"}
-    >
-      <Box h="16vw">
-        {sponsor.image ? (
-          sponsor.link ? (
-            <Link to={sponsor.link}>
-              <Image src={sponsor.image} w="16vw" h="16vw" fit="contain" />
-            </Link>
-          ) : (
-            <Image src={sponsor.image} w="16vw" h="16vw" fit="contain" />
-          )
+    isMobile ? (
+      <Stack
+        justify="center"
+        align="center"
+        ta="center"
+        bd="#FBB416 solid 1rem"
+        p="sm"
+        w="80vw"
+        style={{ borderRadius: "4rem" }}
+        bg={sponsor.invertBackground ? "black" : "white"}
+        c={sponsor.invertBackground ? "pr-yellow" : "black"}
+      >
+        <Box>
+          {sponsor.image ? (
+            sponsor.link ? (
+              <Link to={sponsor.link}>
+                <Image src={sponsor.image} w="48vw" h="48vw" fit="contain" />
+              </Link>
+            ) : (
+              <Image src={sponsor.image} w="48rem" h="48rem" fit="contain" />
+            )
+          ) : null}
+        </Box>
+        <Text fz="6vw" fw="bold" variant="gradient" gradient={sponsorsTierColors[sponsor.tier] || { from: "#000", to: "#000", deg: 90 }} style={{
+          textWrap: "wrap",
+        }}>
+          {sponsor.name}
+        </Text>
+        {sponsor.link ? (
+          <Link to={sponsor.link}>
+            <Text fz="4vw">{sponsor.link}</Text>
+          </Link>
         ) : null}
-      </Box>
-      <Text fz="h1" fw="bold" variant="gradient" gradient={sponsorsTierColors[sponsor.tier] || { from: "#000", to: "#000", deg: 90 }} style={{
-        textWrap: "wrap",
-      }}>
-        {sponsor.name}
-      </Text>
-      {sponsor.link ? (
-        <Link to={sponsor.link}>
-          <Text>{sponsor.link}</Text>
-        </Link>
-      ) : null}
-    </Stack>
-  );
+      </Stack>
+    ) : (
+      <Stack
+        justify="center"
+        align="center"
+        ta="center"
+        bd="#FBB416 solid 1rem"
+        p="sm"
+        w="25vw"
+        style={{ borderRadius: "4rem" }}
+        bg={sponsor.invertBackground ? "black" : "white"}
+        c={sponsor.invertBackground ? "pr-yellow" : "black"}
+      >
+        <Box h="16vw">
+          {sponsor.image ? (
+            sponsor.link ? (
+              <Link to={sponsor.link}>
+                <Image src={sponsor.image} w="16vw" h="16vw" fit="contain" />
+              </Link>
+            ) : (
+              <Image src={sponsor.image} w="16vw" h="16vw" fit="contain" />
+            )
+          ) : null}
+        </Box>
+        <Text fz="h1" fw="bold" variant="gradient" gradient={sponsorsTierColors[sponsor.tier] || { from: "#000", to: "#000", deg: 90 }} style={{
+          textWrap: "wrap",
+        }}>
+          {sponsor.name}
+        </Text>
+        {sponsor.link ? (
+          <Link to={sponsor.link}>
+            <Text>{sponsor.link}</Text>
+          </Link>
+        ) : null}
+      </Stack>
+    ));
 }
 export function IronSponsor({ sponsors }: { sponsors: TSponsor[] }) {
+  const isMobile = useMediaQuery("(max-width: 64em)");
   return (
-    <Stack w="25vw" justify="center" align="center" bd="#FBB416 solid 1rem" p="xl" style={{ borderRadius: "4rem" }} bg="white">
+    isMobile ? (
+      <Stack w="80vw" justify="center" align="center" ta="center" bd="#FBB416 solid 1rem" p="sm" style={{ borderRadius: "4rem" }} bg="white">
+        {sponsors.map((sponsor) => (
+          <Text
+            fz="h3"
+            fw="bold"
+            variant="gradient"
+            gradient={sponsorsTierColors[sponsor.tier] || { from: "#000", to: "#000", deg: 90 }}
+            key={sponsor.name}
+          >
+            {sponsor.name}
+          </Text>
+        ))}
+      </Stack>
+    ) : (
+    <Stack w="25vw" justify="center" align="center" ta="center" bd="#FBB416 solid 1rem" p="sm" style={{ borderRadius: "4rem" }} bg="white">
       {sponsors.map((sponsor) => (
         <Text
           fz="h1"
@@ -63,5 +116,5 @@ export function IronSponsor({ sponsors }: { sponsors: TSponsor[] }) {
         </Text>
       ))}
     </Stack>
-  );
-}
+  )
+)}

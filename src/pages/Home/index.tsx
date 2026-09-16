@@ -24,7 +24,6 @@ import Sponsors from "../../components/Sponsors";
 
 export default function Home() {
   const isMobile = useMediaQuery("(max-width: 64em)");
-
   const [opened, controls] = useDisclosure(false);
 
   // useEffect(() => {
@@ -39,15 +38,15 @@ export default function Home() {
     <Box bg="black">
       <NewsletterModal opened={opened} controls={controls} />
       {isMobile ? (
-        <Stack bg="black" p="xl">
-          <Text ff="Audiowide" fw={"bolder"} fz={64} c="pr-yellow">
+        <Stack bg="black" p="md">
+          <Text ff="Audiowide" fw={"bolder"} fz={44} c="pr-yellow">
             Penticton Robotics
           </Text>
-          <Text fz={45} fw="bold" c="pr-yellow">
+          <Text fz={36} fw="bold" c="pr-yellow">
             FRC Team #8339
           </Text>
           <Link to={`mailto:${email}`}>
-            <Text fz={26} c="pr-yellow">
+            <Text fz={20} c="pr-yellow">
               <IconMail color="#FBB416" size={20} style={{ marginRight: "4px" }} />
               {email}
             </Text>
@@ -69,10 +68,10 @@ export default function Home() {
           </Group>
 
           <Grid>
-            <Grid.Col span={9}>
+            <Grid.Col span={12}>
               <Image src={win} srcSet={win} alt="2025 REEFSCAPE℠ Competition Champion" />
             </Grid.Col>
-            <Grid.Col span={3}>
+            <Grid.Col span={6}>
               <Image src={winnerBanner} alt="2025 REEFSCAPE℠ Competition Champion" />
             </Grid.Col>
           </Grid>
