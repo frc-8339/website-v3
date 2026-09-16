@@ -8,7 +8,7 @@ export const homeButtons: {
   url: string;
 }[] = [
     { title: "Student Benefits", url: "/benefits" },
-    { title: "Join the Team!", url: "https://docs.google.com/forms/d/e/1FAIpQLSdyxV6KFTOH4CrVNiCXxE-if7KObaapBJ_KSYYoopuZmHnKNw/viewform" },
+    { title: "Join the Team!", url: "https://l.tobycm.dev/prsignup" },
     { title: "Sponsor/Donate", url: "/power" },
     {
       title: "Join our newsletter",
