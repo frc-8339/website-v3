@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 
 import marcusFixingRobot from "./IMG_0461.webp";
 
-import Sponsors from "../../components/Sponsors";
-
 export default function SponsorDonate() {
   const isMobile = useMediaQuery("(max-width: 62em)");
 
