@@ -34,58 +34,57 @@ export default function SponsorDonate() {
       <Text m="lg" px={16} ff="Audiowide" fw={"bolder"} fz={isMobile ? 48 : 64} c="pr-yellow">
         Sponsor Incentives
       </Text>
-      <Text ta="center" w="80%" fz="h2">
-        The following incentives are available to sponsors who choose to support Penticton Robotics.
-        Your individual or company name/logo will be shown in one of the various formats
-        below. If you are a returning sponsor of 3 or more years
-        you will receive a shout out at competition during our alliance selection.
+      <Text ta={isMobile ? "left" : "center"} w="80%" fz="h2">
+        The following incentives are available to sponsors who choose to support Penticton
+        Robotics.
       </Text>
 
       <Text m="lg" px={16} ff="Audiowide" fw={"bolder"} fz={isMobile ? 28 : 36} c="pr-yellow">
         Platinum sponsor - $5000+
       </Text>
-      <Text ta="center" w="80%" fz="h2">
-        - Tournaments (your company thanked during competition alliance selections nationally televised) <br />
-        - Your logo displyed in the school display case <br />
-        - Your logo on robot <br />
+      <Text ta={isMobile ? "left" : "center"} w="80%" fz="h2">
+        - At Competitions: your company will be thanked during competition alliance selections -
+        nationally televised. <br />
+        - Your logo displayed in the school display case <br />
+        - Large logo on the robot <br />
         - Large logo on team apparel <br />
-        - Large logo on banner (displayed at events & tournaments)  <br />
-        - Website (picture & link to sponsor’s website on webpage)
+        - Large name and logo on banner (displayed at outreach events & tournaments) <br />
+        - Website (picture & link to sponsor’s website on our webpage)
       </Text>
 
       <Text m="lg" px={16} ff="Audiowide" fw={"bolder"} fz={isMobile ? 28 : 36} c="pr-yellow">
         Gold sponsor - $1,000 to 4,999
       </Text>
-      <Text ta="center" w="80%" fz="h2">
-        - Your business name in large font on team apparel <br />
-        - Your business name on robot <br />
-        - Large name & logo on banner (displayed at events & tournaments) <br />
-        - Website (picture & link to sponsor’s website on webpage)
+      <Text ta={isMobile ? "left" : "center"} w="80%" fz="h2">
+        - Logo on team apparel <br />
+        - Logo name on the robot <br />
+        - Large logo on banner (displayed at outreach events & tournaments) <br />
+        - Website (picture & link to sponsor’s website on our webpage)
       </Text>
 
       <Text m="lg" px={16} ff="Audiowide" fw={"bolder"} fz={isMobile ? 28 : 36} c="pr-yellow">
         Silver sponsor - $500 to $999
       </Text>
-      <Text ta="center" w="80%" fz="h2">
-        - Your business name in medium font on team apparel <br />
-        - Your business name in small font and logo on banner (displayed at events & tournaments) <br />
-        - Website (picture & link to sponsor’s website on webpage)
+      <Text ta={isMobile ? "left" : "center"} w="80%" fz="h2">
+        - Medium logo on team apparel <br />
+        - Medium logo on banner (displayed at outreach events & tournaments) <br />
+        - Website (picture & link to sponsor’s website on our webpage)
       </Text>
 
       <Text m="lg" px={16} ff="Audiowide" fw={"bolder"} fz={isMobile ? 28 : 36} c="pr-yellow">
         Iron sponsor - $150 to $499
       </Text>
-      <Text ta="center" w="80%" fz="h2">
-        - Your business name in small font on team apparel <br />
-        - Your business in small font on banner (displayed at events & tournaments)  <br />
-        - Website (name of individual/business on webpage)
+      <Text ta={isMobile ? "left" : "center"} w="80%" fz="h2">
+        - Small logo or business name on team apparel <br />
+        - Small logo or business name on banner (displayed at events & tournaments) <br />
+        - Website (name of individual/business on our webpage)
       </Text>
 
       <Text m="lg" px={16} ff="Audiowide" fw={"bolder"} fz={isMobile ? 28 : 36} c="pr-yellow">
         Bronze sponsor - $50 to $149
       </Text>
-      <Text ta="center" w="80%" fz="h2">
-        - Website (name of individual/business on webpage)
+      <Text ta={isMobile ? "left" : "center"} w="80%" fz="h2">
+        - Website (name of individual/business on our webpage)
       </Text>
 
       {/* <Sponsors /> */}
