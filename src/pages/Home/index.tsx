@@ -20,7 +20,7 @@ import castanet from "./newsLogos/castanet-logo.svg";
 
 import NewsQuote from "../../components/NewsQuote";
 import NewsletterModal from "../../components/NewsletterModal";
-import Sponsors from "../../components/Sponsors";
+// import Sponsors from "../../components/Sponsors";
 
 export default function Home() {
   const isMobile = useMediaQuery("(max-width: 64em)");
