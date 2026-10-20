@@ -4,6 +4,7 @@ import { useMediaQuery } from "@mantine/hooks";
 import { Link } from "react-router-dom";
 
 import marcusFixingRobot from "./IMG_0461.webp";
+// import Sponsors from "../../components/Sponsors";
 
 export default function SponsorDonate() {
   const isMobile = useMediaQuery("(max-width: 62em)");
@@ -35,52 +36,86 @@ export default function SponsorDonate() {
         Sponsor Incentives
       </Text>
       <Text ta={isMobile ? "left" : "center"} w="80%" fz="h2">
-        The following incentives are available to sponsors who choose to support Penticton
-        Robotics.
+        The following incentives are available to sponsors who choose to support Penticton Robotics.
       </Text>
 
-      <Text m="lg" px={16} ff="Audiowide" fw={"bolder"} fz={isMobile ? 28 : 36} c="pr-yellow">
+      <Text
+        m="lg"
+        px={16}
+        ff="Audiowide"
+        fw={"bolder"}
+        fz={isMobile ? 28 : 36}
+        variant="gradient"
+        gradient={{ from: "#c0c0c0", to: "#a9a9a9", deg: 90 }}
+      >
         Platinum sponsor - $5000+
       </Text>
       <Text ta={isMobile ? "left" : "center"} w="80%" fz="h2">
-        - At Competitions: your company will be thanked during competition alliance selections -
-        nationally televised. <br />
-        - Your logo displayed in the school display case <br />
+        - At Competitions: your company will be thanked during competition alliance selections - internationally televised. <br />
         - Large logo on the robot <br />
         - Large logo on team apparel <br />
-        - Large name and logo on banner (displayed at outreach events & tournaments) <br />
-        - Website (picture & link to sponsor’s website on our webpage)
+        - Large name and logo on banner (displayed at outreach events & tournaments) <br />- Website (picture & link to sponsor’s website on our
+        webpage)
       </Text>
 
-      <Text m="lg" px={16} ff="Audiowide" fw={"bolder"} fz={isMobile ? 28 : 36} c="pr-yellow">
+      <Text
+        m="lg"
+        px={16}
+        ff="Audiowide"
+        fw={"bolder"}
+        fz={isMobile ? 28 : 36}
+        variant="gradient"
+        gradient={{ from: "#ffd700", to: "#daa520", deg: 90 }}
+      >
         Gold sponsor - $1,000 to 4,999
       </Text>
       <Text ta={isMobile ? "left" : "center"} w="80%" fz="h2">
         - Logo on team apparel <br />
         - Logo name on the robot <br />
-        - Large logo on banner (displayed at outreach events & tournaments) <br />
-        - Website (picture & link to sponsor’s website on our webpage)
+        - Large logo on banner (displayed at outreach events & tournaments) <br />- Website (picture & link to sponsor’s website on our webpage)
       </Text>
 
-      <Text m="lg" px={16} ff="Audiowide" fw={"bolder"} fz={isMobile ? 28 : 36} c="pr-yellow">
+      <Text
+        m="lg"
+        px={16}
+        ff="Audiowide"
+        fw={"bolder"}
+        fz={isMobile ? 28 : 36}
+        variant="gradient"
+        gradient={{ from: "#c0c0c0", to: "#a9a9a9", deg: 90 }}
+      >
         Silver sponsor - $500 to $999
       </Text>
       <Text ta={isMobile ? "left" : "center"} w="80%" fz="h2">
         - Medium logo on team apparel <br />
-        - Medium logo on banner (displayed at outreach events & tournaments) <br />
-        - Website (picture & link to sponsor’s website on our webpage)
+        - Medium logo on banner (displayed at outreach events & tournaments) <br />- Website (picture & link to sponsor’s website on our webpage)
       </Text>
 
-      <Text m="lg" px={16} ff="Audiowide" fw={"bolder"} fz={isMobile ? 28 : 36} c="pr-yellow">
+      <Text
+        m="lg"
+        px={16}
+        ff="Audiowide"
+        fw={"bolder"}
+        fz={isMobile ? 28 : 36}
+        variant="gradient"
+        gradient={{ from: "#8b4513", to: "#654321", deg: 90 }}
+      >
         Iron sponsor - $150 to $499
       </Text>
       <Text ta={isMobile ? "left" : "center"} w="80%" fz="h2">
         - Small logo or business name on team apparel <br />
-        - Small logo or business name on banner (displayed at events & tournaments) <br />
-        - Website (name of individual/business on our webpage)
+        - Small logo or business name on banner (displayed at events & tournaments) <br />- Website (name of individual/business on our webpage)
       </Text>
 
-      <Text m="lg" px={16} ff="Audiowide" fw={"bolder"} fz={isMobile ? 28 : 36} c="pr-yellow">
+      <Text
+        m="lg"
+        px={16}
+        ff="Audiowide"
+        fw={"bolder"}
+        fz={isMobile ? 28 : 36}
+        variant="gradient"
+        gradient={{ from: "#cd7f32", to: "#8b4513", deg: 90 }}
+      >
         Bronze sponsor - $50 to $149
       </Text>
       <Text ta={isMobile ? "left" : "center"} w="80%" fz="h2">

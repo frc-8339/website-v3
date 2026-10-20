@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import { Sponsor as TSponsor } from "../lib/constants";
 
 const sponsorsTierColors: Record<string, { from: string; to: string; deg: number }> = {
-  diamond: { from: "#bfe8f5", to: "#9debff", deg: 90 },
+  // diamond: { from: "#bfe8f5", to: "#9debff", deg: 90 },
   platinum: { from: "#c0c0c0", to: "#a9a9a9", deg: 90 },
   gold: { from: "#ffd700", to: "#daa520", deg: 90 },
   silver: { from: "#c0c0c0", to: "#a9a9a9", deg: 90 },
-  bronze: { from: "#cd7f32", to: "#8b4513", deg: 90 },
   iron: { from: "#8b4513", to: "#654321", deg: 90 },
+  bronze: { from: "#cd7f32", to: "#8b4513", deg: 90 },
 };
 
 export default function Sponsor({ sponsor }: { sponsor: TSponsor }) {
