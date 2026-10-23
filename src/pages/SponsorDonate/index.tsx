@@ -1,7 +1,7 @@
-import { BackgroundImage, Box, Flex, Grid, Text } from "@mantine/core";
+import { BackgroundImage, Box, Flex, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import marcusFixingRobot from "./IMG_0461.webp";
 // import Sponsors from "../../components/Sponsors";
