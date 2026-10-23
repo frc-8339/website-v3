@@ -45,6 +45,7 @@ export default function SponsorDonate() {
         ff="Audiowide"
         fw={"bolder"}
         fz={isMobile ? 28 : 36}
+        td="underline"
         variant="gradient"
         gradient={{ from: "#c0c0c0", to: "#a9a9a9", deg: 90 }}
       >
@@ -64,6 +65,7 @@ export default function SponsorDonate() {
         ff="Audiowide"
         fw={"bolder"}
         fz={isMobile ? 28 : 36}
+        td="underline"
         variant="gradient"
         gradient={{ from: "#ffd700", to: "#daa520", deg: 90 }}
       >
@@ -81,6 +83,7 @@ export default function SponsorDonate() {
         ff="Audiowide"
         fw={"bolder"}
         fz={isMobile ? 28 : 36}
+        td="underline"
         variant="gradient"
         gradient={{ from: "#c0c0c0", to: "#a9a9a9", deg: 90 }}
       >
@@ -97,6 +100,7 @@ export default function SponsorDonate() {
         ff="Audiowide"
         fw={"bolder"}
         fz={isMobile ? 28 : 36}
+        td="underline"
         variant="gradient"
         gradient={{ from: "#8b4513", to: "#654321", deg: 90 }}
       >
@@ -113,6 +117,7 @@ export default function SponsorDonate() {
         ff="Audiowide"
         fw={"bolder"}
         fz={isMobile ? 28 : 36}
+        td="underline"
         variant="gradient"
         gradient={{ from: "#cd7f32", to: "#8b4513", deg: 90 }}
       >
@@ -122,9 +127,43 @@ export default function SponsorDonate() {
         - Website (name of individual/business on our webpage)
       </Text>
 
+      <Text m="lg" px={16} ff="Audiowide" fw={"bolder"} fz={isMobile ? 28 : 36} td="underline">
+        Donations
+      </Text>
+      <Text ta={isMobile ? "left" : "center"} w="80%" fz="h2">
+        - Donations of $50 or more are eligible for a charitable tax receipt through School District 67.
+      </Text>
+
+      <Text m="lg" px={16} ff="Audiowide" fw={"bolder"} fz={isMobile ? 28 : 36} td="underline">
+        How to Send Your Payment
+      </Text>
+      <Text mb="md" px={16} fw={"bolder"} fz={isMobile ? 28 : 36}>
+        Sponsorships: <br />
+      </Text>
+      <Text ta={isMobile ? "left" : "center"} w="60%" fz="h2">
+        Make cheques payable to Princess Margaret Secondary School and earmark them for Penticton Robotics. <br />
+        Mail or drop off sponsorships to: <br />
+        Princess Margaret Secondary School120 Green Avenue WestPenticton, BC V2A 3T1
+      </Text>
+      <Text m="lg" px={16} fw={"bolder"} fz={isMobile ? 28 : 36}>
+        Donations
+      </Text>
+      <Text ta={isMobile ? "left" : "center"} w="60%" fz="h2">
+        Make cheques payable to School District 67 and earmark them for Penticton Robotics. <br />
+        Mail or drop off donations to: <br />
+        School District 67425 Jermyn AvenuePenticton, BC V2A 1Z4 <br />
+      </Text>
+      <Text m="lg" px={16} fw={"bolder"} fz={isMobile ? 28 : 36}>
+        E-Transfer Payments: <br />
+      </Text>
+      <Text mb="lg" ta={isMobile ? "left" : "center"} w="60%" fz="h2">
+        We can accept e-transfer for both sponsorship and donation payments. For instructions, please email us at{" "}
+        <a href="mailto:penticton.robotics@gmail.com">penticton.robotics@gmail.com</a>
+      </Text>
+
       {/* <Sponsors /> */}
 
-      {!isMobile ? (
+      {/* {!isMobile ? (
         <Grid m="md" mt="xl" align="start" justify="center">
           <Grid.Col span={3}>
             <Text fz="h2">
@@ -189,7 +228,7 @@ export default function SponsorDonate() {
             You can also <Link to="/contact">contact us</Link> for more information.
           </Text>
         </Flex>
-      )}
+      )} */}
 
       <a href="https://app.return-it.ca/pentictonrobotics">
         {" "}
