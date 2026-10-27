@@ -96,9 +96,6 @@ export default function Contact() {
           <Text fz={isMobile ? "h3": "h2"} ta="center">
             <IconMail /> Email: <a href="mailto:penticton.robotics@gmail.com">penticton.robotics@gmail.com</a>
           </Text>
-          <Text fz={isMobile ? "h3": "h2"} ta="center">
-            <IconBrandDiscord /> Discord: <a href="https://discord.com/users/1176298206309646401"> @3rinaaa (Kim) </a>
-          </Text>
 
           <Space h="2rem" />
 

@@ -40,8 +40,8 @@ export default function Media() {
 
       <Flex m="xl" align="center" direction="column">
         <Text mt="xl" fz="h2" fw="bold" ta="center">
-          Team Photos and Videos from Events:
-          <Button
+          Team Photos and Videos from Events: Under Construction!
+          {/* <Button
             component="a"
             bg="black"
             c="pr-yellow"
@@ -54,7 +54,7 @@ export default function Media() {
             leftSection={<IconBrandGoogleDrive />}
           >
             Google Drive
-          </Button>
+          </Button> */}
         </Text>
 
         <Text mt="xl" fz="h2" fw="bold" ta="center">
