@@ -3,9 +3,9 @@ import { useMediaQuery } from "@mantine/hooks";
 
 import robotTouchGrass from "./IMG_1725-1.webp";
 
-import { IconBrandGoogleDrive, IconMail, IconWorldWww } from "@tabler/icons-react";
+import { IconMail, IconWorldWww } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
-import { email, mediaGoogleDrive } from "../../lib/constants";
+import { email } from "../../lib/constants";
 
 export default function Media() {
   const isMobile = useMediaQuery("(max-width: 62em)");
