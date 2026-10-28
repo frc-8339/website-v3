@@ -4,7 +4,7 @@ import { useMediaQuery } from "@mantine/hooks";
 import robotTouchGrass from "./IMG_1725-1.webp";
 
 import { IconMail, IconWorldWww } from "@tabler/icons-react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { email } from "../../lib/constants";
 
 export default function Media() {
@@ -12,7 +12,7 @@ export default function Media() {
 
   return (
     <Flex align="center" direction="column" id="media" bg="black">
-      <BackgroundImage src={robotTouchGrass} bgsz="cover" style={{ backgroundPositionY: "67.5%" }}>
+      <BackgroundImage src={robotTouchGrass} style={{ backgroundSize: "cover", backgroundPositionY: "67.5%" }}>
         <Flex w="100%" justify="center" bg="#00000080">
           <Grid w="80%" align="center" justify="space-between">
             <Grid.Col span={3}>
@@ -39,17 +39,17 @@ export default function Media() {
       </BackgroundImage>
 
       <Flex m="xl" align="center" direction="column">
-        <Text mt="xl" fz="h2" fw="bold" ta="center">
+        <Text mt="xl" fz="28px" fw="bold" ta="center">
           Team Photos and Videos from Events: Under Construction!
         </Text>
 
-        <Text mt="xl" fz="h2" fw="bold" ta="center">
+        <Text mt="xl" fz="28px" fw="bold" ta="center">
           Matches Videos, Details, Awards, etc:
           <Button
             component="a"
             bg="black"
             c="pr-yellow"
-            fz="h2"
+            fz="28px"
             h="3.5rem"
             ml="sm"
             href="https://frc-events.firstinspires.org/2025/team/8339"
@@ -61,16 +61,16 @@ export default function Media() {
           </Button>
         </Text>
 
-        <Text mt="xl" fz="h2" fw="bold" ta="center">
+        <Text mt="xl" fz="28px" fw="bold" ta="center">
           For more information, please contact us at:
-          <Link to={`mailto:${email}`} style={{ textDecoration: "none" }}>
+          <a href={`mailto:${email}`} target="_blank" style={{ textDecoration: "none" }}>
             <Flex wrap="wrap" align="center" justify="center">
               <IconMail size={50} />
-              <Text ta="center" fz={isMobile ? "h3" : "h2"} fw="bold" ml="xs">
+              <Text ta="center" fz={isMobile ? "24px" : "28px"} fw="bold" ml="xs">
                 {email}
               </Text>
             </Flex>
-          </Link>
+          </a>
         </Text>
       </Flex>
     </Flex>
