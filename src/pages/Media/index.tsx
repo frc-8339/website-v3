@@ -39,17 +39,17 @@ export default function Media() {
       </BackgroundImage>
 
       <Flex m="xl" align="center" direction="column">
-        <Text mt="xl" fz="h2" fw="bold" ta="center">
+        <Text mt="xl" fz="28px" fw="bold" ta="center">
           Team Photos and Videos from Events: Under Construction!
         </Text>
 
-        <Text mt="xl" fz="h2" fw="bold" ta="center">
+        <Text mt="xl" fz="28px" fw="bold" ta="center">
           Matches Videos, Details, Awards, etc:
           <Button
             component="a"
             bg="black"
             c="pr-yellow"
-            fz="h2"
+            fz="28px"
             h="3.5rem"
             ml="sm"
             href="https://frc-events.firstinspires.org/2025/team/8339"
@@ -61,12 +61,12 @@ export default function Media() {
           </Button>
         </Text>
 
-        <Text mt="xl" fz="h2" fw="bold" ta="center">
+        <Text mt="xl" fz="28px" fw="bold" ta="center">
           For more information, please contact us at:
           <Link to={`mailto:${email}`} style={{ textDecoration: "none" }}>
             <Flex wrap="wrap" align="center" justify="center">
               <IconMail size={50} />
-              <Text ta="center" fz={isMobile ? "h3" : "h2"} fw="bold" ml="xs">
+              <Text ta="center" fz={isMobile ? "24px" : "28px"} fw="bold" ml="xs">
                 {email}
               </Text>
             </Flex>
