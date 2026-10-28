@@ -3,7 +3,7 @@ import { useMediaQuery } from "@mantine/hooks";
 
 import marcusFixingRobot from "./IMG_0461.webp";
 
-import { IconBrandDiscord, IconBrandFacebook, IconBrandInstagram, IconBrandYoutube, IconMail, IconPhone } from "@tabler/icons-react";
+import { IconBrandFacebook, IconBrandInstagram, IconBrandYoutube, IconMail, IconPhone } from "@tabler/icons-react";
 
 import walkerFallback from "./walker.png";
 import walker from "./walker.png?w=256;512;768;1024&format=webp;png&as=srcset&imagetools";
