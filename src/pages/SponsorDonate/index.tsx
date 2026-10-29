@@ -1,9 +1,10 @@
-import { BackgroundImage, Box, Flex, Text } from "@mantine/core";
+import { BackgroundImage, Box, Flex, Image, Text } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 
 // import { Link } from "react-router-dom";
 
 import marcusFixingRobot from "./IMG_0461.webp";
+import teamphoto2026 from "./teampr2026.jpg";
 // import Sponsors from "../../components/Sponsors";
 
 export default function SponsorDonate() {
@@ -156,10 +157,12 @@ export default function SponsorDonate() {
       <Text m="lg" px={16} fw={"bolder"} fz={isMobile ? 28 : 36}>
         E-Transfer Payments: <br />
       </Text>
-      <Text mb="lg" ta={isMobile ? "left" : "center"} w="60%" fz="h2">
+      <Text mb="lg" ta={isMobile ? "left" : "center"} w="60%" fz="h2" style={{ overflowWrap: 'break-word' }}>
         We can accept e-transfer for both sponsorship and donation payments. For instructions, please email us at{" "}
-        <a href="mailto:penticton.robotics@gmail.com">penticton.robotics@gmail.com</a>
+        <a href="mailto:penticton.robotics@gmail.com" >penticton.robotics@gmail.com</a>
       </Text>
+      <Image srcSet={teamphoto2026} alt="team photo" w={isMobile ? "60%": "40%"}   mb="lg" />
+
 
       {/* <Sponsors /> */}
 
