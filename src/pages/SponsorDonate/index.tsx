@@ -144,7 +144,7 @@ export default function SponsorDonate() {
       <Text ta={isMobile ? "left" : "center"} w="60%" fz="h2">
         Make cheques payable to Princess Margaret Secondary School and earmark them for Penticton Robotics. <br />
         Mail or drop off sponsorships to: <br />
-        Princess Margaret Secondary School120 Green Avenue WestPenticton, BC V2A 3T1
+        Princess Margaret Secondary School, 120 Green Avenue West Penticton, BC V2A 3T1
       </Text>
       <Text m="lg" px={16} fw={"bolder"} fz={isMobile ? 28 : 36}>
         Donations
@@ -152,7 +152,7 @@ export default function SponsorDonate() {
       <Text ta={isMobile ? "left" : "center"} w="60%" fz="h2">
         Make cheques payable to School District 67 and earmark them for Penticton Robotics. <br />
         Mail or drop off donations to: <br />
-        School District 67425 Jermyn AvenuePenticton, BC V2A 1Z4 <br />
+        School District 67, 425 Jermyn Avenue Penticton, BC V2A 1Z4 <br />
       </Text>
       <Text m="lg" px={16} fw={"bolder"} fz={isMobile ? 28 : 36}>
         E-Transfer Payments: <br />
