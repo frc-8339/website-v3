@@ -61,7 +61,7 @@ export default function App() {
         fontFamily: "Roboto Condensed Variable, sans-serif",
         headings: { fontFamily: "Roboto, sans-serif" },
         colors: {
-          "pr-yellow": ["#FBB416", "#FBB416", "#FBB416", "#FBB416", "#FBB416", "#FBB416", "#FBB416", "#FBB416", "#FBB416", "#FBB416"],
+          "pr-yellow": ["#000000", "#573709", "#FF0000", "#fb8c16", "#e4fb16", "#00FF00", "#0000FF", "#FF00FF", "#AAAAAA", "#FFFFFF"],
         },
         breakpoints: {
           mn: "471px",
